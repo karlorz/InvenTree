@@ -182,8 +182,8 @@ export function BuiltinSettingsWidgets(): DashboardWidgetProps[] {
  */
 export default function DashboardWidgetLibrary(): DashboardWidgetProps[] {
   return [
-    ...BuiltinQueryCountWidgets(),
-    ...BuiltinGettingStartedWidgets(),
+    // ...BuiltinQueryCountWidgets(),
+    // ...BuiltinGettingStartedWidgets(),
     ...BuiltinSettingsWidgets()
   ];
 }
