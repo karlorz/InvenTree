@@ -101,8 +101,8 @@ test('Settings - Admin', async ({ page }) => {
   await page.waitForTimeout(500);
   await page.getByRole('button', { name: 'Submit' }).click();
 
-  // Edit second item
-  await page.getByLabel('row-action-menu-1').click();
+  // Edit fifth item
+  await page.getByLabel('row-action-menu-4').click();
   await page.getByRole('menuitem', { name: 'Edit' }).click();
   await expect(page.getByLabel('text-field-name')).toHaveValue('Box (Large)');
   await expect(page.getByLabel('text-field-description')).toHaveValue(
