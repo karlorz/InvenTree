@@ -45,7 +45,7 @@
     {
       "label": "setup-test",
       "type": "shell",
-      "command": "invoke dev.setup-test -i --path dev/inventree-demo-dataset",
+      "command": "invoke dev.setup-test -i --path dev/app-demo-dataset",
       "problemMatcher": [],
     },
     {

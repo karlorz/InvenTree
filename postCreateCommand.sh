@@ -4,8 +4,13 @@
 cd /home/user/local/InvenTree
 ln -s ./ /home/inventree
 
-# Source the set_env.sh script to set environment variables
-source ./set_env.sh
+# Load the .env file
+if [ -f "/home/user/local/InvenTree/dev.env" ]; then
+    source "/home/user/local/InvenTree/dev.env"
+    echo ".env file loaded"
+else
+    echo ".env file not found"
+fi
 
 # Install psycopg2
 pip install psycopg2-binary django-redis

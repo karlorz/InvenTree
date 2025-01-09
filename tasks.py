@@ -1070,7 +1070,7 @@ def test(
 
 
 @task(help={'dev': 'Set up development environment at the end'})
-def setup_test(c, ignore_update=False, dev=False, path='inventree-demo-dataset'):
+def setup_test(c, ignore_update=False, dev=False, path='app-demo-dataset'):
     """Setup a testing environment."""
     from src.backend.InvenTree.InvenTree.config import get_media_dir
 
@@ -1088,7 +1088,7 @@ def setup_test(c, ignore_update=False, dev=False, path='inventree-demo-dataset')
     info('Cloning demo dataset ...')
     run(
         c,
-        f'git clone https://github.com/inventree/demo-dataset {template_dir} -v --depth=1',
+        f'git clone https://github.com/karlorz/demo-dataset {template_dir} -v --depth=1',
     )
 
     # Make sure migrations are done - might have just deleted sqlite database
