@@ -117,3 +117,4 @@ docs/schema.yml
 docs/docs/api/*.yml
 docs/docs/api/schema/*.yml
 inventree_settings.json
+/.venv
