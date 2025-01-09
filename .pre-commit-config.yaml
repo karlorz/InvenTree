@@ -1,4 +1,27 @@
-# This is a dummy pre-commit config file.
-# It does not define any hooks, so no pre-commit checks will be run.
-# This file is used to avoid "pre-commit not found" errors in GitHub workflows.
-repos: [] 
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+exclude: |
+    (?x)^(
+        src/backend/.*|
+        src/frontend/src/locales/.* |
+        .*/migrations/.* |
+        src/frontend/yarn.lock
+    )$
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: mixed-line-ending
+-   repo: https://github.com/biomejs/pre-commit
+    rev: "v0.5.0"
+    hooks:
+    -   id: biome-check
+        additional_dependencies: ["@biomejs/biome@1.9.4"]
+        files: ^src/frontend/.*\.(js|ts|tsx)$
+-   repo: https://github.com/gitleaks/gitleaks
+    rev: v8.21.2
+    hooks:
+    -   id: gitleaks

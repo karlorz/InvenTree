@@ -18,5 +18,3 @@ invoke dev.setup-dev
 
 # Install required frontend packages
 invoke int.frontend-install
-
-rm .git/hooks/pre-commit

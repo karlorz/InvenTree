@@ -66,7 +66,8 @@ jobs:
         id: force
         if: |
           contains(github.event.pull_request.labels.*.name, 'dependency') ||
-          contains(github.event.pull_request.labels.*.name, 'full-run')
+          contains(github.event.pull_request.labels.*.name, 'full-run') ||
+          contains(github.event.push.labels.*.name, 'full-run')
 
   pre-commit:
     name: Style [pre-commit]
