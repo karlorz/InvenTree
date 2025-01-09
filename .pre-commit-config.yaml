@@ -1,0 +1,4 @@
+# This is a dummy pre-commit config file.
+# It does not define any hooks, so no pre-commit checks will be run.
+# This file is used to avoid "pre-commit not found" errors in GitHub workflows.
+repos: [] 
