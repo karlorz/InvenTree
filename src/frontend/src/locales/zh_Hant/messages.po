@@ -111,7 +111,7 @@ msgid "Enter barcode data"
 msgstr ""
 
 #: src/components/barcodes/BarcodeScanDialog.tsx:32
-#: src/components/nav/NavigationDrawer.tsx:117
+#: src/components/nav/NavigationDrawer.tsx:115
 #: src/forms/PurchaseOrderForms.tsx:383
 #: src/forms/PurchaseOrderForms.tsx:477
 msgid "Scan Barcode"
@@ -305,9 +305,9 @@ msgid "Accept Layout"
 msgstr ""
 
 #: src/components/dashboard/DashboardMenu.tsx:91
-#: src/components/nav/NavigationDrawer.tsx:71
+#: src/components/nav/NavigationDrawer.tsx:69
 #: src/defaults/actions.tsx:25
-#: src/defaults/links.tsx:11
+#: src/defaults/links.tsx:10
 #: src/pages/Index/Home.tsx:8
 msgid "Dashboard"
 msgstr "儀表盤"
@@ -492,12 +492,10 @@ msgstr ""
 
 #: src/components/dashboard/DashboardWidgetLibrary.tsx:158
 #: src/components/dashboard/widgets/GetStartedWidget.tsx:15
-#: src/defaults/links.tsx:40
 msgid "Getting Started"
 msgstr "快速上手"
 
 #: src/components/dashboard/DashboardWidgetLibrary.tsx:159
-#: src/defaults/links.tsx:43
 msgid "Getting started with InvenTree"
 msgstr "開始使用 InvenTree"
 
@@ -1479,8 +1477,12 @@ msgid "Update Available"
 msgstr "有可用更新"
 
 #: src/components/modals/AboutInvenTreeModal.tsx:117
-msgid "InvenTree Version"
-msgstr "InvenTree 版本"
+msgid "App Version"
+msgstr ""
+
+#: src/components/modals/AboutInvenTreeModal.tsx:117
+#~ msgid "InvenTree Version"
+#~ msgstr "InvenTree 版本"
 
 #: src/components/modals/AboutInvenTreeModal.tsx:123
 msgid "Commit Hash"
@@ -1512,8 +1514,7 @@ msgid "Links"
 msgstr "鏈接"
 
 #: src/components/modals/AboutInvenTreeModal.tsx:166
-#: src/components/nav/NavigationDrawer.tsx:205
-#: src/defaults/actions.tsx:32
+#: src/components/nav/NavigationDrawer.tsx:203
 msgid "Documentation"
 msgstr "文檔"
 
@@ -1583,7 +1584,7 @@ msgstr "{key} 包"
 #~ msgstr "Close modal"
 
 #: src/components/modals/ServerInfoModal.tsx:19
-#: src/pages/Index/Settings/SystemSettings.tsx:38
+#: src/pages/Index/Settings/SystemSettings.tsx:30
 msgid "Server"
 msgstr "服務器"
 
@@ -1670,15 +1671,23 @@ msgstr "無結果..."
 #~ msgstr "Profile"
 
 #: src/components/nav/MainMenu.tsx:52
-#: src/components/nav/NavigationDrawer.tsx:181
+#: src/components/nav/NavigationDrawer.tsx:179
 #: src/pages/Index/Settings/AdminCenter/UserManagementPanel.tsx:28
 msgid "Settings"
 msgstr "設置"
 
 #: src/components/nav/MainMenu.tsx:59
+#: src/components/nav/NavigationDrawer.tsx:133
+#: src/components/nav/SettingsHeader.tsx:40
+#: src/pages/Index/Settings/UserSettings.tsx:118
 #: src/pages/Index/Settings/UserSettings.tsx:122
-msgid "Account Settings"
-msgstr "賬户設置"
+msgid "User Settings"
+msgstr "用戶設置"
+
+#: src/components/nav/MainMenu.tsx:59
+#: src/pages/Index/Settings/UserSettings.tsx:122
+#~ msgid "Account Settings"
+#~ msgstr "賬户設置"
 
 #: src/components/nav/MainMenu.tsx:59
 #: src/defaults/menuItems.tsx:15
@@ -1686,11 +1695,11 @@ msgstr "賬户設置"
 #~ msgstr "Account settings"
 
 #: src/components/nav/MainMenu.tsx:67
-#: src/components/nav/NavigationDrawer.tsx:141
+#: src/components/nav/NavigationDrawer.tsx:139
 #: src/components/nav/SettingsHeader.tsx:41
 #: src/pages/Index/Settings/AdminCenter/UserManagementPanel.tsx:37
-#: src/pages/Index/Settings/SystemSettings.tsx:305
-#: src/pages/Index/Settings/SystemSettings.tsx:310
+#: src/pages/Index/Settings/SystemSettings.tsx:297
+#: src/pages/Index/Settings/SystemSettings.tsx:302
 msgid "System Settings"
 msgstr "系統設置"
 
@@ -1703,11 +1712,11 @@ msgstr "系統設置"
 #~ msgstr "Switch to pseudo language"
 
 #: src/components/nav/MainMenu.tsx:86
-#: src/components/nav/NavigationDrawer.tsx:148
+#: src/components/nav/NavigationDrawer.tsx:146
 #: src/components/nav/SettingsHeader.tsx:42
 #: src/defaults/actions.tsx:80
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:243
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:248
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:236
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:241
 msgid "Admin Center"
 msgstr "管理中心"
 
@@ -1732,77 +1741,20 @@ msgstr "登出"
 #~ msgid "Pages"
 #~ msgstr "Pages"
 
-#: src/components/nav/NavigationDrawer.tsx:77
-#: src/components/render/ModelType.tsx:30
-#: src/defaults/links.tsx:12
-#: src/pages/Index/Settings/SystemSettings.tsx:171
-#: src/pages/part/CategoryDetail.tsx:130
-#: src/pages/part/CategoryDetail.tsx:265
-#: src/pages/part/CategoryDetail.tsx:304
-#: src/pages/part/PartDetail.tsx:733
-msgid "Parts"
-msgstr "零件"
-
-#: src/components/nav/NavigationDrawer.tsx:84
-#: src/components/render/Part.tsx:30
-#: src/defaults/links.tsx:13
-#: src/forms/StockForms.tsx:679
-#: src/pages/Index/Settings/SystemSettings.tsx:204
-#: src/pages/part/PartDetail.tsx:500
-#: src/pages/stock/LocationDetail.tsx:351
-#: src/pages/stock/StockDetail.tsx:550
-#: src/tables/stock/StockItemTable.tsx:75
-msgid "Stock"
-msgstr "庫存"
-
-#: src/components/nav/NavigationDrawer.tsx:91
-#: src/defaults/links.tsx:15
-#: src/pages/build/BuildDetail.tsx:536
-#: src/pages/build/BuildIndex.tsx:36
-msgid "Manufacturing"
-msgstr ""
-
-#: src/components/nav/NavigationDrawer.tsx:98
-#: src/defaults/links.tsx:20
-#: src/pages/company/ManufacturerDetail.tsx:9
-#: src/pages/company/ManufacturerPartDetail.tsx:263
-#: src/pages/company/SupplierDetail.tsx:9
-#: src/pages/company/SupplierPartDetail.tsx:354
-#: src/pages/purchasing/PurchaseOrderDetail.tsx:498
-#: src/pages/purchasing/PurchasingIndex.tsx:61
-msgid "Purchasing"
-msgstr "採購中"
-
-#: src/components/nav/NavigationDrawer.tsx:105
-#: src/defaults/links.tsx:24
-#: src/pages/company/CustomerDetail.tsx:9
-#: src/pages/sales/ReturnOrderDetail.tsx:485
-#: src/pages/sales/SalesIndex.tsx:55
-#: src/pages/sales/SalesOrderDetail.tsx:549
-#: src/pages/sales/SalesOrderShipmentDetail.tsx:362
-msgid "Sales"
-msgstr "銷售"
-
-#: src/components/nav/NavigationDrawer.tsx:129
+#: src/components/nav/NavigationDrawer.tsx:127
 #: src/components/nav/NotificationDrawer.tsx:179
-#: src/pages/Index/Settings/SystemSettings.tsx:109
+#: src/pages/Index/Settings/SystemSettings.tsx:101
 #: src/pages/Index/Settings/UserSettings.tsx:95
 #: src/pages/Notifications.tsx:66
 #: src/pages/Notifications.tsx:158
 msgid "Notifications"
 msgstr "通知"
 
-#: src/components/nav/NavigationDrawer.tsx:135
-#: src/components/nav/SettingsHeader.tsx:40
-#: src/pages/Index/Settings/UserSettings.tsx:118
-msgid "User Settings"
-msgstr "用戶設置"
-
-#: src/components/nav/NavigationDrawer.tsx:176
+#: src/components/nav/NavigationDrawer.tsx:174
 msgid "Navigation"
 msgstr "導航欄"
 
-#: src/components/nav/NavigationDrawer.tsx:186
+#: src/components/nav/NavigationDrawer.tsx:184
 #: src/forms/PurchaseOrderForms.tsx:693
 #: src/forms/StockForms.tsx:679
 #: src/forms/StockForms.tsx:716
@@ -1818,13 +1770,13 @@ msgstr "導航欄"
 msgid "Actions"
 msgstr "操作"
 
-#: src/components/nav/NavigationDrawer.tsx:193
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:201
+#: src/components/nav/NavigationDrawer.tsx:191
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:194
 #: src/pages/Index/Settings/AdminCenter/PluginManagementPanel.tsx:44
 msgid "Plugins"
 msgstr "插件"
 
-#: src/components/nav/NavigationDrawer.tsx:211
+#: src/components/nav/NavigationDrawer.tsx:209
 msgid "About"
 msgstr "關於"
 
@@ -2099,6 +2051,14 @@ msgstr "未知模型: {model}"
 msgid "Part"
 msgstr "零件"
 
+#: src/components/render/ModelType.tsx:30
+#: src/pages/part/CategoryDetail.tsx:130
+#: src/pages/part/CategoryDetail.tsx:265
+#: src/pages/part/CategoryDetail.tsx:304
+#: src/pages/part/PartDetail.tsx:733
+msgid "Parts"
+msgstr "零件"
+
 #: src/components/render/ModelType.tsx:38
 #: src/pages/Index/Settings/AdminCenter/PartParameterPanel.tsx:13
 msgid "Part Parameter Template"
@@ -2246,7 +2206,6 @@ msgid "Project Code"
 msgstr "項目編碼"
 
 #: src/components/render/ModelType.tsx:144
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:143
 msgid "Project Codes"
 msgstr "項目編碼"
 
@@ -2262,7 +2221,6 @@ msgid "Purchase Order"
 msgstr "採購訂單"
 
 #: src/components/render/ModelType.tsx:152
-#: src/pages/Index/Settings/SystemSettings.tsx:248
 #: src/pages/company/CompanyDetail.tsx:200
 #: src/pages/company/SupplierPartDetail.tsx:267
 #: src/pages/part/PartDetail.tsx:576
@@ -2292,7 +2250,6 @@ msgid "Sales Order"
 msgstr "銷售訂單"
 
 #: src/components/render/ModelType.tsx:167
-#: src/pages/Index/Settings/SystemSettings.tsx:263
 #: src/pages/company/CompanyDetail.tsx:220
 #: src/pages/part/PartDetail.tsx:588
 #: src/pages/sales/SalesIndex.tsx:26
@@ -2315,7 +2272,6 @@ msgid "Return Order"
 msgstr "退貨訂單"
 
 #: src/components/render/ModelType.tsx:184
-#: src/pages/Index/Settings/SystemSettings.tsx:279
 #: src/pages/company/CompanyDetail.tsx:227
 #: src/pages/part/PartDetail.tsx:595
 #: src/pages/sales/SalesIndex.tsx:33
@@ -2373,7 +2329,7 @@ msgid "User"
 msgstr "用户"
 
 #: src/components/render/ModelType.tsx:223
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:107
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:100
 #: src/pages/Index/Settings/AdminCenter/UserManagementPanel.tsx:13
 msgid "Users"
 msgstr "用户"
@@ -2406,7 +2362,6 @@ msgid "Label Template"
 msgstr "標籤模板"
 
 #: src/components/render/ModelType.tsx:248
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:183
 msgid "Label Templates"
 msgstr "標籤模板"
 
@@ -2415,7 +2370,6 @@ msgid "Report Template"
 msgstr "報告模板"
 
 #: src/components/render/ModelType.tsx:256
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:189
 msgid "Report Templates"
 msgstr "報告模板"
 
@@ -2476,6 +2430,15 @@ msgstr "未激活"
 #: src/tables/part/PartTable.tsx:136
 msgid "No stock"
 msgstr "無庫存"
+
+#: src/components/render/Part.tsx:30
+#: src/forms/StockForms.tsx:679
+#: src/pages/part/PartDetail.tsx:500
+#: src/pages/stock/LocationDetail.tsx:351
+#: src/pages/stock/StockDetail.tsx:550
+#: src/tables/stock/StockItemTable.tsx:75
+msgid "Stock"
+msgstr "庫存"
 
 #: src/components/render/Stock.tsx:61
 #: src/pages/stock/StockDetail.tsx:185
@@ -3001,152 +2964,152 @@ msgid "Order Parts"
 msgstr ""
 
 #: src/contexts/LanguageContext.tsx:20
-msgid "Arabic"
-msgstr "阿拉伯語"
-
-#: src/contexts/LanguageContext.tsx:21
-msgid "Bulgarian"
-msgstr "保加利亞語"
-
-#: src/contexts/LanguageContext.tsx:22
-msgid "Czech"
-msgstr "捷克語"
-
-#: src/contexts/LanguageContext.tsx:23
-msgid "Danish"
-msgstr "丹麥語"
-
-#: src/contexts/LanguageContext.tsx:24
-msgid "German"
-msgstr "德語"
-
-#: src/contexts/LanguageContext.tsx:25
-msgid "Greek"
-msgstr "希臘語"
-
-#: src/contexts/LanguageContext.tsx:26
 msgid "English"
 msgstr "英語"
 
-#: src/contexts/LanguageContext.tsx:27
-msgid "Spanish"
-msgstr "西班牙語"
+#: src/contexts/LanguageContext.tsx:20
+#~ msgid "Arabic"
+#~ msgstr "阿拉伯語"
 
-#: src/contexts/LanguageContext.tsx:28
-msgid "Spanish (Mexican)"
-msgstr "西班牙語(墨西哥)"
-
-#: src/contexts/LanguageContext.tsx:29
-msgid "Estonian"
-msgstr "愛沙尼亞語"
-
-#: src/contexts/LanguageContext.tsx:30
-msgid "Farsi / Persian"
-msgstr "波斯語"
-
-#: src/contexts/LanguageContext.tsx:31
-msgid "Finnish"
-msgstr "芬蘭語"
-
-#: src/contexts/LanguageContext.tsx:32
-msgid "French"
-msgstr "法語"
-
-#: src/contexts/LanguageContext.tsx:33
-msgid "Hebrew"
-msgstr "希伯來語"
-
-#: src/contexts/LanguageContext.tsx:34
-msgid "Hindi"
-msgstr "印地語"
-
-#: src/contexts/LanguageContext.tsx:35
-msgid "Hungarian"
-msgstr "匈牙利語"
-
-#: src/contexts/LanguageContext.tsx:36
-msgid "Italian"
-msgstr "意大利語"
-
-#: src/contexts/LanguageContext.tsx:37
-msgid "Japanese"
-msgstr "日語"
-
-#: src/contexts/LanguageContext.tsx:38
-msgid "Korean"
-msgstr "韓語"
-
-#: src/contexts/LanguageContext.tsx:39
-msgid "Lithuanian"
-msgstr "立陶宛語"
-
-#: src/contexts/LanguageContext.tsx:40
-msgid "Latvian"
-msgstr "Latvian"
-
-#: src/contexts/LanguageContext.tsx:41
-msgid "Dutch"
-msgstr "荷蘭語"
-
-#: src/contexts/LanguageContext.tsx:42
-msgid "Norwegian"
-msgstr "挪威語"
-
-#: src/contexts/LanguageContext.tsx:43
-msgid "Polish"
-msgstr "波蘭語"
-
-#: src/contexts/LanguageContext.tsx:44
-msgid "Portuguese"
-msgstr "葡萄牙語"
-
-#: src/contexts/LanguageContext.tsx:45
-msgid "Portuguese (Brazilian)"
-msgstr "葡萄牙語(巴西)"
-
-#: src/contexts/LanguageContext.tsx:46
-msgid "Romanian"
-msgstr "羅馬尼亞語"
-
-#: src/contexts/LanguageContext.tsx:47
-msgid "Russian"
-msgstr "俄語"
-
-#: src/contexts/LanguageContext.tsx:48
-msgid "Slovak"
-msgstr "Slovak"
-
-#: src/contexts/LanguageContext.tsx:49
-msgid "Slovenian"
-msgstr "斯洛語尼亞語"
-
-#: src/contexts/LanguageContext.tsx:50
-msgid "Swedish"
-msgstr "瑞典語"
-
-#: src/contexts/LanguageContext.tsx:51
-msgid "Thai"
-msgstr "泰語"
-
-#: src/contexts/LanguageContext.tsx:52
-msgid "Turkish"
-msgstr "土耳其語"
-
-#: src/contexts/LanguageContext.tsx:53
-msgid "Ukrainian"
-msgstr "烏克蘭語"
-
-#: src/contexts/LanguageContext.tsx:54
-msgid "Vietnamese"
-msgstr "越南語"
-
-#: src/contexts/LanguageContext.tsx:55
-msgid "Chinese (Simplified)"
-msgstr "中文 (簡體)"
-
-#: src/contexts/LanguageContext.tsx:56
+#: src/contexts/LanguageContext.tsx:21
 msgid "Chinese (Traditional)"
 msgstr "中文 (繁體)"
+
+#: src/contexts/LanguageContext.tsx:21
+#~ msgid "Bulgarian"
+#~ msgstr "保加利亞語"
+
+#: src/contexts/LanguageContext.tsx:22
+#~ msgid "Czech"
+#~ msgstr "捷克語"
+
+#: src/contexts/LanguageContext.tsx:23
+#~ msgid "Danish"
+#~ msgstr "丹麥語"
+
+#: src/contexts/LanguageContext.tsx:24
+#~ msgid "German"
+#~ msgstr "德語"
+
+#: src/contexts/LanguageContext.tsx:25
+#~ msgid "Greek"
+#~ msgstr "希臘語"
+
+#: src/contexts/LanguageContext.tsx:27
+#~ msgid "Spanish"
+#~ msgstr "西班牙語"
+
+#: src/contexts/LanguageContext.tsx:28
+#~ msgid "Spanish (Mexican)"
+#~ msgstr "西班牙語(墨西哥)"
+
+#: src/contexts/LanguageContext.tsx:29
+#~ msgid "Estonian"
+#~ msgstr "愛沙尼亞語"
+
+#: src/contexts/LanguageContext.tsx:30
+#~ msgid "Farsi / Persian"
+#~ msgstr "波斯語"
+
+#: src/contexts/LanguageContext.tsx:31
+#~ msgid "Finnish"
+#~ msgstr "芬蘭語"
+
+#: src/contexts/LanguageContext.tsx:32
+#~ msgid "French"
+#~ msgstr "法語"
+
+#: src/contexts/LanguageContext.tsx:33
+#~ msgid "Hebrew"
+#~ msgstr "希伯來語"
+
+#: src/contexts/LanguageContext.tsx:34
+#~ msgid "Hindi"
+#~ msgstr "印地語"
+
+#: src/contexts/LanguageContext.tsx:35
+#~ msgid "Hungarian"
+#~ msgstr "匈牙利語"
+
+#: src/contexts/LanguageContext.tsx:36
+#~ msgid "Italian"
+#~ msgstr "意大利語"
+
+#: src/contexts/LanguageContext.tsx:37
+#~ msgid "Japanese"
+#~ msgstr "日語"
+
+#: src/contexts/LanguageContext.tsx:38
+#~ msgid "Korean"
+#~ msgstr "韓語"
+
+#: src/contexts/LanguageContext.tsx:39
+#~ msgid "Lithuanian"
+#~ msgstr "立陶宛語"
+
+#: src/contexts/LanguageContext.tsx:40
+#~ msgid "Latvian"
+#~ msgstr "Latvian"
+
+#: src/contexts/LanguageContext.tsx:41
+#~ msgid "Dutch"
+#~ msgstr "荷蘭語"
+
+#: src/contexts/LanguageContext.tsx:42
+#~ msgid "Norwegian"
+#~ msgstr "挪威語"
+
+#: src/contexts/LanguageContext.tsx:43
+#~ msgid "Polish"
+#~ msgstr "波蘭語"
+
+#: src/contexts/LanguageContext.tsx:44
+#~ msgid "Portuguese"
+#~ msgstr "葡萄牙語"
+
+#: src/contexts/LanguageContext.tsx:45
+#~ msgid "Portuguese (Brazilian)"
+#~ msgstr "葡萄牙語(巴西)"
+
+#: src/contexts/LanguageContext.tsx:46
+#~ msgid "Romanian"
+#~ msgstr "羅馬尼亞語"
+
+#: src/contexts/LanguageContext.tsx:47
+#~ msgid "Russian"
+#~ msgstr "俄語"
+
+#: src/contexts/LanguageContext.tsx:48
+#~ msgid "Slovak"
+#~ msgstr "Slovak"
+
+#: src/contexts/LanguageContext.tsx:49
+#~ msgid "Slovenian"
+#~ msgstr "斯洛語尼亞語"
+
+#: src/contexts/LanguageContext.tsx:50
+#~ msgid "Swedish"
+#~ msgstr "瑞典語"
+
+#: src/contexts/LanguageContext.tsx:51
+#~ msgid "Thai"
+#~ msgstr "泰語"
+
+#: src/contexts/LanguageContext.tsx:52
+#~ msgid "Turkish"
+#~ msgstr "土耳其語"
+
+#: src/contexts/LanguageContext.tsx:53
+#~ msgid "Ukrainian"
+#~ msgstr "烏克蘭語"
+
+#: src/contexts/LanguageContext.tsx:54
+#~ msgid "Vietnamese"
+#~ msgstr "越南語"
+
+#: src/contexts/LanguageContext.tsx:55
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "中文 (簡體)"
 
 #: src/defaults/actions.tsx:18
 #: src/defaults/links.tsx:27
@@ -3159,19 +3122,14 @@ msgid "Go to the App dashboard"
 msgstr "跳轉到 App 儀表板"
 
 #: src/defaults/actions.tsx:33
-msgid "Visit the documentation to learn more about InvenTree"
-msgstr "訪問文檔以瞭解更多關於 InvenTree"
+#~ msgid "Visit the documentation to learn more about InvenTree"
+#~ msgstr "訪問文檔以瞭解更多關於 InvenTree"
 
 #: src/defaults/actions.tsx:41
-#: src/defaults/links.tsx:94
-#: src/defaults/links.tsx:140
+#: src/defaults/links.tsx:93
+#: src/defaults/links.tsx:139
 msgid "About App"
 msgstr "關於 App"
-
-#: src/defaults/actions.tsx:41
-#: src/defaults/links.tsx:118
-#~ msgid "About this App instance"
-#~ msgstr "About this App instance"
 
 #: src/defaults/actions.tsx:42
 msgid "About the App org"
@@ -3182,13 +3140,13 @@ msgid "Server Information"
 msgstr "服務器信息"
 
 #: src/defaults/actions.tsx:49
-#: src/defaults/links.tsx:123
+#: src/defaults/links.tsx:122
 msgid "About this App instance"
 msgstr ""
 
 #: src/defaults/actions.tsx:55
-#: src/defaults/links.tsx:107
-#: src/defaults/links.tsx:129
+#: src/defaults/links.tsx:106
+#: src/defaults/links.tsx:128
 msgid "License Information"
 msgstr "許可信息"
 
@@ -3275,34 +3233,34 @@ msgstr "轉到管理中心"
 #~ msgstr "Playground"
 
 #: src/defaults/links.tsx:47
-msgid "API"
-msgstr "API"
+#~ msgid "API"
+#~ msgstr "API"
 
 #: src/defaults/links.tsx:50
-msgid "InvenTree API documentation"
-msgstr "InvenTree API 文檔"
+#~ msgid "InvenTree API documentation"
+#~ msgstr "InvenTree API 文檔"
 
 #: src/defaults/links.tsx:54
-msgid "Developer Manual"
-msgstr "開發者手冊"
+#~ msgid "Developer Manual"
+#~ msgstr "開發者手冊"
 
 #: src/defaults/links.tsx:57
-msgid "InvenTree developer manual"
-msgstr "InvenTree 開發者手冊"
+#~ msgid "InvenTree developer manual"
+#~ msgstr "InvenTree 開發者手冊"
 
 #: src/defaults/links.tsx:61
-msgid "FAQ"
-msgstr "FAQ"
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
 
 #: src/defaults/links.tsx:64
-msgid "Frequently asked questions"
-msgstr "常見問題"
+#~ msgid "Frequently asked questions"
+#~ msgstr "常見問題"
 
-#: src/defaults/links.tsx:68
+#: src/defaults/links.tsx:67
 msgid "GitHub Repository"
 msgstr ""
 
-#: src/defaults/links.tsx:71
+#: src/defaults/links.tsx:70
 msgid "InvenTree source code on GitHub"
 msgstr ""
 
@@ -3310,8 +3268,8 @@ msgstr ""
 #~ msgid "Instance"
 #~ msgstr "Instance"
 
-#: src/defaults/links.tsx:81
-#: src/defaults/links.tsx:122
+#: src/defaults/links.tsx:80
+#: src/defaults/links.tsx:121
 msgid "System Information"
 msgstr "系統信息"
 
@@ -3323,7 +3281,7 @@ msgstr "系統信息"
 #~ msgid "Licenses for packages used by InvenTree"
 #~ msgstr "Licenses for packages used by InvenTree"
 
-#: src/defaults/links.tsx:130
+#: src/defaults/links.tsx:129
 msgid "Licenses for dependencies of the App software"
 msgstr ""
 
@@ -3331,7 +3289,7 @@ msgstr ""
 #~ msgid "Licenses"
 #~ msgstr "Licenses"
 
-#: src/defaults/links.tsx:141
+#: src/defaults/links.tsx:140
 msgid "About the App Project"
 msgstr ""
 
@@ -4811,81 +4769,75 @@ msgstr "上次獲取時間"
 msgid "Base currency"
 msgstr "基準貨幣"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:113
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:106
 msgid "Data Import"
 msgstr "數據導入"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:119
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:112
 msgid "Barcode Scans"
 msgstr "掃描條碼"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:125
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:118
 msgid "Background Tasks"
 msgstr "後台任務"
+
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:124
+msgid "Error Reports"
+msgstr "錯誤報告"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:127
 #~ msgid "Templates"
 #~ msgstr "Templates"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:131
-msgid "Error Reports"
-msgstr "錯誤報告"
-
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:137
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:130
 msgid "Currencies"
 msgstr "幣種"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:153
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:146
 msgid "Custom States"
 msgstr "自定狀態"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:159
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:152
 #: src/pages/Index/Settings/AdminCenter/UnitManagmentPanel.tsx:57
 msgid "Custom Units"
 msgstr "自定義單位"
-
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:165
-#: src/pages/part/CategoryDetail.tsx:294
-msgid "Part Parameters"
-msgstr "零件參數"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:170
 #~ msgid "Location types"
 #~ msgstr "Location types"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:171
-msgid "Category Parameters"
-msgstr "類別參數"
+#~ msgid "Category Parameters"
+#~ msgstr "類別參數"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:177
-msgid "Stocktake"
-msgstr "庫存盤點"
+#~ msgid "Stocktake"
+#~ msgstr "庫存盤點"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:195
-msgid "Location Types"
-msgstr "位置類型"
+#~ msgid "Location Types"
+#~ msgstr "位置類型"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:207
-#: src/pages/Index/Settings/AdminCenter/MachineManagementPanel.tsx:48
-#: src/tables/machine/MachineTypeTable.tsx:308
-msgid "Machines"
-msgstr "設備"
-
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:217
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:210
 msgid "Quick Actions"
 msgstr "快捷操作"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:222
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:215
 msgid "Add a new user"
 msgstr "添加新用户"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:249
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:242
 msgid "Advanced Options"
 msgstr "高級選項"
 
 #: src/pages/Index/Settings/AdminCenter/MachineManagementPanel.tsx:43
 #~ msgid "Machine types"
 #~ msgstr "Machine types"
+
+#: src/pages/Index/Settings/AdminCenter/MachineManagementPanel.tsx:48
+#: src/tables/machine/MachineTypeTable.tsx:308
+msgid "Machines"
+msgstr "設備"
 
 #: src/pages/Index/Settings/AdminCenter/MachineManagementPanel.tsx:53
 #~ msgid "Machine Error Stack"
@@ -5035,15 +4987,15 @@ msgstr "選擇與用户生命週期相關的設置。更多詳情見 "
 #~ msgid "System settings"
 #~ msgstr "System settings"
 
-#: src/pages/Index/Settings/SystemSettings.tsx:65
+#: src/pages/Index/Settings/SystemSettings.tsx:57
 msgid "Login"
 msgstr "登錄"
 
-#: src/pages/Index/Settings/SystemSettings.tsx:91
+#: src/pages/Index/Settings/SystemSettings.tsx:83
 msgid "Barcodes"
 msgstr "條碼"
 
-#: src/pages/Index/Settings/SystemSettings.tsx:115
+#: src/pages/Index/Settings/SystemSettings.tsx:107
 msgid "Pricing"
 msgstr "定價"
 
@@ -5056,20 +5008,8 @@ msgstr "定價"
 #~ msgstr "Exchange Rates"
 
 #: src/pages/Index/Settings/SystemSettings.tsx:150
-msgid "Labels"
-msgstr "標籤"
-
-#: src/pages/Index/Settings/SystemSettings.tsx:156
-#: src/pages/Index/Settings/UserSettings.tsx:101
-msgid "Reporting"
-msgstr "報告"
-
-#: src/pages/Index/Settings/SystemSettings.tsx:230
-#: src/pages/build/BuildIndex.tsx:27
-#: src/pages/part/PartDetail.tsx:543
-#: src/pages/sales/SalesOrderDetail.tsx:367
-msgid "Build Orders"
-msgstr "生產訂單"
+#~ msgid "Labels"
+#~ msgstr "標籤"
 
 #: src/pages/Index/Settings/SystemSettings.tsx:317
 #~ msgid "Switch to User Setting"
@@ -5086,6 +5026,10 @@ msgstr "安全"
 #: src/pages/Index/Settings/UserSettings.tsx:47
 msgid "Display Options"
 msgstr "顯示選項"
+
+#: src/pages/Index/Settings/UserSettings.tsx:101
+msgid "Reporting"
+msgstr "報告"
 
 #: src/pages/Index/Settings/UserSettings.tsx:159
 #~ msgid "Switch to System Setting"
@@ -5432,9 +5376,20 @@ msgstr "取消訂單"
 msgid "Build Order"
 msgstr "生產訂單"
 
+#: src/pages/build/BuildDetail.tsx:536
+#: src/pages/build/BuildIndex.tsx:36
+msgid "Manufacturing"
+msgstr ""
+
 #: src/pages/build/BuildIndex.tsx:23
 #~ msgid "Build order created"
 #~ msgstr "Build order created"
+
+#: src/pages/build/BuildIndex.tsx:27
+#: src/pages/part/PartDetail.tsx:543
+#: src/pages/sales/SalesOrderDetail.tsx:367
+msgid "Build Orders"
+msgstr "生產訂單"
 
 #: src/pages/build/BuildIndex.tsx:39
 #~ msgid "New Build Order"
@@ -5528,6 +5483,23 @@ msgstr "刪除該公司"
 #: src/pages/company/CompanyDetail.tsx:296
 msgid "Company Actions"
 msgstr "公司操作"
+
+#: src/pages/company/CustomerDetail.tsx:9
+#: src/pages/sales/ReturnOrderDetail.tsx:485
+#: src/pages/sales/SalesIndex.tsx:55
+#: src/pages/sales/SalesOrderDetail.tsx:549
+#: src/pages/sales/SalesOrderShipmentDetail.tsx:362
+msgid "Sales"
+msgstr "銷售"
+
+#: src/pages/company/ManufacturerDetail.tsx:9
+#: src/pages/company/ManufacturerPartDetail.tsx:263
+#: src/pages/company/SupplierDetail.tsx:9
+#: src/pages/company/SupplierPartDetail.tsx:354
+#: src/pages/purchasing/PurchaseOrderDetail.tsx:498
+#: src/pages/purchasing/PurchasingIndex.tsx:61
+msgid "Purchasing"
+msgstr "採購中"
 
 #: src/pages/company/ManufacturerPartDetail.tsx:77
 #: src/pages/company/SupplierPartDetail.tsx:87
@@ -5745,6 +5717,10 @@ msgstr "類別操作"
 #: src/pages/part/CategoryDetail.tsx:253
 msgid "Category Details"
 msgstr "類別詳情"
+
+#: src/pages/part/CategoryDetail.tsx:294
+msgid "Part Parameters"
+msgstr "零件參數"
 
 #: src/pages/part/PartAllocationPanel.tsx:21
 #: src/pages/stock/StockDetail.tsx:465

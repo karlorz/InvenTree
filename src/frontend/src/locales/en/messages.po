@@ -106,7 +106,7 @@ msgid "Enter barcode data"
 msgstr "Enter barcode data"
 
 #: src/components/barcodes/BarcodeScanDialog.tsx:32
-#: src/components/nav/NavigationDrawer.tsx:117
+#: src/components/nav/NavigationDrawer.tsx:115
 #: src/forms/PurchaseOrderForms.tsx:383
 #: src/forms/PurchaseOrderForms.tsx:477
 msgid "Scan Barcode"
@@ -300,9 +300,9 @@ msgid "Accept Layout"
 msgstr "Accept Layout"
 
 #: src/components/dashboard/DashboardMenu.tsx:91
-#: src/components/nav/NavigationDrawer.tsx:71
+#: src/components/nav/NavigationDrawer.tsx:69
 #: src/defaults/actions.tsx:25
-#: src/defaults/links.tsx:11
+#: src/defaults/links.tsx:10
 #: src/pages/Index/Home.tsx:8
 msgid "Dashboard"
 msgstr "Dashboard"
@@ -487,12 +487,10 @@ msgstr "Show the number of return orders which are assigned to you"
 
 #: src/components/dashboard/DashboardWidgetLibrary.tsx:158
 #: src/components/dashboard/widgets/GetStartedWidget.tsx:15
-#: src/defaults/links.tsx:40
 msgid "Getting Started"
 msgstr "Getting Started"
 
 #: src/components/dashboard/DashboardWidgetLibrary.tsx:159
-#: src/defaults/links.tsx:43
 msgid "Getting started with InvenTree"
 msgstr "Getting started with InvenTree"
 
@@ -1474,8 +1472,12 @@ msgid "Update Available"
 msgstr "Update Available"
 
 #: src/components/modals/AboutInvenTreeModal.tsx:117
-msgid "InvenTree Version"
-msgstr "InvenTree Version"
+msgid "App Version"
+msgstr "App Version"
+
+#: src/components/modals/AboutInvenTreeModal.tsx:117
+#~ msgid "InvenTree Version"
+#~ msgstr "InvenTree Version"
 
 #: src/components/modals/AboutInvenTreeModal.tsx:123
 msgid "Commit Hash"
@@ -1507,8 +1509,7 @@ msgid "Links"
 msgstr "Links"
 
 #: src/components/modals/AboutInvenTreeModal.tsx:166
-#: src/components/nav/NavigationDrawer.tsx:205
-#: src/defaults/actions.tsx:32
+#: src/components/nav/NavigationDrawer.tsx:203
 msgid "Documentation"
 msgstr "Documentation"
 
@@ -1578,7 +1579,7 @@ msgstr "{key} Packages"
 #~ msgstr "Close modal"
 
 #: src/components/modals/ServerInfoModal.tsx:19
-#: src/pages/Index/Settings/SystemSettings.tsx:38
+#: src/pages/Index/Settings/SystemSettings.tsx:30
 msgid "Server"
 msgstr "Server"
 
@@ -1665,15 +1666,23 @@ msgstr "Nothing found..."
 #~ msgstr "Profile"
 
 #: src/components/nav/MainMenu.tsx:52
-#: src/components/nav/NavigationDrawer.tsx:181
+#: src/components/nav/NavigationDrawer.tsx:179
 #: src/pages/Index/Settings/AdminCenter/UserManagementPanel.tsx:28
 msgid "Settings"
 msgstr "Settings"
 
 #: src/components/nav/MainMenu.tsx:59
+#: src/components/nav/NavigationDrawer.tsx:133
+#: src/components/nav/SettingsHeader.tsx:40
+#: src/pages/Index/Settings/UserSettings.tsx:118
 #: src/pages/Index/Settings/UserSettings.tsx:122
-msgid "Account Settings"
-msgstr "Account Settings"
+msgid "User Settings"
+msgstr "User Settings"
+
+#: src/components/nav/MainMenu.tsx:59
+#: src/pages/Index/Settings/UserSettings.tsx:122
+#~ msgid "Account Settings"
+#~ msgstr "Account Settings"
 
 #: src/components/nav/MainMenu.tsx:59
 #: src/defaults/menuItems.tsx:15
@@ -1681,11 +1690,11 @@ msgstr "Account Settings"
 #~ msgstr "Account settings"
 
 #: src/components/nav/MainMenu.tsx:67
-#: src/components/nav/NavigationDrawer.tsx:141
+#: src/components/nav/NavigationDrawer.tsx:139
 #: src/components/nav/SettingsHeader.tsx:41
 #: src/pages/Index/Settings/AdminCenter/UserManagementPanel.tsx:37
-#: src/pages/Index/Settings/SystemSettings.tsx:305
-#: src/pages/Index/Settings/SystemSettings.tsx:310
+#: src/pages/Index/Settings/SystemSettings.tsx:297
+#: src/pages/Index/Settings/SystemSettings.tsx:302
 msgid "System Settings"
 msgstr "System Settings"
 
@@ -1698,11 +1707,11 @@ msgstr "System Settings"
 #~ msgstr "Switch to pseudo language"
 
 #: src/components/nav/MainMenu.tsx:86
-#: src/components/nav/NavigationDrawer.tsx:148
+#: src/components/nav/NavigationDrawer.tsx:146
 #: src/components/nav/SettingsHeader.tsx:42
 #: src/defaults/actions.tsx:80
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:243
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:248
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:236
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:241
 msgid "Admin Center"
 msgstr "Admin Center"
 
@@ -1727,77 +1736,20 @@ msgstr "Logout"
 #~ msgid "Pages"
 #~ msgstr "Pages"
 
-#: src/components/nav/NavigationDrawer.tsx:77
-#: src/components/render/ModelType.tsx:30
-#: src/defaults/links.tsx:12
-#: src/pages/Index/Settings/SystemSettings.tsx:171
-#: src/pages/part/CategoryDetail.tsx:130
-#: src/pages/part/CategoryDetail.tsx:265
-#: src/pages/part/CategoryDetail.tsx:304
-#: src/pages/part/PartDetail.tsx:733
-msgid "Parts"
-msgstr "Parts"
-
-#: src/components/nav/NavigationDrawer.tsx:84
-#: src/components/render/Part.tsx:30
-#: src/defaults/links.tsx:13
-#: src/forms/StockForms.tsx:679
-#: src/pages/Index/Settings/SystemSettings.tsx:204
-#: src/pages/part/PartDetail.tsx:500
-#: src/pages/stock/LocationDetail.tsx:351
-#: src/pages/stock/StockDetail.tsx:550
-#: src/tables/stock/StockItemTable.tsx:75
-msgid "Stock"
-msgstr "Stock"
-
-#: src/components/nav/NavigationDrawer.tsx:91
-#: src/defaults/links.tsx:15
-#: src/pages/build/BuildDetail.tsx:536
-#: src/pages/build/BuildIndex.tsx:36
-msgid "Manufacturing"
-msgstr "Manufacturing"
-
-#: src/components/nav/NavigationDrawer.tsx:98
-#: src/defaults/links.tsx:20
-#: src/pages/company/ManufacturerDetail.tsx:9
-#: src/pages/company/ManufacturerPartDetail.tsx:263
-#: src/pages/company/SupplierDetail.tsx:9
-#: src/pages/company/SupplierPartDetail.tsx:354
-#: src/pages/purchasing/PurchaseOrderDetail.tsx:498
-#: src/pages/purchasing/PurchasingIndex.tsx:61
-msgid "Purchasing"
-msgstr "Purchasing"
-
-#: src/components/nav/NavigationDrawer.tsx:105
-#: src/defaults/links.tsx:24
-#: src/pages/company/CustomerDetail.tsx:9
-#: src/pages/sales/ReturnOrderDetail.tsx:485
-#: src/pages/sales/SalesIndex.tsx:55
-#: src/pages/sales/SalesOrderDetail.tsx:549
-#: src/pages/sales/SalesOrderShipmentDetail.tsx:362
-msgid "Sales"
-msgstr "Sales"
-
-#: src/components/nav/NavigationDrawer.tsx:129
+#: src/components/nav/NavigationDrawer.tsx:127
 #: src/components/nav/NotificationDrawer.tsx:179
-#: src/pages/Index/Settings/SystemSettings.tsx:109
+#: src/pages/Index/Settings/SystemSettings.tsx:101
 #: src/pages/Index/Settings/UserSettings.tsx:95
 #: src/pages/Notifications.tsx:66
 #: src/pages/Notifications.tsx:158
 msgid "Notifications"
 msgstr "Notifications"
 
-#: src/components/nav/NavigationDrawer.tsx:135
-#: src/components/nav/SettingsHeader.tsx:40
-#: src/pages/Index/Settings/UserSettings.tsx:118
-msgid "User Settings"
-msgstr "User Settings"
-
-#: src/components/nav/NavigationDrawer.tsx:176
+#: src/components/nav/NavigationDrawer.tsx:174
 msgid "Navigation"
 msgstr "Navigation"
 
-#: src/components/nav/NavigationDrawer.tsx:186
+#: src/components/nav/NavigationDrawer.tsx:184
 #: src/forms/PurchaseOrderForms.tsx:693
 #: src/forms/StockForms.tsx:679
 #: src/forms/StockForms.tsx:716
@@ -1813,13 +1765,13 @@ msgstr "Navigation"
 msgid "Actions"
 msgstr "Actions"
 
-#: src/components/nav/NavigationDrawer.tsx:193
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:201
+#: src/components/nav/NavigationDrawer.tsx:191
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:194
 #: src/pages/Index/Settings/AdminCenter/PluginManagementPanel.tsx:44
 msgid "Plugins"
 msgstr "Plugins"
 
-#: src/components/nav/NavigationDrawer.tsx:211
+#: src/components/nav/NavigationDrawer.tsx:209
 msgid "About"
 msgstr "About"
 
@@ -2094,6 +2046,14 @@ msgstr "Unknown model: {model}"
 msgid "Part"
 msgstr "Part"
 
+#: src/components/render/ModelType.tsx:30
+#: src/pages/part/CategoryDetail.tsx:130
+#: src/pages/part/CategoryDetail.tsx:265
+#: src/pages/part/CategoryDetail.tsx:304
+#: src/pages/part/PartDetail.tsx:733
+msgid "Parts"
+msgstr "Parts"
+
 #: src/components/render/ModelType.tsx:38
 #: src/pages/Index/Settings/AdminCenter/PartParameterPanel.tsx:13
 msgid "Part Parameter Template"
@@ -2241,7 +2201,6 @@ msgid "Project Code"
 msgstr "Project Code"
 
 #: src/components/render/ModelType.tsx:144
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:143
 msgid "Project Codes"
 msgstr "Project Codes"
 
@@ -2257,7 +2216,6 @@ msgid "Purchase Order"
 msgstr "Purchase Order"
 
 #: src/components/render/ModelType.tsx:152
-#: src/pages/Index/Settings/SystemSettings.tsx:248
 #: src/pages/company/CompanyDetail.tsx:200
 #: src/pages/company/SupplierPartDetail.tsx:267
 #: src/pages/part/PartDetail.tsx:576
@@ -2287,7 +2245,6 @@ msgid "Sales Order"
 msgstr "Sales Order"
 
 #: src/components/render/ModelType.tsx:167
-#: src/pages/Index/Settings/SystemSettings.tsx:263
 #: src/pages/company/CompanyDetail.tsx:220
 #: src/pages/part/PartDetail.tsx:588
 #: src/pages/sales/SalesIndex.tsx:26
@@ -2310,7 +2267,6 @@ msgid "Return Order"
 msgstr "Return Order"
 
 #: src/components/render/ModelType.tsx:184
-#: src/pages/Index/Settings/SystemSettings.tsx:279
 #: src/pages/company/CompanyDetail.tsx:227
 #: src/pages/part/PartDetail.tsx:595
 #: src/pages/sales/SalesIndex.tsx:33
@@ -2368,7 +2324,7 @@ msgid "User"
 msgstr "User"
 
 #: src/components/render/ModelType.tsx:223
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:107
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:100
 #: src/pages/Index/Settings/AdminCenter/UserManagementPanel.tsx:13
 msgid "Users"
 msgstr "Users"
@@ -2401,7 +2357,6 @@ msgid "Label Template"
 msgstr "Label Template"
 
 #: src/components/render/ModelType.tsx:248
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:183
 msgid "Label Templates"
 msgstr "Label Templates"
 
@@ -2410,7 +2365,6 @@ msgid "Report Template"
 msgstr "Report Template"
 
 #: src/components/render/ModelType.tsx:256
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:189
 msgid "Report Templates"
 msgstr "Report Templates"
 
@@ -2471,6 +2425,15 @@ msgstr "Inactive"
 #: src/tables/part/PartTable.tsx:136
 msgid "No stock"
 msgstr "No stock"
+
+#: src/components/render/Part.tsx:30
+#: src/forms/StockForms.tsx:679
+#: src/pages/part/PartDetail.tsx:500
+#: src/pages/stock/LocationDetail.tsx:351
+#: src/pages/stock/StockDetail.tsx:550
+#: src/tables/stock/StockItemTable.tsx:75
+msgid "Stock"
+msgstr "Stock"
 
 #: src/components/render/Stock.tsx:61
 #: src/pages/stock/StockDetail.tsx:185
@@ -2996,152 +2959,152 @@ msgid "Order Parts"
 msgstr "Order Parts"
 
 #: src/contexts/LanguageContext.tsx:20
-msgid "Arabic"
-msgstr "Arabic"
-
-#: src/contexts/LanguageContext.tsx:21
-msgid "Bulgarian"
-msgstr "Bulgarian"
-
-#: src/contexts/LanguageContext.tsx:22
-msgid "Czech"
-msgstr "Czech"
-
-#: src/contexts/LanguageContext.tsx:23
-msgid "Danish"
-msgstr "Danish"
-
-#: src/contexts/LanguageContext.tsx:24
-msgid "German"
-msgstr "German"
-
-#: src/contexts/LanguageContext.tsx:25
-msgid "Greek"
-msgstr "Greek"
-
-#: src/contexts/LanguageContext.tsx:26
 msgid "English"
 msgstr "English"
 
-#: src/contexts/LanguageContext.tsx:27
-msgid "Spanish"
-msgstr "Spanish"
+#: src/contexts/LanguageContext.tsx:20
+#~ msgid "Arabic"
+#~ msgstr "Arabic"
 
-#: src/contexts/LanguageContext.tsx:28
-msgid "Spanish (Mexican)"
-msgstr "Spanish (Mexican)"
-
-#: src/contexts/LanguageContext.tsx:29
-msgid "Estonian"
-msgstr "Estonian"
-
-#: src/contexts/LanguageContext.tsx:30
-msgid "Farsi / Persian"
-msgstr "Farsi / Persian"
-
-#: src/contexts/LanguageContext.tsx:31
-msgid "Finnish"
-msgstr "Finnish"
-
-#: src/contexts/LanguageContext.tsx:32
-msgid "French"
-msgstr "French"
-
-#: src/contexts/LanguageContext.tsx:33
-msgid "Hebrew"
-msgstr "Hebrew"
-
-#: src/contexts/LanguageContext.tsx:34
-msgid "Hindi"
-msgstr "Hindi"
-
-#: src/contexts/LanguageContext.tsx:35
-msgid "Hungarian"
-msgstr "Hungarian"
-
-#: src/contexts/LanguageContext.tsx:36
-msgid "Italian"
-msgstr "Italian"
-
-#: src/contexts/LanguageContext.tsx:37
-msgid "Japanese"
-msgstr "Japanese"
-
-#: src/contexts/LanguageContext.tsx:38
-msgid "Korean"
-msgstr "Korean"
-
-#: src/contexts/LanguageContext.tsx:39
-msgid "Lithuanian"
-msgstr "Lithuanian"
-
-#: src/contexts/LanguageContext.tsx:40
-msgid "Latvian"
-msgstr "Latvian"
-
-#: src/contexts/LanguageContext.tsx:41
-msgid "Dutch"
-msgstr "Dutch"
-
-#: src/contexts/LanguageContext.tsx:42
-msgid "Norwegian"
-msgstr "Norwegian"
-
-#: src/contexts/LanguageContext.tsx:43
-msgid "Polish"
-msgstr "Polish"
-
-#: src/contexts/LanguageContext.tsx:44
-msgid "Portuguese"
-msgstr "Portuguese"
-
-#: src/contexts/LanguageContext.tsx:45
-msgid "Portuguese (Brazilian)"
-msgstr "Portuguese (Brazilian)"
-
-#: src/contexts/LanguageContext.tsx:46
-msgid "Romanian"
-msgstr "Romanian"
-
-#: src/contexts/LanguageContext.tsx:47
-msgid "Russian"
-msgstr "Russian"
-
-#: src/contexts/LanguageContext.tsx:48
-msgid "Slovak"
-msgstr "Slovak"
-
-#: src/contexts/LanguageContext.tsx:49
-msgid "Slovenian"
-msgstr "Slovenian"
-
-#: src/contexts/LanguageContext.tsx:50
-msgid "Swedish"
-msgstr "Swedish"
-
-#: src/contexts/LanguageContext.tsx:51
-msgid "Thai"
-msgstr "Thai"
-
-#: src/contexts/LanguageContext.tsx:52
-msgid "Turkish"
-msgstr "Turkish"
-
-#: src/contexts/LanguageContext.tsx:53
-msgid "Ukrainian"
-msgstr "Ukrainian"
-
-#: src/contexts/LanguageContext.tsx:54
-msgid "Vietnamese"
-msgstr "Vietnamese"
-
-#: src/contexts/LanguageContext.tsx:55
-msgid "Chinese (Simplified)"
-msgstr "Chinese (Simplified)"
-
-#: src/contexts/LanguageContext.tsx:56
+#: src/contexts/LanguageContext.tsx:21
 msgid "Chinese (Traditional)"
 msgstr "Chinese (Traditional)"
+
+#: src/contexts/LanguageContext.tsx:21
+#~ msgid "Bulgarian"
+#~ msgstr "Bulgarian"
+
+#: src/contexts/LanguageContext.tsx:22
+#~ msgid "Czech"
+#~ msgstr "Czech"
+
+#: src/contexts/LanguageContext.tsx:23
+#~ msgid "Danish"
+#~ msgstr "Danish"
+
+#: src/contexts/LanguageContext.tsx:24
+#~ msgid "German"
+#~ msgstr "German"
+
+#: src/contexts/LanguageContext.tsx:25
+#~ msgid "Greek"
+#~ msgstr "Greek"
+
+#: src/contexts/LanguageContext.tsx:27
+#~ msgid "Spanish"
+#~ msgstr "Spanish"
+
+#: src/contexts/LanguageContext.tsx:28
+#~ msgid "Spanish (Mexican)"
+#~ msgstr "Spanish (Mexican)"
+
+#: src/contexts/LanguageContext.tsx:29
+#~ msgid "Estonian"
+#~ msgstr "Estonian"
+
+#: src/contexts/LanguageContext.tsx:30
+#~ msgid "Farsi / Persian"
+#~ msgstr "Farsi / Persian"
+
+#: src/contexts/LanguageContext.tsx:31
+#~ msgid "Finnish"
+#~ msgstr "Finnish"
+
+#: src/contexts/LanguageContext.tsx:32
+#~ msgid "French"
+#~ msgstr "French"
+
+#: src/contexts/LanguageContext.tsx:33
+#~ msgid "Hebrew"
+#~ msgstr "Hebrew"
+
+#: src/contexts/LanguageContext.tsx:34
+#~ msgid "Hindi"
+#~ msgstr "Hindi"
+
+#: src/contexts/LanguageContext.tsx:35
+#~ msgid "Hungarian"
+#~ msgstr "Hungarian"
+
+#: src/contexts/LanguageContext.tsx:36
+#~ msgid "Italian"
+#~ msgstr "Italian"
+
+#: src/contexts/LanguageContext.tsx:37
+#~ msgid "Japanese"
+#~ msgstr "Japanese"
+
+#: src/contexts/LanguageContext.tsx:38
+#~ msgid "Korean"
+#~ msgstr "Korean"
+
+#: src/contexts/LanguageContext.tsx:39
+#~ msgid "Lithuanian"
+#~ msgstr "Lithuanian"
+
+#: src/contexts/LanguageContext.tsx:40
+#~ msgid "Latvian"
+#~ msgstr "Latvian"
+
+#: src/contexts/LanguageContext.tsx:41
+#~ msgid "Dutch"
+#~ msgstr "Dutch"
+
+#: src/contexts/LanguageContext.tsx:42
+#~ msgid "Norwegian"
+#~ msgstr "Norwegian"
+
+#: src/contexts/LanguageContext.tsx:43
+#~ msgid "Polish"
+#~ msgstr "Polish"
+
+#: src/contexts/LanguageContext.tsx:44
+#~ msgid "Portuguese"
+#~ msgstr "Portuguese"
+
+#: src/contexts/LanguageContext.tsx:45
+#~ msgid "Portuguese (Brazilian)"
+#~ msgstr "Portuguese (Brazilian)"
+
+#: src/contexts/LanguageContext.tsx:46
+#~ msgid "Romanian"
+#~ msgstr "Romanian"
+
+#: src/contexts/LanguageContext.tsx:47
+#~ msgid "Russian"
+#~ msgstr "Russian"
+
+#: src/contexts/LanguageContext.tsx:48
+#~ msgid "Slovak"
+#~ msgstr "Slovak"
+
+#: src/contexts/LanguageContext.tsx:49
+#~ msgid "Slovenian"
+#~ msgstr "Slovenian"
+
+#: src/contexts/LanguageContext.tsx:50
+#~ msgid "Swedish"
+#~ msgstr "Swedish"
+
+#: src/contexts/LanguageContext.tsx:51
+#~ msgid "Thai"
+#~ msgstr "Thai"
+
+#: src/contexts/LanguageContext.tsx:52
+#~ msgid "Turkish"
+#~ msgstr "Turkish"
+
+#: src/contexts/LanguageContext.tsx:53
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainian"
+
+#: src/contexts/LanguageContext.tsx:54
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamese"
+
+#: src/contexts/LanguageContext.tsx:55
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Chinese (Simplified)"
 
 #: src/defaults/actions.tsx:18
 #: src/defaults/links.tsx:27
@@ -3154,19 +3117,14 @@ msgid "Go to the App dashboard"
 msgstr "Go to the App dashboard"
 
 #: src/defaults/actions.tsx:33
-msgid "Visit the documentation to learn more about InvenTree"
-msgstr "Visit the documentation to learn more about InvenTree"
+#~ msgid "Visit the documentation to learn more about InvenTree"
+#~ msgstr "Visit the documentation to learn more about InvenTree"
 
 #: src/defaults/actions.tsx:41
-#: src/defaults/links.tsx:94
-#: src/defaults/links.tsx:140
+#: src/defaults/links.tsx:93
+#: src/defaults/links.tsx:139
 msgid "About App"
 msgstr "About App"
-
-#: src/defaults/actions.tsx:41
-#: src/defaults/links.tsx:118
-#~ msgid "About this App instance"
-#~ msgstr "About this App instance"
 
 #: src/defaults/actions.tsx:42
 msgid "About the App org"
@@ -3177,13 +3135,13 @@ msgid "Server Information"
 msgstr "Server Information"
 
 #: src/defaults/actions.tsx:49
-#: src/defaults/links.tsx:123
+#: src/defaults/links.tsx:122
 msgid "About this App instance"
 msgstr "About this App instance"
 
 #: src/defaults/actions.tsx:55
-#: src/defaults/links.tsx:107
-#: src/defaults/links.tsx:129
+#: src/defaults/links.tsx:106
+#: src/defaults/links.tsx:128
 msgid "License Information"
 msgstr "License Information"
 
@@ -3270,34 +3228,34 @@ msgstr "Go to the Admin Center"
 #~ msgstr "Playground"
 
 #: src/defaults/links.tsx:47
-msgid "API"
-msgstr "API"
+#~ msgid "API"
+#~ msgstr "API"
 
 #: src/defaults/links.tsx:50
-msgid "InvenTree API documentation"
-msgstr "InvenTree API documentation"
+#~ msgid "InvenTree API documentation"
+#~ msgstr "InvenTree API documentation"
 
 #: src/defaults/links.tsx:54
-msgid "Developer Manual"
-msgstr "Developer Manual"
+#~ msgid "Developer Manual"
+#~ msgstr "Developer Manual"
 
 #: src/defaults/links.tsx:57
-msgid "InvenTree developer manual"
-msgstr "InvenTree developer manual"
+#~ msgid "InvenTree developer manual"
+#~ msgstr "InvenTree developer manual"
 
 #: src/defaults/links.tsx:61
-msgid "FAQ"
-msgstr "FAQ"
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
 
 #: src/defaults/links.tsx:64
-msgid "Frequently asked questions"
-msgstr "Frequently asked questions"
+#~ msgid "Frequently asked questions"
+#~ msgstr "Frequently asked questions"
 
-#: src/defaults/links.tsx:68
+#: src/defaults/links.tsx:67
 msgid "GitHub Repository"
 msgstr "GitHub Repository"
 
-#: src/defaults/links.tsx:71
+#: src/defaults/links.tsx:70
 msgid "InvenTree source code on GitHub"
 msgstr "InvenTree source code on GitHub"
 
@@ -3305,8 +3263,8 @@ msgstr "InvenTree source code on GitHub"
 #~ msgid "Instance"
 #~ msgstr "Instance"
 
-#: src/defaults/links.tsx:81
-#: src/defaults/links.tsx:122
+#: src/defaults/links.tsx:80
+#: src/defaults/links.tsx:121
 msgid "System Information"
 msgstr "System Information"
 
@@ -3318,7 +3276,7 @@ msgstr "System Information"
 #~ msgid "Licenses for packages used by InvenTree"
 #~ msgstr "Licenses for packages used by InvenTree"
 
-#: src/defaults/links.tsx:130
+#: src/defaults/links.tsx:129
 msgid "Licenses for dependencies of the App software"
 msgstr "Licenses for dependencies of the App software"
 
@@ -3326,7 +3284,7 @@ msgstr "Licenses for dependencies of the App software"
 #~ msgid "Licenses"
 #~ msgstr "Licenses"
 
-#: src/defaults/links.tsx:141
+#: src/defaults/links.tsx:140
 msgid "About the App Project"
 msgstr "About the App Project"
 
@@ -4806,81 +4764,75 @@ msgstr "Last fetched"
 msgid "Base currency"
 msgstr "Base currency"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:113
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:106
 msgid "Data Import"
 msgstr "Data Import"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:119
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:112
 msgid "Barcode Scans"
 msgstr "Barcode Scans"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:125
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:118
 msgid "Background Tasks"
 msgstr "Background Tasks"
+
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:124
+msgid "Error Reports"
+msgstr "Error Reports"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:127
 #~ msgid "Templates"
 #~ msgstr "Templates"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:131
-msgid "Error Reports"
-msgstr "Error Reports"
-
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:137
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:130
 msgid "Currencies"
 msgstr "Currencies"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:153
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:146
 msgid "Custom States"
 msgstr "Custom States"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:159
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:152
 #: src/pages/Index/Settings/AdminCenter/UnitManagmentPanel.tsx:57
 msgid "Custom Units"
 msgstr "Custom Units"
-
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:165
-#: src/pages/part/CategoryDetail.tsx:294
-msgid "Part Parameters"
-msgstr "Part Parameters"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:170
 #~ msgid "Location types"
 #~ msgstr "Location types"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:171
-msgid "Category Parameters"
-msgstr "Category Parameters"
+#~ msgid "Category Parameters"
+#~ msgstr "Category Parameters"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:177
-msgid "Stocktake"
-msgstr "Stocktake"
+#~ msgid "Stocktake"
+#~ msgstr "Stocktake"
 
 #: src/pages/Index/Settings/AdminCenter/Index.tsx:195
-msgid "Location Types"
-msgstr "Location Types"
+#~ msgid "Location Types"
+#~ msgstr "Location Types"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:207
-#: src/pages/Index/Settings/AdminCenter/MachineManagementPanel.tsx:48
-#: src/tables/machine/MachineTypeTable.tsx:308
-msgid "Machines"
-msgstr "Machines"
-
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:217
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:210
 msgid "Quick Actions"
 msgstr "Quick Actions"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:222
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:215
 msgid "Add a new user"
 msgstr "Add a new user"
 
-#: src/pages/Index/Settings/AdminCenter/Index.tsx:249
+#: src/pages/Index/Settings/AdminCenter/Index.tsx:242
 msgid "Advanced Options"
 msgstr "Advanced Options"
 
 #: src/pages/Index/Settings/AdminCenter/MachineManagementPanel.tsx:43
 #~ msgid "Machine types"
 #~ msgstr "Machine types"
+
+#: src/pages/Index/Settings/AdminCenter/MachineManagementPanel.tsx:48
+#: src/tables/machine/MachineTypeTable.tsx:308
+msgid "Machines"
+msgstr "Machines"
 
 #: src/pages/Index/Settings/AdminCenter/MachineManagementPanel.tsx:53
 #~ msgid "Machine Error Stack"
@@ -5030,15 +4982,15 @@ msgstr "Select settings relevant for user lifecycle. More available in"
 #~ msgid "System settings"
 #~ msgstr "System settings"
 
-#: src/pages/Index/Settings/SystemSettings.tsx:65
+#: src/pages/Index/Settings/SystemSettings.tsx:57
 msgid "Login"
 msgstr "Login"
 
-#: src/pages/Index/Settings/SystemSettings.tsx:91
+#: src/pages/Index/Settings/SystemSettings.tsx:83
 msgid "Barcodes"
 msgstr "Barcodes"
 
-#: src/pages/Index/Settings/SystemSettings.tsx:115
+#: src/pages/Index/Settings/SystemSettings.tsx:107
 msgid "Pricing"
 msgstr "Pricing"
 
@@ -5051,20 +5003,8 @@ msgstr "Pricing"
 #~ msgstr "Exchange Rates"
 
 #: src/pages/Index/Settings/SystemSettings.tsx:150
-msgid "Labels"
-msgstr "Labels"
-
-#: src/pages/Index/Settings/SystemSettings.tsx:156
-#: src/pages/Index/Settings/UserSettings.tsx:101
-msgid "Reporting"
-msgstr "Reporting"
-
-#: src/pages/Index/Settings/SystemSettings.tsx:230
-#: src/pages/build/BuildIndex.tsx:27
-#: src/pages/part/PartDetail.tsx:543
-#: src/pages/sales/SalesOrderDetail.tsx:367
-msgid "Build Orders"
-msgstr "Build Orders"
+#~ msgid "Labels"
+#~ msgstr "Labels"
 
 #: src/pages/Index/Settings/SystemSettings.tsx:317
 #~ msgid "Switch to User Setting"
@@ -5081,6 +5021,10 @@ msgstr "Security"
 #: src/pages/Index/Settings/UserSettings.tsx:47
 msgid "Display Options"
 msgstr "Display Options"
+
+#: src/pages/Index/Settings/UserSettings.tsx:101
+msgid "Reporting"
+msgstr "Reporting"
 
 #: src/pages/Index/Settings/UserSettings.tsx:159
 #~ msgid "Switch to System Setting"
@@ -5427,9 +5371,20 @@ msgstr "Cancel order"
 msgid "Build Order"
 msgstr "Build Order"
 
+#: src/pages/build/BuildDetail.tsx:536
+#: src/pages/build/BuildIndex.tsx:36
+msgid "Manufacturing"
+msgstr "Manufacturing"
+
 #: src/pages/build/BuildIndex.tsx:23
 #~ msgid "Build order created"
 #~ msgstr "Build order created"
+
+#: src/pages/build/BuildIndex.tsx:27
+#: src/pages/part/PartDetail.tsx:543
+#: src/pages/sales/SalesOrderDetail.tsx:367
+msgid "Build Orders"
+msgstr "Build Orders"
 
 #: src/pages/build/BuildIndex.tsx:39
 #~ msgid "New Build Order"
@@ -5523,6 +5478,23 @@ msgstr "Delete Company"
 #: src/pages/company/CompanyDetail.tsx:296
 msgid "Company Actions"
 msgstr "Company Actions"
+
+#: src/pages/company/CustomerDetail.tsx:9
+#: src/pages/sales/ReturnOrderDetail.tsx:485
+#: src/pages/sales/SalesIndex.tsx:55
+#: src/pages/sales/SalesOrderDetail.tsx:549
+#: src/pages/sales/SalesOrderShipmentDetail.tsx:362
+msgid "Sales"
+msgstr "Sales"
+
+#: src/pages/company/ManufacturerDetail.tsx:9
+#: src/pages/company/ManufacturerPartDetail.tsx:263
+#: src/pages/company/SupplierDetail.tsx:9
+#: src/pages/company/SupplierPartDetail.tsx:354
+#: src/pages/purchasing/PurchaseOrderDetail.tsx:498
+#: src/pages/purchasing/PurchasingIndex.tsx:61
+msgid "Purchasing"
+msgstr "Purchasing"
 
 #: src/pages/company/ManufacturerPartDetail.tsx:77
 #: src/pages/company/SupplierPartDetail.tsx:87
@@ -5740,6 +5712,10 @@ msgstr "Category Actions"
 #: src/pages/part/CategoryDetail.tsx:253
 msgid "Category Details"
 msgstr "Category Details"
+
+#: src/pages/part/CategoryDetail.tsx:294
+msgid "Part Parameters"
+msgstr "Part Parameters"
 
 #: src/pages/part/PartAllocationPanel.tsx:21
 #: src/pages/stock/StockDetail.tsx:465
