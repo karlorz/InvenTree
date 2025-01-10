@@ -312,7 +312,7 @@ jobs:
         if: always()
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: inventree/InvenTree
+          slug: karlorz/InvenTree
           flags: backend
 
   postgres:
@@ -453,7 +453,7 @@ jobs:
         if: always()
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: inventree/InvenTree
+          slug: karlorz/InvenTree
           flags: migrations
 
   migrations-checks:
@@ -552,7 +552,7 @@ jobs:
         id: tests
         run: cd src/frontend && npx nyc playwright test
       - uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # pin@v4.5.0
-        if: ${{ !cancelled() && steps.tests.outcome == 'failure' }}
+        # if: ${{ !cancelled() && steps.tests.outcome == 'failure' }}
         with:
           name: playwright-report
           path: src/frontend/playwright-report/
@@ -565,7 +565,7 @@ jobs:
         if: always()
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: inventree/InvenTree
+          slug: karlorz/InvenTree
           flags: pui
       - name: Upload bundler info
         env:
