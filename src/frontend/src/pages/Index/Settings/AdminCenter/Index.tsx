@@ -1,21 +1,14 @@
 import { Trans, t } from '@lingui/macro';
 import { Paper, SimpleGrid, Skeleton, Stack, Text, Title } from '@mantine/core';
 import {
-  IconClipboardCheck,
   IconCoins,
   IconCpu,
-  IconDevicesPc,
   IconExclamationCircle,
   IconFileUpload,
-  IconList,
   IconListDetails,
-  IconPackages,
   IconPlugConnected,
   IconQrcode,
-  IconReport,
   IconScale,
-  IconSitemap,
-  IconTags,
   IconUsersGroup
 } from '@tabler/icons-react';
 import { lazy, useMemo } from 'react';
@@ -138,16 +131,16 @@ export default function AdminCenter() {
         icon: <IconCoins />,
         content: <CurrencyManagmentPanel />
       },
-      {
-        name: 'projectcodes',
-        label: t`Project Codes`,
-        icon: <IconListDetails />,
-        content: (
-          <Stack gap='xs'>
-            <ProjectCodeTable />
-          </Stack>
-        )
-      },
+      // {
+      //   name: 'projectcodes',
+      //   label: t`Project Codes`,
+      //   icon: <IconListDetails />,
+      //   content: (
+      //     <Stack gap='xs'>
+      //       <ProjectCodeTable />
+      //     </Stack>
+      //   )
+      // },
       {
         name: 'customstates',
         label: t`Custom States`,
@@ -160,54 +153,54 @@ export default function AdminCenter() {
         icon: <IconScale />,
         content: <UnitManagmentPanel />
       },
-      {
-        name: 'part-parameters',
-        label: t`Part Parameters`,
-        icon: <IconList />,
-        content: <PartParameterPanel />
-      },
-      {
-        name: 'category-parameters',
-        label: t`Category Parameters`,
-        icon: <IconSitemap />,
-        content: <PartCategoryTemplateTable />
-      },
-      {
-        name: 'stocktake',
-        label: t`Stocktake`,
-        icon: <IconClipboardCheck />,
-        content: <StocktakePanel />
-      },
-      {
-        name: 'labels',
-        label: t`Label Templates`,
-        icon: <IconTags />,
-        content: <LabelTemplatePanel />
-      },
-      {
-        name: 'reports',
-        label: t`Report Templates`,
-        icon: <IconReport />,
-        content: <ReportTemplatePanel />
-      },
-      {
-        name: 'location-types',
-        label: t`Location Types`,
-        icon: <IconPackages />,
-        content: <LocationTypesTable />
-      },
+      // {
+      //   name: 'part-parameters',
+      //   label: t`Part Parameters`,
+      //   icon: <IconList />,
+      //   content: <PartParameterPanel />
+      // },
+      // {
+      //   name: 'category-parameters',
+      //   label: t`Category Parameters`,
+      //   icon: <IconSitemap />,
+      //   content: <PartCategoryTemplateTable />
+      // },
+      // {
+      //   name: 'stocktake',
+      //   label: t`Stocktake`,
+      //   icon: <IconClipboardCheck />,
+      //   content: <StocktakePanel />
+      // },
+      // {
+      //   name: 'labels',
+      //   label: t`Label Templates`,
+      //   icon: <IconTags />,
+      //   content: <LabelTemplatePanel />
+      // },
+      // {
+      //   name: 'reports',
+      //   label: t`Report Templates`,
+      //   icon: <IconReport />,
+      //   content: <ReportTemplatePanel />
+      // },
+      // {
+      //   name: 'location-types',
+      //   label: t`Location Types`,
+      //   icon: <IconPackages />,
+      //   content: <LocationTypesTable />
+      // },
       {
         name: 'plugin',
         label: t`Plugins`,
         icon: <IconPlugConnected />,
         content: <PluginManagementPanel />
-      },
-      {
-        name: 'machine',
-        label: t`Machines`,
-        icon: <IconDevicesPc />,
-        content: <MachineManagementPanel />
       }
+      // {
+      //   name: 'machine',
+      //   label: t`Machines`,
+      //   icon: <IconDevicesPc />,
+      //   content: <MachineManagementPanel />
+      // }
     ];
   }, []);
 

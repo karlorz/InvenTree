@@ -2,18 +2,10 @@ import { t } from '@lingui/macro';
 import { Skeleton, Stack } from '@mantine/core';
 import {
   IconBellCog,
-  IconCategory,
   IconCurrencyDollar,
-  IconFileAnalytics,
   IconFingerprint,
-  IconPackages,
   IconQrcode,
-  IconServerCog,
-  IconShoppingCart,
-  IconTag,
-  IconTools,
-  IconTruckDelivery,
-  IconTruckReturn
+  IconServerCog
 } from '@tabler/icons-react';
 import { useMemo } from 'react';
 
@@ -144,151 +136,151 @@ export default function SystemSettings() {
             />
           </>
         )
-      },
-      {
-        name: 'labels',
-        label: t`Labels`,
-        icon: <IconTag />,
-        content: <GlobalSettingList keys={['LABEL_ENABLE', 'LABEL_DPI']} />
-      },
-      {
-        name: 'reporting',
-        label: t`Reporting`,
-        icon: <IconFileAnalytics />,
-        content: (
-          <GlobalSettingList
-            keys={[
-              'REPORT_ENABLE',
-              'REPORT_DEFAULT_PAGE_SIZE',
-              'REPORT_DEBUG_MODE',
-              'REPORT_LOG_ERRORS'
-            ]}
-          />
-        )
-      },
-      {
-        name: 'parts',
-        label: t`Parts`,
-        icon: <IconCategory />,
-        content: (
-          <GlobalSettingList
-            keys={[
-              'PART_IPN_REGEX',
-              'PART_ALLOW_DUPLICATE_IPN',
-              'PART_ALLOW_EDIT_IPN',
-              'PART_ALLOW_DELETE_FROM_ASSEMBLY',
-              'PART_ENABLE_REVISION',
-              'PART_REVISION_ASSEMBLY_ONLY',
-              'PART_NAME_FORMAT',
-              'PART_SHOW_RELATED',
-              'PART_CREATE_INITIAL',
-              'PART_CREATE_SUPPLIER', // TODO: Break here
-              'PART_TEMPLATE',
-              'PART_ASSEMBLY',
-              'PART_COMPONENT',
-              'PART_TRACKABLE',
-              'PART_PURCHASEABLE',
-              'PART_SALABLE',
-              'PART_VIRTUAL', // TODO: Break here
-              'PART_COPY_BOM',
-              'PART_COPY_PARAMETERS',
-              'PART_COPY_TESTS',
-              'PART_CATEGORY_PARAMETERS',
-              'PART_CATEGORY_DEFAULT_ICON' // TODO: Move to part category settings page
-            ]}
-          />
-        )
-      },
-      {
-        name: 'stock',
-        label: t`Stock`,
-        icon: <IconPackages />,
-        content: (
-          <GlobalSettingList
-            keys={[
-              'SERIAL_NUMBER_GLOBALLY_UNIQUE',
-              'SERIAL_NUMBER_AUTOFILL',
-              'STOCK_DELETE_DEPLETED_DEFAULT',
-              'STOCK_BATCH_CODE_TEMPLATE',
-              'STOCK_ENABLE_EXPIRY',
-              'STOCK_STALE_DAYS',
-              'STOCK_ALLOW_EXPIRED_SALE',
-              'STOCK_ALLOW_EXPIRED_BUILD',
-              'STOCK_OWNERSHIP_CONTROL',
-              'STOCK_LOCATION_DEFAULT_ICON',
-              'STOCK_SHOW_INSTALLED_ITEMS',
-              'STOCK_ENFORCE_BOM_INSTALLATION',
-              'STOCK_ALLOW_OUT_OF_STOCK_TRANSFER',
-              'TEST_STATION_DATA',
-              'TEST_UPLOAD_CREATE_TEMPLATE'
-            ]}
-          />
-        )
-      },
-      {
-        name: 'buildorders',
-        label: t`Build Orders`,
-        icon: <IconTools />,
-        content: (
-          <GlobalSettingList
-            keys={[
-              'BUILDORDER_REFERENCE_PATTERN',
-              'BUILDORDER_REQUIRE_RESPONSIBLE',
-              'BUILDORDER_REQUIRE_ACTIVE_PART',
-              'BUILDORDER_REQUIRE_LOCKED_PART',
-              'BUILDORDER_REQUIRE_VALID_BOM',
-              'BUILDORDER_REQUIRE_CLOSED_CHILDS',
-              'PREVENT_BUILD_COMPLETION_HAVING_INCOMPLETED_TESTS'
-            ]}
-          />
-        )
-      },
-      {
-        name: 'purchaseorders',
-        label: t`Purchase Orders`,
-        icon: <IconShoppingCart />,
-        content: (
-          <GlobalSettingList
-            keys={[
-              'PURCHASEORDER_REFERENCE_PATTERN',
-              'PURCHASEORDER_REQUIRE_RESPONSIBLE',
-              'PURCHASEORDER_EDIT_COMPLETED_ORDERS',
-              'PURCHASEORDER_AUTO_COMPLETE'
-            ]}
-          />
-        )
-      },
-      {
-        name: 'salesorders',
-        label: t`Sales Orders`,
-        icon: <IconTruckDelivery />,
-        content: (
-          <GlobalSettingList
-            keys={[
-              'SALESORDER_REFERENCE_PATTERN',
-              'SALESORDER_REQUIRE_RESPONSIBLE',
-              'SALESORDER_DEFAULT_SHIPMENT',
-              'SALESORDER_EDIT_COMPLETED_ORDERS',
-              'SALESORDER_SHIP_COMPLETE'
-            ]}
-          />
-        )
-      },
-      {
-        name: 'returnorders',
-        label: t`Return Orders`,
-        icon: <IconTruckReturn />,
-        content: (
-          <GlobalSettingList
-            keys={[
-              'RETURNORDER_ENABLED',
-              'RETURNORDER_REFERENCE_PATTERN',
-              'RETURNORDER_REQUIRE_RESPONSIBLE',
-              'RETURNORDER_EDIT_COMPLETED_ORDERS'
-            ]}
-          />
-        )
       }
+      // {
+      //   name: 'labels',
+      //   label: t`Labels`,
+      //   icon: <IconTag />,
+      //   content: <GlobalSettingList keys={['LABEL_ENABLE', 'LABEL_DPI']} />
+      // },
+      // {
+      //   name: 'reporting',
+      //   label: t`Reporting`,
+      //   icon: <IconFileAnalytics />,
+      //   content: (
+      //     <GlobalSettingList
+      //       keys={[
+      //         'REPORT_ENABLE',
+      //         'REPORT_DEFAULT_PAGE_SIZE',
+      //         'REPORT_DEBUG_MODE',
+      //         'REPORT_LOG_ERRORS'
+      //       ]}
+      //     />
+      //   )
+      // },
+      // {
+      //   name: 'parts',
+      //   label: t`Parts`,
+      //   icon: <IconCategory />,
+      //   content: (
+      //     <GlobalSettingList
+      //       keys={[
+      //         'PART_IPN_REGEX',
+      //         'PART_ALLOW_DUPLICATE_IPN',
+      //         'PART_ALLOW_EDIT_IPN',
+      //         'PART_ALLOW_DELETE_FROM_ASSEMBLY',
+      //         'PART_ENABLE_REVISION',
+      //         'PART_REVISION_ASSEMBLY_ONLY',
+      //         'PART_NAME_FORMAT',
+      //         'PART_SHOW_RELATED',
+      //         'PART_CREATE_INITIAL',
+      //         'PART_CREATE_SUPPLIER', // TODO: Break here
+      //         'PART_TEMPLATE',
+      //         'PART_ASSEMBLY',
+      //         'PART_COMPONENT',
+      //         'PART_TRACKABLE',
+      //         'PART_PURCHASEABLE',
+      //         'PART_SALABLE',
+      //         'PART_VIRTUAL', // TODO: Break here
+      //         'PART_COPY_BOM',
+      //         'PART_COPY_PARAMETERS',
+      //         'PART_COPY_TESTS',
+      //         'PART_CATEGORY_PARAMETERS',
+      //         'PART_CATEGORY_DEFAULT_ICON' // TODO: Move to part category settings page
+      //       ]}
+      //     />
+      //   )
+      // },
+      // {
+      //   name: 'stock',
+      //   label: t`Stock`,
+      //   icon: <IconPackages />,
+      //   content: (
+      //     <GlobalSettingList
+      //       keys={[
+      //         'SERIAL_NUMBER_GLOBALLY_UNIQUE',
+      //         'SERIAL_NUMBER_AUTOFILL',
+      //         'STOCK_DELETE_DEPLETED_DEFAULT',
+      //         'STOCK_BATCH_CODE_TEMPLATE',
+      //         'STOCK_ENABLE_EXPIRY',
+      //         'STOCK_STALE_DAYS',
+      //         'STOCK_ALLOW_EXPIRED_SALE',
+      //         'STOCK_ALLOW_EXPIRED_BUILD',
+      //         'STOCK_OWNERSHIP_CONTROL',
+      //         'STOCK_LOCATION_DEFAULT_ICON',
+      //         'STOCK_SHOW_INSTALLED_ITEMS',
+      //         'STOCK_ENFORCE_BOM_INSTALLATION',
+      //         'STOCK_ALLOW_OUT_OF_STOCK_TRANSFER',
+      //         'TEST_STATION_DATA',
+      //         'TEST_UPLOAD_CREATE_TEMPLATE'
+      //       ]}
+      //     />
+      //   )
+      // },
+      // {
+      //   name: 'buildorders',
+      //   label: t`Build Orders`,
+      //   icon: <IconTools />,
+      //   content: (
+      //     <GlobalSettingList
+      //       keys={[
+      //         'BUILDORDER_REFERENCE_PATTERN',
+      //         'BUILDORDER_REQUIRE_RESPONSIBLE',
+      //         'BUILDORDER_REQUIRE_ACTIVE_PART',
+      //         'BUILDORDER_REQUIRE_LOCKED_PART',
+      //         'BUILDORDER_REQUIRE_VALID_BOM',
+      //         'BUILDORDER_REQUIRE_CLOSED_CHILDS',
+      //         'PREVENT_BUILD_COMPLETION_HAVING_INCOMPLETED_TESTS'
+      //       ]}
+      //     />
+      //   )
+      // },
+      // {
+      //   name: 'purchaseorders',
+      //   label: t`Purchase Orders`,
+      //   icon: <IconShoppingCart />,
+      //   content: (
+      //     <GlobalSettingList
+      //       keys={[
+      //         'PURCHASEORDER_REFERENCE_PATTERN',
+      //         'PURCHASEORDER_REQUIRE_RESPONSIBLE',
+      //         'PURCHASEORDER_EDIT_COMPLETED_ORDERS',
+      //         'PURCHASEORDER_AUTO_COMPLETE'
+      //       ]}
+      //     />
+      //   )
+      // },
+      // {
+      //   name: 'salesorders',
+      //   label: t`Sales Orders`,
+      //   icon: <IconTruckDelivery />,
+      //   content: (
+      //     <GlobalSettingList
+      //       keys={[
+      //         'SALESORDER_REFERENCE_PATTERN',
+      //         'SALESORDER_REQUIRE_RESPONSIBLE',
+      //         'SALESORDER_DEFAULT_SHIPMENT',
+      //         'SALESORDER_EDIT_COMPLETED_ORDERS',
+      //         'SALESORDER_SHIP_COMPLETE'
+      //       ]}
+      //     />
+      //   )
+      // },
+      // {
+      //   name: 'returnorders',
+      //   label: t`Return Orders`,
+      //   icon: <IconTruckReturn />,
+      //   content: (
+      //     <GlobalSettingList
+      //       keys={[
+      //         'RETURNORDER_ENABLED',
+      //         'RETURNORDER_REFERENCE_PATTERN',
+      //         'RETURNORDER_REQUIRE_RESPONSIBLE',
+      //         'RETURNORDER_EDIT_COMPLETED_ORDERS'
+      //       ]}
+      //     />
+      //   )
+      // }
     ];
   }, []);
 
