@@ -8,6 +8,7 @@ import { useMatch, useNavigate } from 'react-router-dom';
 import { api } from '../../App';
 import { navTabs as mainNavTabs } from '../../defaults/links';
 import { ApiEndpoints } from '../../enums/ApiEndpoints';
+import type { UserRoles } from '../../enums/Roles';
 import { navigateToLink } from '../../functions/navigation';
 import * as classes from '../../main.css';
 import { apiUrl } from '../../states/ApiState';
@@ -21,6 +22,12 @@ import { NavHoverMenu } from './NavHoverMenu';
 import { NavigationDrawer } from './NavigationDrawer';
 import { NotificationDrawer } from './NotificationDrawer';
 import { SearchDrawer } from './SearchDrawer';
+
+interface NavTab {
+  text: ReactNode;
+  name: string;
+  role?: string;
+}
 
 export function Header() {
   const [setNavigationOpen, navigationOpen] = useLocalState((state) => [
@@ -149,7 +156,8 @@ function NavTabs() {
     const _tabs: ReactNode[] = [];
 
     mainNavTabs.forEach((tab) => {
-      if (tab.role && !user.hasViewRole(tab.role)) {
+      const _tab = tab as NavTab;
+      if (_tab.role && !user.hasViewRole(_tab.role as UserRoles)) {
         return;
       }
 
