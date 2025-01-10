@@ -3155,8 +3155,8 @@ msgstr "中文 (繁體)"
 #~ msgstr "Home"
 
 #: src/defaults/actions.tsx:26
-msgid "Go to the InvenTree dashboard"
-msgstr "跳轉到 InvenTree 儀表板"
+msgid "Go to the App dashboard"
+msgstr "跳轉到 App 儀表板"
 
 #: src/defaults/actions.tsx:33
 msgid "Visit the documentation to learn more about InvenTree"

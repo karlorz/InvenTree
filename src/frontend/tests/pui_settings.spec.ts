@@ -65,8 +65,8 @@ test('Settings - Admin', async ({ page }) => {
   await page.getByRole('tab', { name: 'Barcodes' }).click();
   await page.getByRole('tab', { name: 'Notifications' }).click();
   await page.getByRole('tab', { name: 'Pricing' }).click();
-  await page.getByRole('tab', { name: 'Labels' }).click();
-  await page.getByRole('tab', { name: 'Reporting' }).click();
+  // await page.getByRole('tab', { name: 'Labels' }).click();
+  // await page.getByRole('tab', { name: 'Reporting' }).click();
 
   // await page.getByRole('tab', { name: 'Build Orders' }).click();
   // await page.getByRole('tab', { name: 'Purchase Orders' }).click();

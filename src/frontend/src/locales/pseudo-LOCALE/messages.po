@@ -3166,7 +3166,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/defaults/actions.tsx:26
-msgid "Go to the InvenTree dashboard"
+msgid "Go to the App dashboard"
 msgstr ""
 
 #: src/defaults/actions.tsx:33

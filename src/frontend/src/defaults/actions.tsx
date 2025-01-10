@@ -23,8 +23,8 @@ export function getActions(navigate: NavigateFunction) {
     {
       id: 'dashboard',
       label: t`Dashboard`,
-      description: t`Go to the InvenTree dashboard`,
-      onClick: () => {}, // navigate(menuItems.dashboard.link),
+      description: t`Go to the App dashboard`,
+      onClick: () => navigate('/home'), // navigate(menuItems.dashboard.link),
       leftSection: <IconLink size='1.2rem' />
     },
     // {
@@ -79,7 +79,7 @@ export function getActions(navigate: NavigateFunction) {
       id: 'admin-center',
       label: t`Admin Center`,
       description: t`Go to the Admin Center`,
-      onClick: () => {}, /// navigate(menuItems['settings-admin'].link),}
+      onClick: () => navigate('/settings/admin'), /// navigate(menuItems['settings-admin'].link),}
       leftSection: <IconLink size='1.2rem' />
     });
 
