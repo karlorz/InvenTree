@@ -24,7 +24,7 @@ export const navTabs = [
 ];
 
 export const docLinks = {
-  app: 'https://docs.inventree.org/app/',
+  app: 'https://github.com/karlorz/inventree/',
   // getting_started: 'https://docs.inventree.org/en/latest/start/intro/',
   // api: 'https://docs.inventree.org/en/latest/api/api/',
   // developer: 'https://docs.inventree.org/en/latest/develop/contributing/',

@@ -8,7 +8,7 @@ import { useLocalState } from '../states/LocalState';
 
 function checkMobile() {
   const { height, width } = useViewportSize();
-  if (width < 425 || height < 425) return true;
+  if (width < 425 || height < 425) return false;
   return false;
 }
 

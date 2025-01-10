@@ -10,10 +10,10 @@ test('Dashboard - Basic', async ({ page }) => {
   // Let's add some widgets
   await page.getByLabel('dashboard-menu').click();
   await page.getByRole('menuitem', { name: 'Add Widget' }).click();
-  await page.getByLabel('dashboard-widgets-filter-input').fill('overdue order');
+  await page.getByLabel('dashboard-widgets-filter-input').fill('change');
 
-  await page.getByLabel('add-widget-ovr-so').click();
-  await page.getByLabel('add-widget-ovr-po').click();
+  await page.getByLabel('add-widget-clr').click();
+  await page.getByLabel('add-widget-lngsel').click();
 
   await page.getByLabel('dashboard-widgets-filter-clear').click();
 
@@ -23,13 +23,13 @@ test('Dashboard - Basic', async ({ page }) => {
   await page.waitForTimeout(500);
 
   // Check that the widgets are visible
-  await page.getByText('Overdue Sales Orders').waitFor();
-  await page.getByText('Overdue Purchase Orders').waitFor();
+  await page.getByText('Change Color Mode').waitFor();
+  await page.getByText('Change Language').waitFor();
 
   // Let's remove one of the widgets
   await page.getByLabel('dashboard-menu').click();
   await page.getByRole('menuitem', { name: 'Remove Widgets' }).click();
-  await page.getByLabel('remove-dashboard-item-ovr-so').click();
+  await page.getByLabel('remove-dashboard-item-clr').click();
 
   // Accept the layout
   await page.getByLabel('dashboard-accept-layout').click();

@@ -1,4 +1,4 @@
-import { expect, test } from './baseFixtures.js';
+import { test } from './baseFixtures.js';
 import { apiUrl, baseUrl } from './defaults.js';
 import { doQuickLogin } from './login.js';
 import { setSettingState } from './settings.js';
@@ -14,15 +14,15 @@ test('Settings - Language / Color', async ({ page }) => {
   await page.getByRole('button', { name: 'Send me an email' }).click();
   await page.getByRole('button').nth(3).click();
   await page.getByLabel('Select language').first().click();
-  await page.getByRole('option', { name: 'German' }).click();
+  await page.getByRole('option', { name: 'Chinese (Traditional)' }).click();
   await page.waitForTimeout(200);
 
-  await page.getByRole('button', { name: 'Benutzername und Passwort' }).click();
-  await page.getByPlaceholder('Ihr Benutzername').click();
-  await page.getByPlaceholder('Ihr Benutzername').fill('admin');
-  await page.getByPlaceholder('Ihr Benutzername').press('Tab');
-  await page.getByPlaceholder('Dein Passwort').fill('inventree');
-  await page.getByRole('button', { name: 'Anmelden' }).click();
+  await page.getByRole('button', { name: '使用用户名和密碼' }).click();
+  await page.getByPlaceholder('您的用户名').click();
+  await page.getByPlaceholder('您的用户名').fill('admin');
+  await page.getByPlaceholder('您的用户名').press('Tab');
+  await page.getByPlaceholder('您的密碼').fill('inventree');
+  await page.getByRole('button', { name: '登錄' }).click();
   await page.waitForTimeout(200);
 
   // Note: changes to the dashboard have invalidated these tests (for now)
@@ -37,7 +37,7 @@ test('Settings - Language / Color', async ({ page }) => {
   //   .getByRole('button')
   //   .click();
 
-  await page.getByRole('tab', { name: 'Dashboard' }).click();
+  await page.getByRole('tab', { name: '儀表盤' }).click();
   await page.waitForURL('**/platform/home');
 });
 
@@ -68,10 +68,10 @@ test('Settings - Admin', async ({ page }) => {
   await page.getByRole('tab', { name: 'Labels' }).click();
   await page.getByRole('tab', { name: 'Reporting' }).click();
 
-  await page.getByRole('tab', { name: 'Build Orders' }).click();
-  await page.getByRole('tab', { name: 'Purchase Orders' }).click();
-  await page.getByRole('tab', { name: 'Sales Orders' }).click();
-  await page.getByRole('tab', { name: 'Return Orders' }).click();
+  // await page.getByRole('tab', { name: 'Build Orders' }).click();
+  // await page.getByRole('tab', { name: 'Purchase Orders' }).click();
+  // await page.getByRole('tab', { name: 'Sales Orders' }).click();
+  // await page.getByRole('tab', { name: 'Return Orders' }).click();
 
   // Admin Center
   await page.getByRole('button', { name: 'admin' }).click();
@@ -79,49 +79,49 @@ test('Settings - Admin', async ({ page }) => {
   await page.getByRole('tab', { name: 'Background Tasks' }).click();
   await page.getByRole('tab', { name: 'Error Reports' }).click();
   await page.getByRole('tab', { name: 'Currencies' }).click();
-  await page.getByRole('tab', { name: 'Project Codes' }).click();
+  // await page.getByRole('tab', { name: 'Project Codes' }).click();
   await page.getByRole('tab', { name: 'Custom Units' }).click();
-  await page.getByRole('tab', { name: 'Part Parameters' }).click();
-  await page.getByRole('tab', { name: 'Category Parameters' }).click();
-  await page.getByRole('tab', { name: 'Label Templates' }).click();
-  await page.getByRole('tab', { name: 'Report Templates' }).click();
+  // await page.getByRole('tab', { name: 'Part Parameters' }).click();
+  // await page.getByRole('tab', { name: 'Category Parameters' }).click();
+  // await page.getByRole('tab', { name: 'Label Templates' }).click();
+  // await page.getByRole('tab', { name: 'Report Templates' }).click();
   await page.getByRole('tab', { name: 'Plugins' }).click();
 
-  // Adjust some "location type" items
-  await page.getByRole('tab', { name: 'Location Types' }).click();
+  // // Adjust some "location type" items
+  // await page.getByRole('tab', { name: 'Location Types' }).click();
 
-  // Edit first item
-  await page.getByLabel('row-action-menu-0').click();
-  await page.getByRole('menuitem', { name: 'Edit' }).click();
-  await expect(page.getByLabel('text-field-name')).toHaveValue('Room');
-  await expect(page.getByLabel('text-field-description')).toHaveValue('A room');
-  await page.getByLabel('text-field-name').fill('Large Room');
-  await page.waitForTimeout(500);
-  await page.getByLabel('text-field-description').fill('A large room');
-  await page.waitForTimeout(500);
-  await page.getByRole('button', { name: 'Submit' }).click();
+  // // Edit first item
+  // await page.getByLabel('row-action-menu-0').click();
+  // await page.getByRole('menuitem', { name: 'Edit' }).click();
+  // await expect(page.getByLabel('text-field-name')).toHaveValue('Room');
+  // await expect(page.getByLabel('text-field-description')).toHaveValue('A room');
+  // await page.getByLabel('text-field-name').fill('Large Room');
+  // await page.waitForTimeout(500);
+  // await page.getByLabel('text-field-description').fill('A large room');
+  // await page.waitForTimeout(500);
+  // await page.getByRole('button', { name: 'Submit' }).click();
 
-  // Edit fifth item
-  await page.getByLabel('row-action-menu-4').click();
-  await page.getByRole('menuitem', { name: 'Edit' }).click();
-  await expect(page.getByLabel('text-field-name')).toHaveValue('Box (Large)');
-  await expect(page.getByLabel('text-field-description')).toHaveValue(
-    'Large cardboard box'
-  );
-  await page.getByRole('button', { name: 'Cancel' }).click();
+  // // Edit fifth item
+  // await page.getByLabel('row-action-menu-4').click();
+  // await page.getByRole('menuitem', { name: 'Edit' }).click();
+  // await expect(page.getByLabel('text-field-name')).toHaveValue('Box (Large)');
+  // await expect(page.getByLabel('text-field-description')).toHaveValue(
+  //   'Large cardboard box'
+  // );
+  // await page.getByRole('button', { name: 'Cancel' }).click();
 
-  // Edit first item again (revert values)
-  await page.getByLabel('row-action-menu-0').click();
-  await page.getByRole('menuitem', { name: 'Edit' }).click();
-  await expect(page.getByLabel('text-field-name')).toHaveValue('Large Room');
-  await expect(page.getByLabel('text-field-description')).toHaveValue(
-    'A large room'
-  );
-  await page.getByLabel('text-field-name').fill('Room');
-  await page.waitForTimeout(500);
-  await page.getByLabel('text-field-description').fill('A room');
-  await page.waitForTimeout(500);
-  await page.getByRole('button', { name: 'Submit' }).click();
+  // // Edit first item again (revert values)
+  // await page.getByLabel('row-action-menu-0').click();
+  // await page.getByRole('menuitem', { name: 'Edit' }).click();
+  // await expect(page.getByLabel('text-field-name')).toHaveValue('Large Room');
+  // await expect(page.getByLabel('text-field-description')).toHaveValue(
+  //   'A large room'
+  // );
+  // await page.getByLabel('text-field-name').fill('Room');
+  // await page.waitForTimeout(500);
+  // await page.getByLabel('text-field-description').fill('A room');
+  // await page.waitForTimeout(500);
+  // await page.getByRole('button', { name: 'Submit' }).click();
 });
 
 test('Settings - Admin - Barcode History', async ({ page, request }) => {

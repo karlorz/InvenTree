@@ -951,7 +951,7 @@ msgstr "使用者帳號"
 #: src/components/forms/AuthenticationForm.tsx:117
 #: src/components/forms/AuthenticationForm.tsx:240
 msgid "Your username"
-msgstr "你的用户名"
+msgstr "您的用户名"
 
 #: src/components/forms/AuthenticationForm.tsx:122
 #: src/components/forms/AuthenticationForm.tsx:253

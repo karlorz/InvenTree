@@ -8,18 +8,18 @@ test('Login - Basic Test', async ({ page }) => {
   // Check that the username is provided
   await page.getByText(user.username);
 
-  await expect(page).toHaveTitle(/^InvenTree/);
+  await expect(page).toHaveTitle(/^App/);
 
   // Go to the dashboard
   await page.goto(baseUrl);
   await page.waitForURL('**/platform');
 
-  await page.getByText('InvenTree Demo Server -').waitFor();
+  await page.getByText('App Demo Server -').waitFor();
 
   // Check that the username is provided
   await page.getByText(user.username);
 
-  await expect(page).toHaveTitle(/^InvenTree/);
+  await expect(page).toHaveTitle(/^App/);
 
   // Go to the dashboard
   await page.goto(baseUrl);
@@ -39,13 +39,13 @@ test('Login - Quick Test', async ({ page }) => {
   // Check that the username is provided
   await page.getByText(user.username);
 
-  await expect(page).toHaveTitle(/^InvenTree/);
+  await expect(page).toHaveTitle(/^App/);
 
   // Go to the dashboard
   await page.goto(baseUrl);
   await page.waitForURL('**/platform');
 
-  await page.getByText('InvenTree Demo Server - ').waitFor();
+  await page.getByText('App Demo Server - ').waitFor();
 
   // Logout (via URL)
   await page.goto(`${baseUrl}/logout/`);
@@ -66,7 +66,7 @@ test('Login - Failures', async ({ page }) => {
 
   // Navigate to the 'login' page
   await page.goto(logoutUrl);
-  await expect(page).toHaveTitle(/^InvenTree.*$/);
+  await expect(page).toHaveTitle(/^App.*$/);
   await page.waitForURL('**/platform/login');
 
   // Attempt login with invalid credentials
@@ -123,7 +123,7 @@ test('Login - Change Password', async ({ page }) => {
 
   // Should have redirected to the index page
   await page.waitForURL('**/platform/home**');
-  await page.getByText('InvenTree Demo Server - Norman Nothington');
+  await page.getByText('App Demo Server - Norman Nothington');
 
   await page.waitForTimeout(1000);
 });
