@@ -38,8 +38,8 @@ export function getActions(navigate: NavigateFunction) {
     },
     {
       id: 'about',
-      label: t`About InvenTree`,
-      description: t`About the InvenTree org`,
+      label: t`About App`,
+      description: t`About the App org`,
       onClick: () => aboutInvenTree(),
       leftSection: <IconLink size='1.2rem' />
     },

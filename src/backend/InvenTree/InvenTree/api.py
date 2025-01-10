@@ -152,11 +152,11 @@ class VersionView(APIView):
                 'django': InvenTree.version.inventreeDjangoVersion(),
             },
             'links': {
-                'doc': InvenTree.version.inventreeDocUrl(),
+                # 'doc': InvenTree.version.inventreeDocUrl(),
                 'code': InvenTree.version.inventreeGithubUrl(),
-                'credit': InvenTree.version.inventreeCreditsUrl(),
-                'app': InvenTree.version.inventreeAppUrl(),
-                'bug': f'{InvenTree.version.inventreeGithubUrl()}issues',
+                # 'credit': InvenTree.version.inventreeCreditsUrl(),
+                # 'app': InvenTree.version.inventreeAppUrl(),
+                # 'bug': f'{InvenTree.version.inventreeGithubUrl()}issues',
             },
         })
 

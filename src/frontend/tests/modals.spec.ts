@@ -46,7 +46,7 @@ test('Modals - Admin', async ({ page }) => {
   // use about
   await page.getByLabel('open-spotlight').click();
   await page
-    .getByRole('button', { name: 'About InvenTree About the InvenTree org' })
+    .getByRole('button', { name: 'About App About the App org' })
     .click();
-  await page.getByRole('cell', { name: 'InvenTree Version' }).click();
+  await page.getByRole('cell', { name: 'App Version' }).click();
 });

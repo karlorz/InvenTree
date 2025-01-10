@@ -127,7 +127,7 @@ def inventreeCreditsUrl():
 
 def inventreeGithubUrl():
     """Return URL for InvenTree github site."""
-    return 'https://github.com/InvenTree/InvenTree/'
+    return 'https://github.com/karlorz/InvenTree/'
 
 
 def isInvenTreeUpToDate():

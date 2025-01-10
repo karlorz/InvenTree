@@ -3,66 +3,65 @@ import { openContextModal } from '@mantine/modals';
 
 import type { MenuLinkItem } from '../components/items/MenuLinks';
 import { StylishText } from '../components/items/StylishText';
-import { UserRoles } from '../enums/Roles';
 import type { SettingsStateProps } from '../states/SettingsState';
 import type { UserStateProps } from '../states/UserState';
 
 export const navTabs = [
-  { text: <Trans>Dashboard</Trans>, name: 'home' },
-  { text: <Trans>Parts</Trans>, name: 'part', role: UserRoles.part },
-  { text: <Trans>Stock</Trans>, name: 'stock', role: UserRoles.stock },
-  {
-    text: <Trans>Manufacturing</Trans>,
-    name: 'manufacturing',
-    role: UserRoles.build
-  },
-  {
-    text: <Trans>Purchasing</Trans>,
-    name: 'purchasing',
-    role: UserRoles.purchase_order
-  },
-  { text: <Trans>Sales</Trans>, name: 'sales', role: UserRoles.sales_order }
+  { text: <Trans>Dashboard</Trans>, name: 'home' }
+  // { text: <Trans>Parts</Trans>, name: 'part', role: UserRoles.part },
+  // { text: <Trans>Stock</Trans>, name: 'stock', role: UserRoles.stock },
+  // {
+  //   text: <Trans>Manufacturing</Trans>,
+  //   name: 'manufacturing',
+  //   role: UserRoles.build
+  // },
+  // {
+  //   text: <Trans>Purchasing</Trans>,
+  //   name: 'purchasing',
+  //   role: UserRoles.purchase_order
+  // },
+  // { text: <Trans>Sales</Trans>, name: 'sales', role: UserRoles.sales_order }
 ];
 
 export const docLinks = {
   app: 'https://docs.inventree.org/app/',
-  getting_started: 'https://docs.inventree.org/en/latest/start/intro/',
-  api: 'https://docs.inventree.org/en/latest/api/api/',
-  developer: 'https://docs.inventree.org/en/latest/develop/contributing/',
-  faq: 'https://docs.inventree.org/en/latest/faq/',
-  github: 'https://github.com/inventree/inventree'
+  // getting_started: 'https://docs.inventree.org/en/latest/start/intro/',
+  // api: 'https://docs.inventree.org/en/latest/api/api/',
+  // developer: 'https://docs.inventree.org/en/latest/develop/contributing/',
+  // faq: 'https://docs.inventree.org/en/latest/faq/',
+  github: 'https://github.com/karlorz/inventree'
 };
 
 export function DocumentationLinks(): MenuLinkItem[] {
   return [
-    {
-      id: 'gettin-started',
-      title: t`Getting Started`,
-      link: docLinks.getting_started,
-      external: true,
-      description: t`Getting started with InvenTree`
-    },
-    {
-      id: 'api',
-      title: t`API`,
-      link: docLinks.api,
-      external: true,
-      description: t`InvenTree API documentation`
-    },
-    {
-      id: 'developer',
-      title: t`Developer Manual`,
-      link: docLinks.developer,
-      external: true,
-      description: t`InvenTree developer manual`
-    },
-    {
-      id: 'faq',
-      title: t`FAQ`,
-      link: docLinks.faq,
-      external: true,
-      description: t`Frequently asked questions`
-    },
+    // {
+    //   id: 'gettin-started',
+    //   title: t`Getting Started`,
+    //   link: docLinks.getting_started,
+    //   external: true,
+    //   description: t`Getting started with InvenTree`
+    // },
+    // {
+    //   id: 'api',
+    //   title: t`API`,
+    //   link: docLinks.api,
+    //   external: true,
+    //   description: t`InvenTree API documentation`
+    // },
+    // {
+    //   id: 'developer',
+    //   title: t`Developer Manual`,
+    //   link: docLinks.developer,
+    //   external: true,
+    //   description: t`InvenTree developer manual`
+    // },
+    // {
+    //   id: 'faq',
+    //   title: t`FAQ`,
+    //   link: docLinks.faq,
+    //   external: true,
+    //   description: t`Frequently asked questions`
+    // },
     {
       id: 'github',
       title: t`GitHub Repository`,
@@ -91,7 +90,7 @@ export function aboutInvenTree() {
     modal: 'about',
     title: (
       <StylishText size='xl'>
-        <Trans>About InvenTree</Trans>
+        <Trans>About App</Trans>
       </StylishText>
     ),
     size: 'xl',

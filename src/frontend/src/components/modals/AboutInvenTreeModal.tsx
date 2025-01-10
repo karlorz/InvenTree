@@ -114,8 +114,8 @@ export function AboutInvenTreeModal({
             [
               {
                 ref: 'server',
-                title: <Trans>InvenTree Version</Trans>,
-                link: 'https://github.com/inventree/InvenTree/releases',
+                title: <Trans>App Version</Trans>,
+                link: 'https://github.com/karlorz/InvenTree/releases',
                 copy: true
               },
               {

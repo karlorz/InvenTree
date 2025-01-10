@@ -11,8 +11,6 @@ import { useViewportSize } from '@mantine/hooks';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { AboutLinks, DocumentationLinks } from '../../defaults/links';
-import { ModelType } from '../../enums/ModelType';
-import { UserRoles } from '../../enums/Roles';
 import useInstanceName from '../../hooks/UseInstanceName';
 import * as classes from '../../main.css';
 import { useGlobalSettingsState } from '../../states/SettingsState';
@@ -71,42 +69,42 @@ function DrawerContent({ closeFunc }: Readonly<{ closeFunc?: () => void }>) {
         title: t`Dashboard`,
         link: '/',
         icon: 'dashboard'
-      },
-      {
-        id: 'parts',
-        title: t`Parts`,
-        hidden: !user.hasViewPermission(ModelType.part),
-        link: '/part',
-        icon: 'part'
-      },
-      {
-        id: 'stock',
-        title: t`Stock`,
-        link: '/stock',
-        hidden: !user.hasViewPermission(ModelType.stockitem),
-        icon: 'stock'
-      },
-      {
-        id: 'build',
-        title: t`Manufacturing`,
-        link: '/manufacturing/',
-        hidden: !user.hasViewRole(UserRoles.build),
-        icon: 'build'
-      },
-      {
-        id: 'purchasing',
-        title: t`Purchasing`,
-        link: '/purchasing/',
-        hidden: !user.hasViewRole(UserRoles.purchase_order),
-        icon: 'purchase_orders'
-      },
-      {
-        id: 'sales',
-        title: t`Sales`,
-        link: '/sales/',
-        hidden: !user.hasViewRole(UserRoles.sales_order),
-        icon: 'sales_orders'
       }
+      // {
+      //   id: 'parts',
+      //   title: t`Parts`,
+      //   hidden: !user.hasViewPermission(ModelType.part),
+      //   link: '/part',
+      //   icon: 'part'
+      // },
+      // {
+      //   id: 'stock',
+      //   title: t`Stock`,
+      //   link: '/stock',
+      //   hidden: !user.hasViewPermission(ModelType.stockitem),
+      //   icon: 'stock'
+      // },
+      // {
+      //   id: 'build',
+      //   title: t`Manufacturing`,
+      //   link: '/manufacturing/',
+      //   hidden: !user.hasViewRole(UserRoles.build),
+      //   icon: 'build'
+      // },
+      // {
+      //   id: 'purchasing',
+      //   title: t`Purchasing`,
+      //   link: '/purchasing/',
+      //   hidden: !user.hasViewRole(UserRoles.purchase_order),
+      //   icon: 'purchase_orders'
+      // },
+      // {
+      //   id: 'sales',
+      //   title: t`Sales`,
+      //   link: '/sales/',
+      //   hidden: !user.hasViewRole(UserRoles.sales_order),
+      //   icon: 'sales_orders'
+      // }
     ];
   }, [user]);
 
