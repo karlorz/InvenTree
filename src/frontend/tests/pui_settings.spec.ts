@@ -47,7 +47,7 @@ test('Settings - Admin', async ({ page }) => {
 
   // User settings
   await page.getByRole('button', { name: 'admin' }).click();
-  await page.getByRole('menuitem', { name: 'Account settings' }).click();
+  await page.getByRole('menuitem', { name: 'User Settings' }).click();
   await page.getByRole('tab', { name: 'Security' }).click();
 
   await page.getByRole('tab', { name: 'Display Options' }).click();

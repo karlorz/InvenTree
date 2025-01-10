@@ -8,7 +8,7 @@ test('Modals - Admin', async ({ page }) => {
   await page.getByLabel('open-spotlight').click();
   await page
     .getByRole('button', {
-      name: 'Server Information About this InvenTree instance'
+      name: 'Server Information About this App instance'
     })
     .click();
   await page.getByRole('cell', { name: 'Instance Name' }).waitFor();

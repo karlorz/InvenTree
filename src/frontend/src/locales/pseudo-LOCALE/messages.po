@@ -3176,16 +3176,16 @@ msgstr ""
 #: src/defaults/actions.tsx:41
 #: src/defaults/links.tsx:94
 #: src/defaults/links.tsx:140
-msgid "About InvenTree"
+msgid "About App"
 msgstr ""
 
 #: src/defaults/actions.tsx:42
-msgid "About the InvenTree org"
+msgid "About the App org"
 msgstr ""
 
 #: src/defaults/actions.tsx:47
 #: src/defaults/links.tsx:123
-#~ msgid "About this Inventree instance"
+#~ msgid "About this App instance"
 #~ msgstr ""
 
 #: src/defaults/actions.tsx:48
@@ -3194,7 +3194,7 @@ msgstr ""
 
 #: src/defaults/actions.tsx:49
 #: src/defaults/links.tsx:123
-msgid "About this InvenTree instance"
+msgid "About this App instance"
 msgstr ""
 
 #: src/defaults/actions.tsx:55
@@ -3335,7 +3335,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/defaults/links.tsx:130
-msgid "Licenses for dependencies of the InvenTree software"
+msgid "Licenses for dependencies of the App software"
 msgstr ""
 
 #: src/defaults/links.tsx:134
@@ -3343,7 +3343,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/defaults/links.tsx:141
-msgid "About the InvenTree Project"
+msgid "About the App Project"
 msgstr ""
 
 #: src/defaults/menuItems.tsx:7

@@ -119,14 +119,14 @@ export function AboutLinks(
     {
       id: 'instance',
       title: t`System Information`,
-      description: t`About this InvenTree instance`,
+      description: t`About this App instance`,
       icon: 'info',
       action: serverInfo
     },
     {
       id: 'licenses',
       title: t`License Information`,
-      description: t`Licenses for dependencies of the InvenTree software`,
+      description: t`Licenses for dependencies of the App software`,
       icon: 'license',
       action: licenseInfo
     }
@@ -136,8 +136,8 @@ export function AboutLinks(
   if (user.isSuperuser() || !settings.isSet('INVENTREE_RESTRICT_ABOUT')) {
     base_items.push({
       id: 'about',
-      title: t`About InvenTree`,
-      description: t`About the InvenTree Project`,
+      title: t`About App`,
+      description: t`About the App Project`,
       icon: 'info',
       action: aboutInvenTree
     });

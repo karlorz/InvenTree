@@ -70,22 +70,22 @@ export default function UserSettings() {
               'SEARCH_WHOLE',
               'SEARCH_REGEX',
               'SEARCH_PREVIEW_RESULTS',
-              'SEARCH_PREVIEW_SHOW_PARTS',
-              'SEARCH_HIDE_INACTIVE_PARTS',
-              'SEARCH_PREVIEW_SHOW_SUPPLIER_PARTS',
-              'SEARCH_PREVIEW_SHOW_MANUFACTURER_PARTS',
-              'SEARCH_PREVIEW_SHOW_CATEGORIES',
-              'SEARCH_PREVIEW_SHOW_STOCK',
-              'SEARCH_PREVIEW_HIDE_UNAVAILABLE_STOCK',
-              'SEARCH_PREVIEW_SHOW_LOCATIONS',
-              'SEARCH_PREVIEW_SHOW_COMPANIES',
-              'SEARCH_PREVIEW_SHOW_BUILD_ORDERS',
-              'SEARCH_PREVIEW_SHOW_PURCHASE_ORDERS',
-              'SEARCH_PREVIEW_EXCLUDE_INACTIVE_PURCHASE_ORDERS',
-              'SEARCH_PREVIEW_SHOW_SALES_ORDERS',
-              'SEARCH_PREVIEW_EXCLUDE_INACTIVE_SALES_ORDERS',
-              'SEARCH_PREVIEW_SHOW_RETURN_ORDERS',
-              'SEARCH_PREVIEW_EXCLUDE_INACTIVE_RETURN_ORDERS'
+              // 'SEARCH_PREVIEW_SHOW_PARTS',
+              // 'SEARCH_HIDE_INACTIVE_PARTS',
+              // 'SEARCH_PREVIEW_SHOW_SUPPLIER_PARTS',
+              // 'SEARCH_PREVIEW_SHOW_MANUFACTURER_PARTS',
+              // 'SEARCH_PREVIEW_SHOW_CATEGORIES',
+              // 'SEARCH_PREVIEW_SHOW_STOCK',
+              // 'SEARCH_PREVIEW_HIDE_UNAVAILABLE_STOCK',
+              'SEARCH_PREVIEW_SHOW_LOCATIONS'
+              // 'SEARCH_PREVIEW_SHOW_COMPANIES',
+              // 'SEARCH_PREVIEW_SHOW_BUILD_ORDERS',
+              // 'SEARCH_PREVIEW_SHOW_PURCHASE_ORDERS',
+              // 'SEARCH_PREVIEW_EXCLUDE_INACTIVE_PURCHASE_ORDERS',
+              // 'SEARCH_PREVIEW_SHOW_SALES_ORDERS',
+              // 'SEARCH_PREVIEW_EXCLUDE_INACTIVE_SALES_ORDERS',
+              // 'SEARCH_PREVIEW_SHOW_RETURN_ORDERS',
+              // 'SEARCH_PREVIEW_EXCLUDE_INACTIVE_RETURN_ORDERS'
             ]}
           />
         )
@@ -119,7 +119,7 @@ export default function UserSettings() {
       <Stack gap='xs'>
         <SettingsHeader
           label='user'
-          title={t`Account Settings`}
+          title={t`User Settings`}
           subtitle={
             user?.first_name && user?.last_name
               ? `${user?.first_name} ${user?.last_name}`

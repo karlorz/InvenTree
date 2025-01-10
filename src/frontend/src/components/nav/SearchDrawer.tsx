@@ -140,127 +140,127 @@ export function SearchDrawer({
   // Build out search queries based on user permissions and preferences
   const searchQueryList: SearchQuery[] = useMemo(() => {
     return [
-      {
-        model: ModelType.part,
-        parameters: {
-          active: userSettings.isSet('SEARCH_HIDE_INACTIVE_PARTS')
-            ? true
-            : undefined
-        },
-        enabled:
-          user.hasViewRole(UserRoles.part) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_PARTS')
-      },
-      {
-        model: ModelType.supplierpart,
-        parameters: {
-          part_detail: true,
-          supplier_detail: true,
-          manufacturer_detail: true
-        },
-        enabled:
-          user.hasViewRole(UserRoles.part) &&
-          user.hasViewRole(UserRoles.purchase_order) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_SUPPLIER_PARTS')
-      },
-      {
-        model: ModelType.manufacturerpart,
-        parameters: {
-          part_detail: true,
-          supplier_detail: true,
-          manufacturer_detail: true
-        },
-        enabled:
-          user.hasViewRole(UserRoles.part) &&
-          user.hasViewRole(UserRoles.purchase_order) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_MANUFACTURER_PARTS')
-      },
-      {
-        model: ModelType.partcategory,
-        parameters: {},
-        enabled:
-          user.hasViewRole(UserRoles.part_category) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_CATEGORIES')
-      },
-      {
-        model: ModelType.stockitem,
-        parameters: {
-          part_detail: true,
-          location_detail: true,
-          in_stock: userSettings.isSet('SEARCH_PREVIEW_HIDE_UNAVAILABLE_STOCK')
-            ? true
-            : undefined
-        },
-        enabled:
-          user.hasViewRole(UserRoles.stock) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_STOCK')
-      },
+      // {
+      //   model: ModelType.part,
+      //   parameters: {
+      //     active: userSettings.isSet('SEARCH_HIDE_INACTIVE_PARTS')
+      //       ? true
+      //       : undefined
+      //   },
+      //   enabled:
+      //     user.hasViewRole(UserRoles.part) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_PARTS')
+      // },
+      // {
+      //   model: ModelType.supplierpart,
+      //   parameters: {
+      //     part_detail: true,
+      //     supplier_detail: true,
+      //     manufacturer_detail: true
+      //   },
+      //   enabled:
+      //     user.hasViewRole(UserRoles.part) &&
+      //     user.hasViewRole(UserRoles.purchase_order) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_SUPPLIER_PARTS')
+      // },
+      // {
+      //   model: ModelType.manufacturerpart,
+      //   parameters: {
+      //     part_detail: true,
+      //     supplier_detail: true,
+      //     manufacturer_detail: true
+      //   },
+      //   enabled:
+      //     user.hasViewRole(UserRoles.part) &&
+      //     user.hasViewRole(UserRoles.purchase_order) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_MANUFACTURER_PARTS')
+      // },
+      // {
+      //   model: ModelType.partcategory,
+      //   parameters: {},
+      //   enabled:
+      //     user.hasViewRole(UserRoles.part_category) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_CATEGORIES')
+      // },
+      // {
+      //   model: ModelType.stockitem,
+      //   parameters: {
+      //     part_detail: true,
+      //     location_detail: true,
+      //     in_stock: userSettings.isSet('SEARCH_PREVIEW_HIDE_UNAVAILABLE_STOCK')
+      //       ? true
+      //       : undefined
+      //   },
+      //   enabled:
+      //     user.hasViewRole(UserRoles.stock) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_STOCK')
+      // },
       {
         model: ModelType.stocklocation,
         parameters: {},
         enabled:
           user.hasViewRole(UserRoles.stock_location) &&
           userSettings.isSet('SEARCH_PREVIEW_SHOW_LOCATIONS')
-      },
-      {
-        model: ModelType.build,
-        parameters: {
-          part_detail: true
-        },
-        enabled:
-          user.hasViewRole(UserRoles.build) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_BUILD_ORDERS')
-      },
-      {
-        model: ModelType.company,
-        parameters: {},
-        enabled:
-          (user.hasViewRole(UserRoles.sales_order) ||
-            user.hasViewRole(UserRoles.purchase_order)) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_COMPANIES')
-      },
-      {
-        model: ModelType.purchaseorder,
-        parameters: {
-          supplier_detail: true,
-          outstanding: userSettings.isSet(
-            'SEARCH_PREVIEW_EXCLUDE_INACTIVE_PURCHASE_ORDERS'
-          )
-            ? true
-            : undefined
-        },
-        enabled:
-          user.hasViewRole(UserRoles.purchase_order) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_PURCHASE_ORDERS')
-      },
-      {
-        model: ModelType.salesorder,
-        parameters: {
-          customer_detail: true,
-          outstanding: userSettings.isSet(
-            'SEARCH_PREVIEW_EXCLUDE_INACTIVE_SALES_ORDERS'
-          )
-            ? true
-            : undefined
-        },
-        enabled:
-          user.hasViewRole(UserRoles.sales_order) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_SALES_ORDERS')
-      },
-      {
-        model: ModelType.returnorder,
-        parameters: {
-          customer_detail: true,
-          outstanding: userSettings.isSet(
-            'SEARCH_PREVIEW_EXCLUDE_INACTIVE_RETURN_ORDERS'
-          )
-            ? true
-            : undefined
-        },
-        enabled:
-          user.hasViewRole(UserRoles.return_order) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_RETURN_ORDERS')
       }
+      // {
+      //   model: ModelType.build,
+      //   parameters: {
+      //     part_detail: true
+      //   },
+      //   enabled:
+      //     user.hasViewRole(UserRoles.build) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_BUILD_ORDERS')
+      // },
+      // {
+      //   model: ModelType.company,
+      //   parameters: {},
+      //   enabled:
+      //     (user.hasViewRole(UserRoles.sales_order) ||
+      //       user.hasViewRole(UserRoles.purchase_order)) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_COMPANIES')
+      // },
+      // {
+      //   model: ModelType.purchaseorder,
+      //   parameters: {
+      //     supplier_detail: true,
+      //     outstanding: userSettings.isSet(
+      //       'SEARCH_PREVIEW_EXCLUDE_INACTIVE_PURCHASE_ORDERS'
+      //     )
+      //       ? true
+      //       : undefined
+      //   },
+      //   enabled:
+      //     user.hasViewRole(UserRoles.purchase_order) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_PURCHASE_ORDERS')
+      // },
+      // {
+      //   model: ModelType.salesorder,
+      //   parameters: {
+      //     customer_detail: true,
+      //     outstanding: userSettings.isSet(
+      //       'SEARCH_PREVIEW_EXCLUDE_INACTIVE_SALES_ORDERS'
+      //     )
+      //       ? true
+      //       : undefined
+      //   },
+      //   enabled:
+      //     user.hasViewRole(UserRoles.sales_order) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_SALES_ORDERS')
+      // },
+      // {
+      //   model: ModelType.returnorder,
+      //   parameters: {
+      //     customer_detail: true,
+      //     outstanding: userSettings.isSet(
+      //       'SEARCH_PREVIEW_EXCLUDE_INACTIVE_RETURN_ORDERS'
+      //     )
+      //       ? true
+      //       : undefined
+      //   },
+      //   enabled:
+      //     user.hasViewRole(UserRoles.return_order) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_RETURN_ORDERS')
+      // }
     ];
   }, [user, userSettings]);
 

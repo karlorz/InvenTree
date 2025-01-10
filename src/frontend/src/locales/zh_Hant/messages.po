@@ -1796,7 +1796,7 @@ msgstr "通知"
 #: src/components/nav/SettingsHeader.tsx:40
 #: src/pages/Index/Settings/UserSettings.tsx:118
 msgid "User Settings"
-msgstr ""
+msgstr "用戶設置"
 
 #: src/components/nav/NavigationDrawer.tsx:176
 msgid "Navigation"
@@ -3165,16 +3165,16 @@ msgstr "訪問文檔以瞭解更多關於 InvenTree"
 #: src/defaults/actions.tsx:41
 #: src/defaults/links.tsx:94
 #: src/defaults/links.tsx:140
-msgid "About InvenTree"
-msgstr "關於 InvenTree"
+msgid "About App"
+msgstr "關於 App"
 
 #: src/defaults/actions.tsx:41
 #: src/defaults/links.tsx:118
-#~ msgid "About this Inventree instance"
-#~ msgstr "About this Inventree instance"
+#~ msgid "About this App instance"
+#~ msgstr "About this App instance"
 
 #: src/defaults/actions.tsx:42
-msgid "About the InvenTree org"
+msgid "About the App org"
 msgstr "關於 InvenTree 組織"
 
 #: src/defaults/actions.tsx:48
@@ -3183,7 +3183,7 @@ msgstr "服務器信息"
 
 #: src/defaults/actions.tsx:49
 #: src/defaults/links.tsx:123
-msgid "About this InvenTree instance"
+msgid "About this App instance"
 msgstr ""
 
 #: src/defaults/actions.tsx:55
@@ -3324,7 +3324,7 @@ msgstr "系統信息"
 #~ msgstr "Licenses for packages used by InvenTree"
 
 #: src/defaults/links.tsx:130
-msgid "Licenses for dependencies of the InvenTree software"
+msgid "Licenses for dependencies of the App software"
 msgstr ""
 
 #: src/defaults/links.tsx:134
@@ -3332,7 +3332,7 @@ msgstr ""
 #~ msgstr "Licenses"
 
 #: src/defaults/links.tsx:141
-msgid "About the InvenTree Project"
+msgid "About the App Project"
 msgstr ""
 
 #: src/defaults/menuItems.tsx:7

@@ -3160,17 +3160,17 @@ msgstr "Visit the documentation to learn more about InvenTree"
 #: src/defaults/actions.tsx:41
 #: src/defaults/links.tsx:94
 #: src/defaults/links.tsx:140
-msgid "About InvenTree"
-msgstr "About InvenTree"
+msgid "About App"
+msgstr "About App"
 
 #: src/defaults/actions.tsx:41
 #: src/defaults/links.tsx:118
-#~ msgid "About this Inventree instance"
-#~ msgstr "About this Inventree instance"
+#~ msgid "About this App instance"
+#~ msgstr "About this App instance"
 
 #: src/defaults/actions.tsx:42
-msgid "About the InvenTree org"
-msgstr "About the InvenTree org"
+msgid "About the App org"
+msgstr "About the App org"
 
 #: src/defaults/actions.tsx:48
 msgid "Server Information"
@@ -3178,8 +3178,8 @@ msgstr "Server Information"
 
 #: src/defaults/actions.tsx:49
 #: src/defaults/links.tsx:123
-msgid "About this InvenTree instance"
-msgstr "About this InvenTree instance"
+msgid "About this App instance"
+msgstr "About this App instance"
 
 #: src/defaults/actions.tsx:55
 #: src/defaults/links.tsx:107
@@ -3319,16 +3319,16 @@ msgstr "System Information"
 #~ msgstr "Licenses for packages used by InvenTree"
 
 #: src/defaults/links.tsx:130
-msgid "Licenses for dependencies of the InvenTree software"
-msgstr "Licenses for dependencies of the InvenTree software"
+msgid "Licenses for dependencies of the App software"
+msgstr "Licenses for dependencies of the App software"
 
 #: src/defaults/links.tsx:134
 #~ msgid "Licenses"
 #~ msgstr "Licenses"
 
 #: src/defaults/links.tsx:141
-msgid "About the InvenTree Project"
-msgstr "About the InvenTree Project"
+msgid "About the App Project"
+msgstr "About the App Project"
 
 #: src/defaults/menuItems.tsx:7
 #~ msgid "Open sourcea"
