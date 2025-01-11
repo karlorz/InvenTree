@@ -3272,7 +3272,7 @@ msgid "GitHub Repository"
 msgstr ""
 
 #: src/defaults/links.tsx:70
-msgid "InvenTree source code on GitHub"
+msgid "App source code on GitHub"
 msgstr ""
 
 #: src/defaults/links.tsx:76

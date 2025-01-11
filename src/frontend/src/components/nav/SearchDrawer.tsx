@@ -140,17 +140,17 @@ export function SearchDrawer({
   // Build out search queries based on user permissions and preferences
   const searchQueryList: SearchQuery[] = useMemo(() => {
     return [
-      // {
-      //   model: ModelType.part,
-      //   parameters: {
-      //     active: userSettings.isSet('SEARCH_HIDE_INACTIVE_PARTS')
-      //       ? true
-      //       : undefined
-      //   },
-      //   enabled:
-      //     user.hasViewRole(UserRoles.part) &&
-      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_PARTS')
-      // },
+      {
+        model: ModelType.part,
+        parameters: {
+          active: userSettings.isSet('SEARCH_HIDE_INACTIVE_PARTS')
+            ? true
+            : undefined
+        },
+        enabled:
+          user.hasViewRole(UserRoles.part) &&
+          userSettings.isSet('SEARCH_PREVIEW_SHOW_PARTS')
+      }
       // {
       //   model: ModelType.supplierpart,
       //   parameters: {
@@ -195,13 +195,13 @@ export function SearchDrawer({
       //     user.hasViewRole(UserRoles.stock) &&
       //     userSettings.isSet('SEARCH_PREVIEW_SHOW_STOCK')
       // },
-      {
-        model: ModelType.stocklocation,
-        parameters: {},
-        enabled:
-          user.hasViewRole(UserRoles.stock_location) &&
-          userSettings.isSet('SEARCH_PREVIEW_SHOW_LOCATIONS')
-      }
+      // {
+      //   model: ModelType.stocklocation,
+      //   parameters: {},
+      //   enabled:
+      //     user.hasViewRole(UserRoles.stock_location) &&
+      //     userSettings.isSet('SEARCH_PREVIEW_SHOW_LOCATIONS')
+      // }
       // {
       //   model: ModelType.build,
       //   parameters: {

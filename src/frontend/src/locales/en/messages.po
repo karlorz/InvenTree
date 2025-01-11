@@ -3256,8 +3256,8 @@ msgid "GitHub Repository"
 msgstr "GitHub Repository"
 
 #: src/defaults/links.tsx:70
-msgid "InvenTree source code on GitHub"
-msgstr "InvenTree source code on GitHub"
+msgid "App source code on GitHub"
+msgstr "App source code on GitHub"
 
 #: src/defaults/links.tsx:76
 #~ msgid "Instance"

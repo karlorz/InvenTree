@@ -1,14 +1,14 @@
 import { Trans, t } from '@lingui/macro';
 import { openContextModal } from '@mantine/modals';
-// import { UserRoles } from '../enums/Roles';
 import type { MenuLinkItem } from '../components/items/MenuLinks';
 import { StylishText } from '../components/items/StylishText';
+import { UserRoles } from '../enums/Roles';
 import type { SettingsStateProps } from '../states/SettingsState';
 import type { UserStateProps } from '../states/UserState';
 
 export const navTabs = [
-  { text: <Trans>Dashboard</Trans>, name: 'home' }
-  // { text: <Trans>Parts</Trans>, name: 'part', role: UserRoles.part },
+  { text: <Trans>Dashboard</Trans>, name: 'home' },
+  { text: <Trans>Parts</Trans>, name: 'part', role: UserRoles.part }
   // { text: <Trans>Stock</Trans>, name: 'stock', role: UserRoles.stock },
   // {
   //   text: <Trans>Manufacturing</Trans>,
@@ -67,7 +67,7 @@ export function DocumentationLinks(): MenuLinkItem[] {
       title: t`GitHub Repository`,
       link: docLinks.github,
       external: true,
-      description: t`InvenTree source code on GitHub`
+      description: t`App source code on GitHub`
     }
   ];
 }
