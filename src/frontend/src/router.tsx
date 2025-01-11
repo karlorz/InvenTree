@@ -9,29 +9,29 @@ export const LayoutComponent = Loadable(
 );
 export const Home = Loadable(lazy(() => import('./pages/Index/Home')));
 
-export const CompanyDetail = Loadable(
-  lazy(() => import('./pages/company/CompanyDetail'))
-);
+// export const CompanyDetail = Loadable(
+//   lazy(() => import('./pages/company/CompanyDetail'))
+// );
 
-export const CustomerDetail = Loadable(
-  lazy(() => import('./pages/company/CustomerDetail'))
-);
+// export const CustomerDetail = Loadable(
+//   lazy(() => import('./pages/company/CustomerDetail'))
+// );
 
-export const SupplierDetail = Loadable(
-  lazy(() => import('./pages/company/SupplierDetail'))
-);
+// export const SupplierDetail = Loadable(
+//   lazy(() => import('./pages/company/SupplierDetail'))
+// );
 
-export const ManufacturerDetail = Loadable(
-  lazy(() => import('./pages/company/ManufacturerDetail'))
-);
+// export const ManufacturerDetail = Loadable(
+//   lazy(() => import('./pages/company/ManufacturerDetail'))
+// );
 
-export const SupplierPartDetail = Loadable(
-  lazy(() => import('./pages/company/SupplierPartDetail'))
-);
+// export const SupplierPartDetail = Loadable(
+//   lazy(() => import('./pages/company/SupplierPartDetail'))
+// );
 
-export const ManufacturerPartDetail = Loadable(
-  lazy(() => import('./pages/company/ManufacturerPartDetail'))
-);
+// export const ManufacturerPartDetail = Loadable(
+//   lazy(() => import('./pages/company/ManufacturerPartDetail'))
+// );
 
 export const CategoryDetail = Loadable(
   lazy(() => import('./pages/part/CategoryDetail'))
@@ -40,45 +40,45 @@ export const PartDetail = Loadable(
   lazy(() => import('./pages/part/PartDetail'))
 );
 
-export const LocationDetail = Loadable(
-  lazy(() => import('./pages/stock/LocationDetail'))
-);
+// export const LocationDetail = Loadable(
+//   lazy(() => import('./pages/stock/LocationDetail'))
+// );
 
-export const StockDetail = Loadable(
-  lazy(() => import('./pages/stock/StockDetail'))
-);
+// export const StockDetail = Loadable(
+//   lazy(() => import('./pages/stock/StockDetail'))
+// );
 
-export const BuildIndex = Loadable(
-  lazy(() => import('./pages/build/BuildIndex'))
-);
+// export const BuildIndex = Loadable(
+//   lazy(() => import('./pages/build/BuildIndex'))
+// );
 
-export const BuildDetail = Loadable(
-  lazy(() => import('./pages/build/BuildDetail'))
-);
+// export const BuildDetail = Loadable(
+//   lazy(() => import('./pages/build/BuildDetail'))
+// );
 
-export const PurchasingIndex = Loadable(
-  lazy(() => import('./pages/purchasing/PurchasingIndex'))
-);
+// export const PurchasingIndex = Loadable(
+//   lazy(() => import('./pages/purchasing/PurchasingIndex'))
+// );
 
-export const PurchaseOrderDetail = Loadable(
-  lazy(() => import('./pages/purchasing/PurchaseOrderDetail'))
-);
+// export const PurchaseOrderDetail = Loadable(
+//   lazy(() => import('./pages/purchasing/PurchaseOrderDetail'))
+// );
 
-export const SalesIndex = Loadable(
-  lazy(() => import('./pages/sales/SalesIndex'))
-);
+// export const SalesIndex = Loadable(
+//   lazy(() => import('./pages/sales/SalesIndex'))
+// );
 
-export const SalesOrderDetail = Loadable(
-  lazy(() => import('./pages/sales/SalesOrderDetail'))
-);
+// export const SalesOrderDetail = Loadable(
+//   lazy(() => import('./pages/sales/SalesOrderDetail'))
+// );
 
-export const SalesOrderShipmentDetail = Loadable(
-  lazy(() => import('./pages/sales/SalesOrderShipmentDetail'))
-);
+// export const SalesOrderShipmentDetail = Loadable(
+//   lazy(() => import('./pages/sales/SalesOrderShipmentDetail'))
+// );
 
-export const ReturnOrderDetail = Loadable(
-  lazy(() => import('./pages/sales/ReturnOrderDetail'))
-);
+// export const ReturnOrderDetail = Loadable(
+//   lazy(() => import('./pages/sales/ReturnOrderDetail'))
+// );
 
 export const Scan = Loadable(lazy(() => import('./pages/Index/Scan')));
 
@@ -136,7 +136,7 @@ export const routes = (
         <Route path='category/:id?/*' element={<CategoryDetail />} />
         <Route path=':id/*' element={<PartDetail />} />
       </Route>
-      <Route path='stock/'>
+      {/* <Route path='stock/'>
         <Route index element={<Navigate to='location/index/' />} />
         <Route path='location/:id?/*' element={<LocationDetail />} />
         <Route path='item/:id/*' element={<StockDetail />} />
@@ -166,7 +166,7 @@ export const routes = (
         <Route path='shipment/:id/*' element={<SalesOrderShipmentDetail />} />
         <Route path='return-order/:id/*' element={<ReturnOrderDetail />} />
         <Route path='customer/:id/*' element={<CustomerDetail />} />
-      </Route>
+      </Route> */}
     </Route>
     <Route path='/' errorElement={<ErrorPage />}>
       <Route path='/login' element={<Login />} />,

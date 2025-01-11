@@ -1,32 +1,15 @@
 import { t } from '@lingui/macro';
+import { Alert, Grid, Skeleton, Space, Stack, Text } from '@mantine/core';
 import {
-  Alert,
-  Center,
-  Grid,
-  Loader,
-  Skeleton,
-  Space,
-  Stack,
-  Text
-} from '@mantine/core';
-import {
-  IconBookmarks,
-  IconBuilding,
-  IconCalendarStats,
-  IconClipboardList,
   IconCurrencyDollar,
   IconInfoCircle,
   IconLayersLinked,
   IconList,
-  IconListTree,
   IconLock,
   IconPackages,
   IconShoppingCart,
   IconStack2,
   IconTestPipe,
-  IconTools,
-  IconTruckDelivery,
-  IconTruckReturn,
   IconVersions
 } from '@tabler/icons-react';
 import { useQuery } from '@tanstack/react-query';
@@ -87,22 +70,12 @@ import {
   useUserSettingsState
 } from '../../states/SettingsState';
 import { useUserState } from '../../states/UserState';
-import { BomTable } from '../../tables/bom/BomTable';
 import { UsedInTable } from '../../tables/bom/UsedInTable';
-import { BuildOrderTable } from '../../tables/build/BuildOrderTable';
 import { PartParameterTable } from '../../tables/part/PartParameterTable';
-import PartPurchaseOrdersTable from '../../tables/part/PartPurchaseOrdersTable';
 import PartTestTemplateTable from '../../tables/part/PartTestTemplateTable';
 import { PartVariantTable } from '../../tables/part/PartVariantTable';
 import { RelatedPartTable } from '../../tables/part/RelatedPartTable';
-import { ReturnOrderTable } from '../../tables/sales/ReturnOrderTable';
-import { SalesOrderTable } from '../../tables/sales/SalesOrderTable';
-import { StockItemTable } from '../../tables/stock/StockItemTable';
-import PartAllocationPanel from './PartAllocationPanel';
 import PartPricingPanel from './PartPricingPanel';
-import PartSchedulingDetail from './PartSchedulingDetail';
-import PartStocktakeDetail from './PartStocktakeDetail';
-import PartSupplierDetail from './PartSupplierDetail';
 
 /**
  * Detail view for a single Part instance
@@ -495,24 +468,24 @@ export default function PartDetail() {
           />
         )
       },
-      {
-        name: 'stock',
-        label: t`Stock`,
-        icon: <IconPackages />,
-        content: part.pk ? (
-          <StockItemTable
-            tableName='part-stock'
-            allowAdd
-            params={{
-              part: part.pk
-            }}
-          />
-        ) : (
-          <Center>
-            <Loader />
-          </Center>
-        )
-      },
+      // {
+      //   name: 'stock',
+      //   label: t`Stock`,
+      //   icon: <IconPackages />,
+      //   content: part.pk ? (
+      //     <StockItemTable
+      //       tableName='part-stock'
+      //       allowAdd
+      //       params={{
+      //         part: part.pk
+      //       }}
+      //     />
+      //   ) : (
+      //     <Center>
+      //       <Loader />
+      //     </Center>
+      //   )
+      // },
       {
         name: 'variants',
         label: t`Variants`,
@@ -520,31 +493,31 @@ export default function PartDetail() {
         hidden: !part.is_template,
         content: <PartVariantTable part={part} />
       },
-      {
-        name: 'allocations',
-        label: t`Allocations`,
-        icon: <IconBookmarks />,
-        hidden: !part.component && !part.salable,
-        content: part.pk ? <PartAllocationPanel part={part} /> : <Skeleton />
-      },
-      {
-        name: 'bom',
-        label: t`Bill of Materials`,
-        icon: <IconListTree />,
-        hidden: !part.assembly,
-        content: part?.pk ? (
-          <BomTable partId={part.pk ?? -1} partLocked={part?.locked == true} />
-        ) : (
-          <Skeleton />
-        )
-      },
-      {
-        name: 'builds',
-        label: t`Build Orders`,
-        icon: <IconTools />,
-        hidden: !part.assembly || !user.hasViewRole(UserRoles.build),
-        content: part.pk ? <BuildOrderTable partId={part.pk} /> : <Skeleton />
-      },
+      // {
+      //   name: 'allocations',
+      //   label: t`Allocations`,
+      //   icon: <IconBookmarks />,
+      //   hidden: !part.component && !part.salable,
+      //   content: part.pk ? <PartAllocationPanel part={part} /> : <Skeleton />
+      // },
+      // {
+      //   name: 'bom',
+      //   label: t`Bill of Materials`,
+      //   icon: <IconListTree />,
+      //   hidden: !part.assembly,
+      //   content: part?.pk ? (
+      //     <BomTable partId={part.pk ?? -1} partLocked={part?.locked == true} />
+      //   ) : (
+      //     <Skeleton />
+      //   )
+      // },
+      // {
+      //   name: 'builds',
+      //   label: t`Build Orders`,
+      //   icon: <IconTools />,
+      //   hidden: !part.assembly || !user.hasViewRole(UserRoles.build),
+      //   content: part.pk ? <BuildOrderTable partId={part.pk} /> : <Skeleton />
+      // },
       {
         name: 'used_in',
         label: t`Used In`,
@@ -558,65 +531,65 @@ export default function PartDetail() {
         icon: <IconCurrencyDollar />,
         content: part ? <PartPricingPanel part={part} /> : <Skeleton />
       },
-      {
-        name: 'suppliers',
-        label: t`Suppliers`,
-        icon: <IconBuilding />,
-        hidden:
-          !part.purchaseable || !user.hasViewRole(UserRoles.purchase_order),
+      // {
+      //   name: 'suppliers',
+      //   label: t`Suppliers`,
+      //   icon: <IconBuilding />,
+      //   hidden:
+      //     !part.purchaseable || !user.hasViewRole(UserRoles.purchase_order),
 
-        content: part.pk ? (
-          <PartSupplierDetail partId={part.pk} />
-        ) : (
-          <Skeleton />
-        )
-      },
-      {
-        name: 'purchase_orders',
-        label: t`Purchase Orders`,
-        icon: <IconShoppingCart />,
-        hidden:
-          !part.purchaseable || !user.hasViewRole(UserRoles.purchase_order),
-        content: part.pk ? (
-          <PartPurchaseOrdersTable partId={part.pk} />
-        ) : (
-          <Skeleton />
-        )
-      },
-      {
-        name: 'sales_orders',
-        label: t`Sales Orders`,
-        icon: <IconTruckDelivery />,
-        hidden: !part.salable || !user.hasViewRole(UserRoles.sales_order),
-        content: part.pk ? <SalesOrderTable partId={part.pk} /> : <Skeleton />
-      },
-      {
-        name: 'return_orders',
-        label: t`Return Orders`,
-        icon: <IconTruckReturn />,
-        hidden:
-          !part.salable ||
-          !user.hasViewRole(UserRoles.return_order) ||
-          !globalSettings.isSet('RETURNORDER_ENABLED'),
-        content: part.pk ? <ReturnOrderTable partId={part.pk} /> : <Skeleton />
-      },
-      {
-        name: 'stocktake',
-        label: t`Stock History`,
-        icon: <IconClipboardList />,
-        content: part ? <PartStocktakeDetail partId={part.pk} /> : <Skeleton />,
-        hidden:
-          !user.hasViewRole(UserRoles.stocktake) ||
-          !globalSettings.isSet('STOCKTAKE_ENABLE') ||
-          !userSettings.isSet('DISPLAY_STOCKTAKE_TAB')
-      },
-      {
-        name: 'scheduling',
-        label: t`Scheduling`,
-        icon: <IconCalendarStats />,
-        content: part ? <PartSchedulingDetail part={part} /> : <Skeleton />,
-        hidden: !userSettings.isSet('DISPLAY_SCHEDULE_TAB')
-      },
+      //   content: part.pk ? (
+      //     <PartSupplierDetail partId={part.pk} />
+      //   ) : (
+      //     <Skeleton />
+      //   )
+      // },
+      // {
+      //   name: 'purchase_orders',
+      //   label: t`Purchase Orders`,
+      //   icon: <IconShoppingCart />,
+      //   hidden:
+      //     !part.purchaseable || !user.hasViewRole(UserRoles.purchase_order),
+      //   content: part.pk ? (
+      //     <PartPurchaseOrdersTable partId={part.pk} />
+      //   ) : (
+      //     <Skeleton />
+      //   )
+      // },
+      // {
+      //   name: 'sales_orders',
+      //   label: t`Sales Orders`,
+      //   icon: <IconTruckDelivery />,
+      //   hidden: !part.salable || !user.hasViewRole(UserRoles.sales_order),
+      //   content: part.pk ? <SalesOrderTable partId={part.pk} /> : <Skeleton />
+      // },
+      // {
+      //   name: 'return_orders',
+      //   label: t`Return Orders`,
+      //   icon: <IconTruckReturn />,
+      //   hidden:
+      //     !part.salable ||
+      //     !user.hasViewRole(UserRoles.return_order) ||
+      //     !globalSettings.isSet('RETURNORDER_ENABLED'),
+      //   content: part.pk ? <ReturnOrderTable partId={part.pk} /> : <Skeleton />
+      // },
+      // {
+      //   name: 'stocktake',
+      //   label: t`Stock History`,
+      //   icon: <IconClipboardList />,
+      //   content: part ? <PartStocktakeDetail partId={part.pk} /> : <Skeleton />,
+      //   hidden:
+      //     !user.hasViewRole(UserRoles.stocktake) ||
+      //     !globalSettings.isSet('STOCKTAKE_ENABLE') ||
+      //     !userSettings.isSet('DISPLAY_STOCKTAKE_TAB')
+      // },
+      // {
+      //   name: 'scheduling',
+      //   label: t`Scheduling`,
+      //   icon: <IconCalendarStats />,
+      //   content: part ? <PartSchedulingDetail part={part} /> : <Skeleton />,
+      //   hidden: !userSettings.isSet('DISPLAY_SCHEDULE_TAB')
+      // },
       {
         name: 'test_templates',
         label: t`Test Templates`,

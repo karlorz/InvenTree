@@ -7,13 +7,9 @@ import { UserRoles } from '../../enums/Roles';
 import { useInstance } from '../../hooks/UseInstance';
 import { useGlobalSettingsState } from '../../states/SettingsState';
 import { useUserState } from '../../states/UserState';
-import BomPricingPanel from './pricing/BomPricingPanel';
 import PriceBreakPanel from './pricing/PriceBreakPanel';
 import PricingOverviewPanel from './pricing/PricingOverviewPanel';
 import PricingPanel from './pricing/PricingPanel';
-import PurchaseHistoryPanel from './pricing/PurchaseHistoryPanel';
-import SaleHistoryPanel from './pricing/SaleHistoryPanel';
-import SupplierPricingPanel from './pricing/SupplierPricingPanel';
 import VariantPricingPanel from './pricing/VariantPricingPanel';
 
 export enum panelOptions {
@@ -87,7 +83,7 @@ export default function PartPricingPanel({ part }: Readonly<{ part: any }>) {
             title={t`Pricing Overview`}
             visible={true}
           />
-          <PricingPanel
+          {/* <PricingPanel
             content={<PurchaseHistoryPanel part={part} />}
             label={panelOptions.purchase}
             title={t`Purchase History`}
@@ -95,7 +91,7 @@ export default function PartPricingPanel({ part }: Readonly<{ part: any }>) {
             disabled={
               !pricing?.purchase_cost_min || !pricing?.purchase_cost_max
             }
-          />
+          /> */}
           <PricingPanel
             content={
               <PriceBreakPanel
@@ -110,7 +106,7 @@ export default function PartPricingPanel({ part }: Readonly<{ part: any }>) {
               !pricing?.internal_cost_min || !pricing?.internal_cost_max
             }
           />
-          <PricingPanel
+          {/* <PricingPanel
             content={<SupplierPricingPanel part={part} />}
             label={panelOptions.supplier}
             title={t`Supplier Pricing`}
@@ -118,14 +114,14 @@ export default function PartPricingPanel({ part }: Readonly<{ part: any }>) {
             disabled={
               !pricing?.supplier_price_min || !pricing?.supplier_price_max
             }
-          />
-          <PricingPanel
+          /> */}
+          {/* <PricingPanel
             content={<BomPricingPanel part={part} pricing={pricing} />}
             label={panelOptions.bom}
             title={t`BOM Pricing`}
             visible={part?.assembly}
             disabled={!pricing?.bom_cost_min || !pricing?.bom_cost_max}
-          />
+          /> */}
           <PricingPanel
             content={<VariantPricingPanel part={part} pricing={pricing} />}
             label={panelOptions.variant}
@@ -133,7 +129,7 @@ export default function PartPricingPanel({ part }: Readonly<{ part: any }>) {
             visible={part?.is_template}
             disabled={!pricing?.variant_cost_min || !pricing?.variant_cost_max}
           />
-          <PricingPanel
+          {/* <PricingPanel
             content={
               <PriceBreakPanel
                 part={part}
@@ -144,14 +140,14 @@ export default function PartPricingPanel({ part }: Readonly<{ part: any }>) {
             title={t`Sale Pricing`}
             visible={salesOrderPricing}
             disabled={!pricing?.sale_price_min || !pricing?.sale_price_max}
-          />
-          <PricingPanel
+          /> */}
+          {/* <PricingPanel
             content={<SaleHistoryPanel part={part} />}
             label={panelOptions.sale_history}
             title={t`Sale History`}
             visible={salesOrderPricing}
             disabled={!pricing?.sale_history_min || !pricing?.sale_history_max}
-          />
+          /> */}
         </Accordion>
       )}
     </Stack>
