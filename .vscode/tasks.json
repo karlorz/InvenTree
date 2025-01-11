@@ -66,5 +66,11 @@
       "command": "invoke update",
       "problemMatcher": [],
     },
+    {
+      "label": "frontend",
+      "type": "shell",
+      "command": "invoke dev.frontend-server",
+      "problemMatcher": [],
+    }
   ]
 }
