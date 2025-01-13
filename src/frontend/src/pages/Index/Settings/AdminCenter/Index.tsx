@@ -5,6 +5,7 @@ import {
   IconCpu,
   IconExclamationCircle,
   IconFileUpload,
+  IconList,
   IconListDetails,
   IconPlugConnected,
   IconQrcode,
@@ -153,12 +154,12 @@ export default function AdminCenter() {
         icon: <IconScale />,
         content: <UnitManagmentPanel />
       },
-      // {
-      //   name: 'part-parameters',
-      //   label: t`Part Parameters`,
-      //   icon: <IconList />,
-      //   content: <PartParameterPanel />
-      // },
+      {
+        name: 'part-parameters',
+        label: t`Part Parameters`,
+        icon: <IconList />,
+        content: <PartParameterPanel />
+      },
       // {
       //   name: 'category-parameters',
       //   label: t`Category Parameters`,

@@ -2,6 +2,7 @@ import { t } from '@lingui/macro';
 import { Skeleton, Stack } from '@mantine/core';
 import {
   IconBellCog,
+  IconCategory,
   IconCurrencyDollar,
   IconFingerprint,
   IconQrcode,
@@ -136,7 +137,7 @@ export default function SystemSettings() {
             />
           </>
         )
-      }
+      },
       // {
       //   name: 'labels',
       //   label: t`Labels`,
@@ -158,39 +159,39 @@ export default function SystemSettings() {
       //     />
       //   )
       // },
-      // {
-      //   name: 'parts',
-      //   label: t`Parts`,
-      //   icon: <IconCategory />,
-      //   content: (
-      //     <GlobalSettingList
-      //       keys={[
-      //         'PART_IPN_REGEX',
-      //         'PART_ALLOW_DUPLICATE_IPN',
-      //         'PART_ALLOW_EDIT_IPN',
-      //         'PART_ALLOW_DELETE_FROM_ASSEMBLY',
-      //         'PART_ENABLE_REVISION',
-      //         'PART_REVISION_ASSEMBLY_ONLY',
-      //         'PART_NAME_FORMAT',
-      //         'PART_SHOW_RELATED',
-      //         'PART_CREATE_INITIAL',
-      //         'PART_CREATE_SUPPLIER', // TODO: Break here
-      //         'PART_TEMPLATE',
-      //         'PART_ASSEMBLY',
-      //         'PART_COMPONENT',
-      //         'PART_TRACKABLE',
-      //         'PART_PURCHASEABLE',
-      //         'PART_SALABLE',
-      //         'PART_VIRTUAL', // TODO: Break here
-      //         'PART_COPY_BOM',
-      //         'PART_COPY_PARAMETERS',
-      //         'PART_COPY_TESTS',
-      //         'PART_CATEGORY_PARAMETERS',
-      //         'PART_CATEGORY_DEFAULT_ICON' // TODO: Move to part category settings page
-      //       ]}
-      //     />
-      //   )
-      // },
+      {
+        name: 'parts',
+        label: t`Parts`,
+        icon: <IconCategory />,
+        content: (
+          <GlobalSettingList
+            keys={[
+              'PART_IPN_REGEX',
+              'PART_ALLOW_DUPLICATE_IPN',
+              'PART_ALLOW_EDIT_IPN',
+              'PART_ALLOW_DELETE_FROM_ASSEMBLY',
+              'PART_ENABLE_REVISION',
+              'PART_REVISION_ASSEMBLY_ONLY',
+              'PART_NAME_FORMAT',
+              'PART_SHOW_RELATED',
+              'PART_CREATE_INITIAL',
+              'PART_CREATE_SUPPLIER', // TODO: Break here
+              'PART_TEMPLATE',
+              'PART_ASSEMBLY',
+              'PART_COMPONENT',
+              'PART_TRACKABLE',
+              'PART_PURCHASEABLE',
+              'PART_SALABLE',
+              'PART_VIRTUAL', // TODO: Break here
+              'PART_COPY_BOM',
+              'PART_COPY_PARAMETERS',
+              'PART_COPY_TESTS',
+              'PART_CATEGORY_PARAMETERS',
+              'PART_CATEGORY_DEFAULT_ICON' // TODO: Move to part category settings page
+            ]}
+          />
+        )
+      }
       // {
       //   name: 'stock',
       //   label: t`Stock`,
