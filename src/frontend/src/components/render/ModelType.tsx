@@ -50,24 +50,24 @@ export const ModelInformationDict: ModelDict = {
     api_endpoint: ApiEndpoints.part_test_template_list,
     icon: 'test'
   },
-  supplierpart: {
-    label: () => t`Supplier Part`,
-    label_multiple: () => t`Supplier Parts`,
-    url_overview: '/supplierpart',
-    url_detail: '/purchasing/supplier-part/:pk/',
-    api_endpoint: ApiEndpoints.supplier_part_list,
-    admin_url: '/company/supplierpart/',
-    icon: 'supplier_part'
-  },
-  manufacturerpart: {
-    label: () => t`Manufacturer Part`,
-    label_multiple: () => t`Manufacturer Parts`,
-    url_overview: '/manufacturerpart',
-    url_detail: '/purchasing/manufacturer-part/:pk/',
-    api_endpoint: ApiEndpoints.manufacturer_part_list,
-    admin_url: '/company/manufacturerpart/',
-    icon: 'manufacturers'
-  },
+  // supplierpart: {
+  //   label: () => t`Supplier Part`,
+  //   label_multiple: () => t`Supplier Parts`,
+  //   url_overview: '/supplierpart',
+  //   url_detail: '/purchasing/supplier-part/:pk/',
+  //   api_endpoint: ApiEndpoints.supplier_part_list,
+  //   admin_url: '/company/supplierpart/',
+  //   icon: 'supplier_part'
+  // },
+  // manufacturerpart: {
+  //   label: () => t`Manufacturer Part`,
+  //   label_multiple: () => t`Manufacturer Parts`,
+  //   url_overview: '/manufacturerpart',
+  //   url_detail: '/purchasing/manufacturer-part/:pk/',
+  //   api_endpoint: ApiEndpoints.manufacturer_part_list,
+  //   admin_url: '/company/manufacturerpart/',
+  //   icon: 'manufacturers'
+  // },
   partcategory: {
     label: () => t`Part Category`,
     label_multiple: () => t`Part Categories`,
@@ -130,23 +130,23 @@ export const ModelInformationDict: ModelDict = {
     api_endpoint: ApiEndpoints.build_item_list,
     icon: 'build_order'
   },
-  company: {
-    label: () => t`Company`,
-    label_multiple: () => t`Companies`,
-    url_overview: '/company',
-    url_detail: '/company/:pk/',
-    api_endpoint: ApiEndpoints.company_list,
-    admin_url: '/company/company/',
-    icon: 'building'
-  },
-  projectcode: {
-    label: () => t`Project Code`,
-    label_multiple: () => t`Project Codes`,
-    url_overview: '/project-code',
-    url_detail: '/project-code/:pk/',
-    api_endpoint: ApiEndpoints.project_code_list,
-    icon: 'list_details'
-  },
+  // company: {
+  //   label: () => t`Company`,
+  //   label_multiple: () => t`Companies`,
+  //   url_overview: '/company',
+  //   url_detail: '/company/:pk/',
+  //   api_endpoint: ApiEndpoints.company_list,
+  //   admin_url: '/company/company/',
+  //   icon: 'building'
+  // },
+  // projectcode: {
+  //   label: () => t`Project Code`,
+  //   label_multiple: () => t`Project Codes`,
+  //   url_overview: '/project-code',
+  //   url_detail: '/project-code/:pk/',
+  //   api_endpoint: ApiEndpoints.project_code_list,
+  //   icon: 'list_details'
+  // },
   purchaseorder: {
     label: () => t`Purchase Order`,
     label_multiple: () => t`Purchase Orders`,
@@ -194,22 +194,22 @@ export const ModelInformationDict: ModelDict = {
     api_endpoint: ApiEndpoints.return_order_line_list,
     icon: 'return_orders'
   },
-  address: {
-    label: () => t`Address`,
-    label_multiple: () => t`Addresses`,
-    url_overview: '/address',
-    url_detail: '/address/:pk/',
-    api_endpoint: ApiEndpoints.address_list,
-    icon: 'address'
-  },
-  contact: {
-    label: () => t`Contact`,
-    label_multiple: () => t`Contacts`,
-    url_overview: '/contact',
-    url_detail: '/contact/:pk/',
-    api_endpoint: ApiEndpoints.contact_list,
-    icon: 'group'
-  },
+  // address: {
+  //   label: () => t`Address`,
+  //   label_multiple: () => t`Addresses`,
+  //   url_overview: '/address',
+  //   url_detail: '/address/:pk/',
+  //   api_endpoint: ApiEndpoints.address_list,
+  //   icon: 'address'
+  // },
+  // contact: {
+  //   label: () => t`Contact`,
+  //   label_multiple: () => t`Contacts`,
+  //   url_overview: '/contact',
+  //   url_detail: '/contact/:pk/',
+  //   api_endpoint: ApiEndpoints.contact_list,
+  //   icon: 'group'
+  // },
   owner: {
     label: () => t`Owner`,
     label_multiple: () => t`Owners`,

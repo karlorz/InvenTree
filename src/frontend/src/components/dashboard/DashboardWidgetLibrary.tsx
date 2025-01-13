@@ -48,22 +48,22 @@ export function BuiltinQueryCountWidgets(): DashboardWidgetProps[] {
       modelType: ModelType.part,
       params: { stock_to_build: true }
     }),
-    QueryCountDashboardWidget({
-      title: t`Expired Stock Items`,
-      label: 'exp-stk',
-      description: t`Show the number of stock items which have expired`,
-      modelType: ModelType.stockitem,
-      params: { expired: true },
-      enabled: globalSettings.isSet('STOCK_ENABLE_EXPIRY')
-    }),
-    QueryCountDashboardWidget({
-      title: t`Stale Stock Items`,
-      label: 'stl-stk',
-      description: t`Show the number of stock items which are stale`,
-      modelType: ModelType.stockitem,
-      params: { stale: true },
-      enabled: globalSettings.isSet('STOCK_ENABLE_EXPIRY')
-    }),
+    // QueryCountDashboardWidget({
+    //   title: t`Expired Stock Items`,
+    //   label: 'exp-stk',
+    //   description: t`Show the number of stock items which have expired`,
+    //   modelType: ModelType.stockitem,
+    //   params: { expired: true },
+    //   enabled: globalSettings.isSet('STOCK_ENABLE_EXPIRY')
+    // }),
+    // QueryCountDashboardWidget({
+    //   title: t`Stale Stock Items`,
+    //   label: 'stl-stk',
+    //   description: t`Show the number of stock items which are stale`,
+    //   modelType: ModelType.stockitem,
+    //   params: { stale: true },
+    //   enabled: globalSettings.isSet('STOCK_ENABLE_EXPIRY')
+    // }),
     QueryCountDashboardWidget({
       title: t`Active Build Orders`,
       label: 'act-bo',

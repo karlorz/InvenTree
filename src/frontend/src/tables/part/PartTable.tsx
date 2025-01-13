@@ -1,11 +1,9 @@
 import { t } from '@lingui/macro';
 import { Group, Text } from '@mantine/core';
 import { type ReactNode, useMemo } from 'react';
-
-import { IconShoppingCart } from '@tabler/icons-react';
 import { AddItemButton } from '../../components/buttons/AddItemButton';
 import { ActionDropdown } from '../../components/items/ActionDropdown';
-import OrderPartsWizard from '../../components/wizards/OrderPartsWizard';
+// import OrderPartsWizard from '../../components/wizards/OrderPartsWizard';
 import { formatPriceRange } from '../../defaults/formatters';
 import { ApiEndpoints } from '../../enums/ApiEndpoints';
 import { ModelType } from '../../enums/ModelType';
@@ -337,7 +335,7 @@ export function PartListTable({
     modelType: ModelType.part
   });
 
-  const orderPartsWizard = OrderPartsWizard({ parts: table.selectedRecords });
+  // const orderPartsWizard = OrderPartsWizard({ parts: table.selectedRecords });
 
   const tableActions = useMemo(() => {
     return [
@@ -345,16 +343,18 @@ export function PartListTable({
         tooltip={t`Part Actions`}
         icon={<InvenTreeIcon icon='part' />}
         disabled={!table.hasSelectedRecords}
-        actions={[
-          {
-            name: t`Order Parts`,
-            icon: <IconShoppingCart color='blue' />,
-            tooltip: t`Order selected parts`,
-            onClick: () => {
-              orderPartsWizard.openWizard();
-            }
-          }
-        ]}
+        actions={
+          [
+            // {
+            //   name: t`Order Parts`,
+            //   icon: <IconShoppingCart color='blue' />,
+            //   tooltip: t`Order selected parts`,
+            //   onClick: () => {
+            //     orderPartsWizard.openWizard();
+            //   }
+            // }
+          ]
+        }
       />,
       <AddItemButton
         key='add-part'
@@ -368,7 +368,7 @@ export function PartListTable({
   return (
     <>
       {newPart.modal}
-      {orderPartsWizard.wizard}
+      {/* {orderPartsWizard.wizard} */}
       <InvenTreeTable
         url={apiUrl(ApiEndpoints.part_list)}
         tableState={table}

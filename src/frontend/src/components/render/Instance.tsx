@@ -10,18 +10,18 @@ import { shortenString } from '../../functions/tables';
 import { apiUrl } from '../../states/ApiState';
 import { Thumbnail } from '../images/Thumbnail';
 import { RenderBuildItem, RenderBuildLine, RenderBuildOrder } from './Build';
-import {
-  RenderAddress,
-  RenderCompany,
-  RenderContact,
-  RenderManufacturerPart,
-  RenderSupplierPart
-} from './Company';
+// import {
+//   RenderAddress,
+//   RenderCompany,
+//   RenderContact,
+//   RenderManufacturerPart,
+//   RenderSupplierPart
+// } from './Company';
 import {
   RenderContentType,
   RenderError,
   RenderImportSession,
-  RenderProjectCode,
+  // RenderProjectCode,
   RenderSelectionList
 } from './Generic';
 import { ModelInformationDict } from './ModelType';
@@ -65,19 +65,19 @@ const RendererLookup: EnumDictionary<
   ModelType,
   (props: Readonly<InstanceRenderInterface>) => ReactNode
 > = {
-  [ModelType.address]: RenderAddress,
+  // [ModelType.address]: RenderAddress,
   [ModelType.build]: RenderBuildOrder,
   [ModelType.buildline]: RenderBuildLine,
   [ModelType.builditem]: RenderBuildItem,
-  [ModelType.company]: RenderCompany,
-  [ModelType.contact]: RenderContact,
-  [ModelType.manufacturerpart]: RenderManufacturerPart,
+  // [ModelType.company]: RenderCompany,
+  // [ModelType.contact]: RenderContact,
+  // [ModelType.manufacturerpart]: RenderManufacturerPart,
   [ModelType.owner]: RenderOwner,
   [ModelType.part]: RenderPart,
   [ModelType.partcategory]: RenderPartCategory,
   [ModelType.partparametertemplate]: RenderPartParameterTemplate,
   [ModelType.parttesttemplate]: RenderPartTestTemplate,
-  [ModelType.projectcode]: RenderProjectCode,
+  // [ModelType.projectcode]: RenderProjectCode,
   [ModelType.purchaseorder]: RenderPurchaseOrder,
   [ModelType.purchaseorderlineitem]: RenderPurchaseOrder,
   [ModelType.returnorder]: RenderReturnOrder,
@@ -88,7 +88,7 @@ const RendererLookup: EnumDictionary<
   [ModelType.stocklocationtype]: RenderStockLocationType,
   [ModelType.stockitem]: RenderStockItem,
   [ModelType.stockhistory]: RenderStockItem,
-  [ModelType.supplierpart]: RenderSupplierPart,
+  // [ModelType.supplierpart]: RenderSupplierPart,
   [ModelType.user]: RenderUser,
   [ModelType.group]: RenderGroup,
   [ModelType.importsession]: RenderImportSession,

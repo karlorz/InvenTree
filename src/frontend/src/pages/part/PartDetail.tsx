@@ -43,7 +43,7 @@ import NotesPanel from '../../components/panels/NotesPanel';
 import type { PanelType } from '../../components/panels/Panel';
 import { PanelGroup } from '../../components/panels/PanelGroup';
 import { RenderPart } from '../../components/render/Part';
-import OrderPartsWizard from '../../components/wizards/OrderPartsWizard';
+// import OrderPartsWizard from '../../components/wizards/OrderPartsWizard';
 import { useApi } from '../../contexts/ApiContext';
 import { formatPriceRange } from '../../defaults/formatters';
 import { ApiEndpoints } from '../../enums/ApiEndpoints';
@@ -378,14 +378,14 @@ export default function PartDetail() {
         label: t`Responsible`,
         badge: 'owner',
         hidden: !part.responsible
-      },
-      {
-        type: 'link',
-        name: 'default_supplier',
-        label: t`Default Supplier`,
-        model: ModelType.supplierpart,
-        hidden: !part.default_supplier
       }
+      // {
+      //   type: 'link',
+      //   name: 'default_supplier',
+      //   label: t`Default Supplier`,
+      //   model: ModelType.supplierpart,
+      //   hidden: !part.default_supplier
+      // }
     ];
 
     // Add in price range data
@@ -848,9 +848,9 @@ export default function PartDetail() {
   const countStockItems = useCountStockItem(stockActionProps);
   const transferStockItems = useTransferStockItem(stockActionProps);
 
-  const orderPartsWizard = OrderPartsWizard({
-    parts: [part]
-  });
+  // const orderPartsWizard = OrderPartsWizard({
+  //   parts: [part]
+  // });
 
   const partActions = useMemo(() => {
     return [
@@ -943,7 +943,7 @@ export default function PartDetail() {
       {duplicatePart.modal}
       {editPart.modal}
       {deletePart.modal}
-      {orderPartsWizard.wizard}
+      {/* {orderPartsWizard.wizard} */}
       <InstanceDetail
         status={requestStatus}
         loading={instanceQuery.isFetching}
