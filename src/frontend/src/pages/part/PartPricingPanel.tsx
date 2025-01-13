@@ -3,7 +3,6 @@ import { Accordion, Alert, LoadingOverlay, Stack, Text } from '@mantine/core';
 import { useMemo, useState } from 'react';
 
 import { ApiEndpoints } from '../../enums/ApiEndpoints';
-import { UserRoles } from '../../enums/Roles';
 import { useInstance } from '../../hooks/UseInstance';
 import { useGlobalSettingsState } from '../../states/SettingsState';
 import { useUserState } from '../../states/UserState';
@@ -41,13 +40,13 @@ export default function PartPricingPanel({ part }: Readonly<{ part: any }>) {
     return globalSettings.isSet('PART_INTERNAL_PRICE');
   }, [globalSettings]);
 
-  const purchaseOrderPricing = useMemo(() => {
-    return user.hasViewRole(UserRoles.purchase_order) && part?.purchaseable;
-  }, [user, part]);
+  // const purchaseOrderPricing = useMemo(() => {
+  //   return user.hasViewRole(UserRoles.purchase_order) && part?.purchaseable;
+  // }, [user, part]);
 
-  const salesOrderPricing = useMemo(() => {
-    return user.hasViewRole(UserRoles.sales_order) && part?.salable;
-  }, [user, part]);
+  // const salesOrderPricing = useMemo(() => {
+  //   return user.hasViewRole(UserRoles.sales_order) && part?.salable;
+  // }, [user, part]);
 
   const [value, setValue] = useState<string[]>([panelOptions.overview]);
   function doNavigation(panel: panelOptions) {

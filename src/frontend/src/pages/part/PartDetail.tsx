@@ -7,7 +7,6 @@ import {
   IconList,
   IconLock,
   IconPackages,
-  IconShoppingCart,
   IconStack2,
   IconTestPipe,
   IconVersions
@@ -56,7 +55,6 @@ import {
   useCountStockItem,
   useTransferStockItem
 } from '../../forms/StockForms';
-import { InvenTreeIcon } from '../../functions/icons';
 import { getDetailUrl } from '../../functions/urls';
 import {
   useCreateApiFormModal,
@@ -873,42 +871,44 @@ export default function PartDetail() {
       <ActionDropdown
         tooltip={t`Stock Actions`}
         icon={<IconPackages />}
-        actions={[
-          {
-            icon: (
-              <InvenTreeIcon icon='stocktake' iconProps={{ color: 'blue' }} />
-            ),
-            name: t`Count Stock`,
-            tooltip: t`Count part stock`,
-            hidden: !user.hasChangeRole(UserRoles.stock),
-            onClick: () => {
-              part.pk && countStockItems.open();
-            }
-          },
-          {
-            icon: (
-              <InvenTreeIcon icon='transfer' iconProps={{ color: 'blue' }} />
-            ),
-            name: t`Transfer Stock`,
-            tooltip: t`Transfer part stock`,
-            hidden: !user.hasChangeRole(UserRoles.stock),
-            onClick: () => {
-              part.pk && transferStockItems.open();
-            }
-          },
-          {
-            name: t`Order`,
-            tooltip: t`Order Stock`,
-            hidden:
-              !user.hasAddRole(UserRoles.purchase_order) ||
-              !part?.active ||
-              !part?.purchaseable,
-            icon: <IconShoppingCart color='blue' />,
-            onClick: () => {
-              orderPartsWizard.openWizard();
-            }
-          }
-        ]}
+        actions={
+          [
+            // {
+            //   icon: (
+            //     <InvenTreeIcon icon='stocktake' iconProps={{ color: 'blue' }} />
+            //   ),
+            //   name: t`Count Stock`,
+            //   tooltip: t`Count part stock`,
+            //   hidden: !user.hasChangeRole(UserRoles.stock),
+            //   onClick: () => {
+            //     part.pk && countStockItems.open();
+            //   }
+            // },
+            // {
+            //   icon: (
+            //     <InvenTreeIcon icon='transfer' iconProps={{ color: 'blue' }} />
+            //   ),
+            //   name: t`Transfer Stock`,
+            //   tooltip: t`Transfer part stock`,
+            //   hidden: !user.hasChangeRole(UserRoles.stock),
+            //   onClick: () => {
+            //     part.pk && transferStockItems.open();
+            //   }
+            // },
+            // {
+            //   name: t`Order`,
+            //   tooltip: t`Order Stock`,
+            //   hidden:
+            //     !user.hasAddRole(UserRoles.purchase_order) ||
+            //     !part?.active ||
+            //     !part?.purchaseable,
+            //   icon: <IconShoppingCart color='blue' />,
+            //   onClick: () => {
+            //     orderPartsWizard.openWizard();
+            //   }
+            // }
+          ]
+        }
       />,
       <OptionsActionDropdown
         tooltip={t`Part Actions`}

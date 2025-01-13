@@ -3,15 +3,15 @@
  */
 export enum UserRoles {
   admin = 'admin',
-  build = 'build',
+  // build = 'build',
   part = 'part',
-  part_category = 'part_category',
-  purchase_order = 'purchase_order',
-  return_order = 'return_order',
-  sales_order = 'sales_order',
-  stock = 'stock',
-  stock_location = 'stock_location',
-  stocktake = 'stocktake'
+  part_category = 'part_category'
+  // purchase_order = 'purchase_order',
+  // return_order = 'return_order',
+  // sales_order = 'sales_order',
+  // stock = 'stock',
+  // stock_location = 'stock_location',
+  // stocktake = 'stocktake'
 }
 
 /*

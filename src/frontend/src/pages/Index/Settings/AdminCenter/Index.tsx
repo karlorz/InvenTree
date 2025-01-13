@@ -85,9 +85,9 @@ const PartCategoryTemplateTable = Loadable(
   lazy(() => import('../../../../tables/part/PartCategoryTemplateTable'))
 );
 
-const LocationTypesTable = Loadable(
-  lazy(() => import('../../../../tables/stock/LocationTypesTable'))
-);
+// const LocationTypesTable = Loadable(
+//   lazy(() => import('../../../../tables/stock/LocationTypesTable'))
+// );
 
 const StocktakePanel = Loadable(lazy(() => import('./StocktakePanel')));
 
