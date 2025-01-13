@@ -9,7 +9,6 @@ import { navigateToLink } from '../../functions/navigation';
 import { shortenString } from '../../functions/tables';
 import { apiUrl } from '../../states/ApiState';
 import { Thumbnail } from '../images/Thumbnail';
-import { RenderBuildItem, RenderBuildLine, RenderBuildOrder } from './Build';
 // import {
 //   RenderAddress,
 //   RenderCompany,
@@ -26,13 +25,6 @@ import {
 } from './Generic';
 import { ModelInformationDict } from './ModelType';
 import {
-  RenderPurchaseOrder,
-  RenderReturnOrder,
-  RenderReturnOrderLineItem,
-  RenderSalesOrder,
-  RenderSalesOrderShipment
-} from './Order';
-import {
   RenderPart,
   RenderPartCategory,
   RenderPartParameterTemplate,
@@ -40,11 +32,7 @@ import {
 } from './Part';
 import { RenderPlugin } from './Plugin';
 import { RenderLabelTemplate, RenderReportTemplate } from './Report';
-import {
-  RenderStockItem,
-  RenderStockLocation,
-  RenderStockLocationType
-} from './Stock';
+import { RenderStockLocation, RenderStockLocationType } from './Stock';
 import { RenderGroup, RenderOwner, RenderUser } from './User';
 
 type EnumDictionary<T extends string | symbol | number, U> = {
@@ -66,9 +54,9 @@ const RendererLookup: EnumDictionary<
   (props: Readonly<InstanceRenderInterface>) => ReactNode
 > = {
   // [ModelType.address]: RenderAddress,
-  [ModelType.build]: RenderBuildOrder,
-  [ModelType.buildline]: RenderBuildLine,
-  [ModelType.builditem]: RenderBuildItem,
+  // [ModelType.build]: RenderBuildOrder,
+  // [ModelType.buildline]: RenderBuildLine,
+  // [ModelType.builditem]: RenderBuildItem,
   // [ModelType.company]: RenderCompany,
   // [ModelType.contact]: RenderContact,
   // [ModelType.manufacturerpart]: RenderManufacturerPart,
@@ -78,16 +66,16 @@ const RendererLookup: EnumDictionary<
   [ModelType.partparametertemplate]: RenderPartParameterTemplate,
   [ModelType.parttesttemplate]: RenderPartTestTemplate,
   // [ModelType.projectcode]: RenderProjectCode,
-  [ModelType.purchaseorder]: RenderPurchaseOrder,
-  [ModelType.purchaseorderlineitem]: RenderPurchaseOrder,
-  [ModelType.returnorder]: RenderReturnOrder,
-  [ModelType.returnorderlineitem]: RenderReturnOrderLineItem,
-  [ModelType.salesorder]: RenderSalesOrder,
-  [ModelType.salesordershipment]: RenderSalesOrderShipment,
+  // [ModelType.purchaseorder]: RenderPurchaseOrder,
+  // [ModelType.purchaseorderlineitem]: RenderPurchaseOrder,
+  // [ModelType.returnorder]: RenderReturnOrder,
+  // [ModelType.returnorderlineitem]: RenderReturnOrderLineItem,
+  // [ModelType.salesorder]: RenderSalesOrder,
+  // [ModelType.salesordershipment]: RenderSalesOrderShipment,
   [ModelType.stocklocation]: RenderStockLocation,
   [ModelType.stocklocationtype]: RenderStockLocationType,
-  [ModelType.stockitem]: RenderStockItem,
-  [ModelType.stockhistory]: RenderStockItem,
+  // [ModelType.stockitem]: RenderStockItem,
+  // [ModelType.stockhistory]: RenderStockItem,
   // [ModelType.supplierpart]: RenderSupplierPart,
   [ModelType.user]: RenderUser,
   [ModelType.group]: RenderGroup,

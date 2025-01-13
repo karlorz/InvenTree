@@ -44,7 +44,11 @@ function partTableColumns(): TableColumn[] {
       accessor: 'units',
       sortable: true
     },
-    DescriptionColumn({}),
+    // remark: DescriptionColumn with width and ellipsis
+    DescriptionColumn({
+      // width: 360,
+      // ellipsis: true
+    }),
     {
       accessor: 'category',
       sortable: true,

@@ -50,11 +50,11 @@ import { ApiEndpoints } from '../../enums/ApiEndpoints';
 import { ModelType } from '../../enums/ModelType';
 import { UserRoles } from '../../enums/Roles';
 import { usePartFields } from '../../forms/PartForms';
-import {
-  type StockOperationProps,
-  useCountStockItem,
-  useTransferStockItem
-} from '../../forms/StockForms';
+// import {
+//   type StockOperationProps,
+//   useCountStockItem,
+//   useTransferStockItem
+// } from '../../forms/StockForms';
 import { getDetailUrl } from '../../functions/urls';
 import {
   useCreateApiFormModal,
@@ -834,19 +834,19 @@ export default function PartDetail() {
     )
   });
 
-  const stockActionProps: StockOperationProps = useMemo(() => {
-    return {
-      pk: part.pk,
-      model: ModelType.part,
-      refresh: refreshInstance,
-      filters: {
-        in_stock: true
-      }
-    };
-  }, [part]);
+  // const stockActionProps: StockOperationProps = useMemo(() => {
+  //   return {
+  //     pk: part.pk,
+  //     model: ModelType.part,
+  //     refresh: refreshInstance,
+  //     filters: {
+  //       in_stock: true
+  //     }
+  //   };
+  // }, [part]);
 
-  const countStockItems = useCountStockItem(stockActionProps);
-  const transferStockItems = useTransferStockItem(stockActionProps);
+  // const countStockItems = useCountStockItem(stockActionProps);
+  // const transferStockItems = useTransferStockItem(stockActionProps);
 
   // const orderPartsWizard = OrderPartsWizard({
   //   parts: [part]
@@ -1025,8 +1025,8 @@ export default function PartDetail() {
             model={ModelType.part}
             id={part.pk}
           />
-          {transferStockItems.modal}
-          {countStockItems.modal}
+          {/* {transferStockItems.modal}
+          {countStockItems.modal} */}
         </Stack>
       </InstanceDetail>
     </>

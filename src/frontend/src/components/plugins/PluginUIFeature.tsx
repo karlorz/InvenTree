@@ -1,34 +1,11 @@
-import { t } from '@lingui/macro';
-import { Alert, Stack, Text } from '@mantine/core';
-import { IconExclamationCircle } from '@tabler/icons-react';
-import {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState
-} from 'react';
-
-import type { TemplateI } from '../../tables/settings/TemplateTable';
-import type {
-  EditorComponent,
-  PreviewAreaComponent,
-  PreviewAreaRef
-} from '../editors/TemplateEditor/TemplateEditor';
-import type {
-  PluginUIFuncWithoutInvenTreeContextType,
-  TemplateEditorUIFeature,
-  TemplatePreviewUIFeature
-} from './PluginUIFeatureTypes';
-
 /**
  * Enumeration for available plugin UI feature types.
  */
 export enum PluginUIFeatureType {
   dashboard = 'dashboard',
-  panel = 'panel',
-  template_editor = 'template_editor',
-  template_preview = 'template_preview'
+  panel = 'panel'
+  // template_editor = 'template_editor',
+  // template_preview = 'template_preview'
 }
 
 /**
@@ -57,111 +34,111 @@ export interface PluginUIFeature {
   source: string;
 }
 
-export const getPluginTemplateEditor = (
-  func: PluginUIFuncWithoutInvenTreeContextType<TemplateEditorUIFeature>,
-  template: TemplateI
-) =>
-  forwardRef((props, ref) => {
-    const elRef = useRef<HTMLDivElement>();
-    const [error, setError] = useState<string | undefined>(undefined);
+// export const getPluginTemplateEditor = (
+//   func: PluginUIFuncWithoutInvenTreeContextType<TemplateEditorUIFeature>,
+//   template: TemplateI
+// ) =>
+//   forwardRef((props, ref) => {
+//     const elRef = useRef<HTMLDivElement>();
+//     const [error, setError] = useState<string | undefined>(undefined);
 
-    const initialCodeRef = useRef<string>();
-    const setCodeRef = useRef<(code: string) => void>();
-    const getCodeRef = useRef<() => string>();
+//     const initialCodeRef = useRef<string>();
+//     const setCodeRef = useRef<(code: string) => void>();
+//     const getCodeRef = useRef<() => string>();
 
-    useImperativeHandle(ref, () => ({
-      setCode: (code) => {
-        // if the editor is not yet initialized, store the initial code in a ref to set it later
-        if (setCodeRef.current) {
-          setCodeRef.current(code);
-        } else {
-          initialCodeRef.current = code;
-        }
-      },
-      getCode: () => getCodeRef.current?.()
-    }));
+//     useImperativeHandle(ref, () => ({
+//       setCode: (code) => {
+//         // if the editor is not yet initialized, store the initial code in a ref to set it later
+//         if (setCodeRef.current) {
+//           setCodeRef.current(code);
+//         } else {
+//           initialCodeRef.current = code;
+//         }
+//       },
+//       getCode: () => getCodeRef.current?.()
+//     }));
 
-    useEffect(() => {
-      (async () => {
-        try {
-          func({
-            ref: elRef.current!,
-            registerHandlers: ({ getCode, setCode }) => {
-              setCodeRef.current = setCode;
-              getCodeRef.current = getCode;
+//     useEffect(() => {
+//       (async () => {
+//         try {
+//           func({
+//             ref: elRef.current!,
+//             registerHandlers: ({ getCode, setCode }) => {
+//               setCodeRef.current = setCode;
+//               getCodeRef.current = getCode;
 
-              if (initialCodeRef.current) {
-                setCode(initialCodeRef.current);
-              }
-            },
-            template
-          });
-        } catch (error) {
-          setError(t`Error occurred while rendering the template editor.`);
-          console.error(error);
-        }
-      })();
-    }, []);
+//               if (initialCodeRef.current) {
+//                 setCode(initialCodeRef.current);
+//               }
+//             },
+//             template
+//           });
+//         } catch (error) {
+//           setError(t`Error occurred while rendering the template editor.`);
+//           console.error(error);
+//         }
+//       })();
+//     }, []);
 
-    return (
-      <Stack gap='xs' style={{ display: 'flex', flex: 1 }}>
-        {error && (
-          <Alert
-            color='red'
-            title={t`Error Loading Plugin Editor`}
-            icon={<IconExclamationCircle />}
-          >
-            <Text>{error}</Text>
-          </Alert>
-        )}
-        <div ref={elRef as any} style={{ display: 'flex', flex: 1 }} />
-      </Stack>
-    );
-  }) as EditorComponent;
+//     return (
+//       <Stack gap='xs' style={{ display: 'flex', flex: 1 }}>
+//         {error && (
+//           <Alert
+//             color='red'
+//             title={t`Error Loading Plugin Editor`}
+//             icon={<IconExclamationCircle />}
+//           >
+//             <Text>{error}</Text>
+//           </Alert>
+//         )}
+//         <div ref={elRef as any} style={{ display: 'flex', flex: 1 }} />
+//       </Stack>
+//     );
+//   }) as EditorComponent;
 
-export const getPluginTemplatePreview = (
-  func: PluginUIFuncWithoutInvenTreeContextType<TemplatePreviewUIFeature>,
-  template: TemplateI
-) =>
-  forwardRef((props, ref) => {
-    const elRef = useRef<HTMLDivElement>();
-    const [error, setError] = useState<string | undefined>(undefined);
+// export const getPluginTemplatePreview = (
+//   func: PluginUIFuncWithoutInvenTreeContextType<TemplatePreviewUIFeature>,
+//   template: TemplateI
+// ) =>
+//   forwardRef((props, ref) => {
+//     const elRef = useRef<HTMLDivElement>();
+//     const [error, setError] = useState<string | undefined>(undefined);
 
-    const updatePreviewRef = useRef<PreviewAreaRef['updatePreview']>();
+//     const updatePreviewRef = useRef<PreviewAreaRef['updatePreview']>();
 
-    useImperativeHandle(ref, () => ({
-      updatePreview: (...args) => updatePreviewRef.current?.(...args)
-    }));
+//     useImperativeHandle(ref, () => ({
+//       updatePreview: (...args) => updatePreviewRef.current?.(...args)
+//     }));
 
-    useEffect(() => {
-      (async () => {
-        try {
-          func({
-            ref: elRef.current!,
-            registerHandlers: ({ updatePreview }) => {
-              updatePreviewRef.current = updatePreview;
-            },
-            template
-          });
-        } catch (error) {
-          setError(t`Error occurred while rendering the template preview.`);
-          console.error(error);
-        }
-      })();
-    }, []);
+//     useEffect(() => {
+//       (async () => {
+//         try {
+//           func({
+//             ref: elRef.current!,
+//             registerHandlers: ({ updatePreview }) => {
+//               updatePreviewRef.current = updatePreview;
+//             },
+//             template
+//           });
+//         } catch (error) {
+//           setError(t`Error occurred while rendering the template preview.`);
+//           console.error(error);
+//         }
+//       })();
+//     }, []);
 
-    return (
-      <Stack gap='xs' style={{ display: 'flex', flex: 1 }}>
-        {error && (
-          <Alert
-            color='red'
-            title={t`Error Loading Plugin Preview`}
-            icon={<IconExclamationCircle />}
-          >
-            <Text>{error}</Text>
-          </Alert>
-        )}
-        <div ref={elRef as any} style={{ display: 'flex', flex: 1 }} />
-      </Stack>
-    );
-  }) as PreviewAreaComponent;
+//     return (
+//       <Stack gap='xs' style={{ display: 'flex', flex: 1 }}>
+//         {error && (
+//           <Alert
+//             color='red'
+//             title={t`Error Loading Plugin Preview`}
+//             icon={<IconExclamationCircle />}
+//           >
+//             <Text>{error}</Text>
+//           </Alert>
+//         )}
+//         <div ref={elRef as any} style={{ display: 'flex', flex: 1 }} />
+//       </Stack>
+//     );
+//   }) as PreviewAreaComponent;

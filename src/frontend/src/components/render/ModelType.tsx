@@ -77,15 +77,15 @@ export const ModelInformationDict: ModelDict = {
     admin_url: '/part/partcategory/',
     icon: 'category'
   },
-  stockitem: {
-    label: () => t`Stock Item`,
-    label_multiple: () => t`Stock Items`,
-    url_overview: '/stock/location/index/stock-items',
-    url_detail: '/stock/item/:pk/',
-    api_endpoint: ApiEndpoints.stock_item_list,
-    admin_url: '/stock/stockitem/',
-    icon: 'stock'
-  },
+  // stockitem: {
+  //   label: () => t`Stock Item`,
+  //   label_multiple: () => t`Stock Items`,
+  //   url_overview: '/stock/location/index/stock-items',
+  //   url_detail: '/stock/item/:pk/',
+  //   api_endpoint: ApiEndpoints.stock_item_list,
+  //   admin_url: '/stock/stockitem/',
+  //   icon: 'stock'
+  // },
   stocklocation: {
     label: () => t`Stock Location`,
     label_multiple: () => t`Stock Locations`,
@@ -101,35 +101,35 @@ export const ModelInformationDict: ModelDict = {
     api_endpoint: ApiEndpoints.stock_location_type_list,
     icon: 'location'
   },
-  stockhistory: {
-    label: () => t`Stock History`,
-    label_multiple: () => t`Stock Histories`,
-    api_endpoint: ApiEndpoints.stock_tracking_list,
-    icon: 'history'
-  },
-  build: {
-    label: () => t`Build`,
-    label_multiple: () => t`Builds`,
-    url_overview: '/manufacturing/index/buildorders/',
-    url_detail: '/manufacturing/build-order/:pk/',
-    api_endpoint: ApiEndpoints.build_order_list,
-    admin_url: '/build/build/',
-    icon: 'build_order'
-  },
-  buildline: {
-    label: () => t`Build Line`,
-    label_multiple: () => t`Build Lines`,
-    url_overview: '/build/line',
-    url_detail: '/build/line/:pk/',
-    api_endpoint: ApiEndpoints.build_line_list,
-    icon: 'build_order'
-  },
-  builditem: {
-    label: () => t`Build Item`,
-    label_multiple: () => t`Build Items`,
-    api_endpoint: ApiEndpoints.build_item_list,
-    icon: 'build_order'
-  },
+  // stockhistory: {
+  //   label: () => t`Stock History`,
+  //   label_multiple: () => t`Stock Histories`,
+  //   api_endpoint: ApiEndpoints.stock_tracking_list,
+  //   icon: 'history'
+  // },
+  // build: {
+  //   label: () => t`Build`,
+  //   label_multiple: () => t`Builds`,
+  //   url_overview: '/manufacturing/index/buildorders/',
+  //   url_detail: '/manufacturing/build-order/:pk/',
+  //   api_endpoint: ApiEndpoints.build_order_list,
+  //   admin_url: '/build/build/',
+  //   icon: 'build_order'
+  // },
+  // buildline: {
+  //   label: () => t`Build Line`,
+  //   label_multiple: () => t`Build Lines`,
+  //   url_overview: '/build/line',
+  //   url_detail: '/build/line/:pk/',
+  //   api_endpoint: ApiEndpoints.build_line_list,
+  //   icon: 'build_order'
+  // },
+  // builditem: {
+  //   label: () => t`Build Item`,
+  //   label_multiple: () => t`Build Items`,
+  //   api_endpoint: ApiEndpoints.build_item_list,
+  //   icon: 'build_order'
+  // },
   // company: {
   //   label: () => t`Company`,
   //   label_multiple: () => t`Companies`,
@@ -147,53 +147,53 @@ export const ModelInformationDict: ModelDict = {
   //   api_endpoint: ApiEndpoints.project_code_list,
   //   icon: 'list_details'
   // },
-  purchaseorder: {
-    label: () => t`Purchase Order`,
-    label_multiple: () => t`Purchase Orders`,
-    url_overview: '/purchasing/index/purchaseorders',
-    url_detail: '/purchasing/purchase-order/:pk/',
-    api_endpoint: ApiEndpoints.purchase_order_list,
-    admin_url: '/order/purchaseorder/',
-    icon: 'purchase_orders'
-  },
-  purchaseorderlineitem: {
-    label: () => t`Purchase Order Line`,
-    label_multiple: () => t`Purchase Order Lines`,
-    api_endpoint: ApiEndpoints.purchase_order_line_list,
-    icon: 'purchase_orders'
-  },
-  salesorder: {
-    label: () => t`Sales Order`,
-    label_multiple: () => t`Sales Orders`,
-    url_overview: '/sales/index/salesorders',
-    url_detail: '/sales/sales-order/:pk/',
-    api_endpoint: ApiEndpoints.sales_order_list,
-    admin_url: '/order/salesorder/',
-    icon: 'sales_orders'
-  },
-  salesordershipment: {
-    label: () => t`Sales Order Shipment`,
-    label_multiple: () => t`Sales Order Shipments`,
-    url_overview: '/sales/shipment/',
-    url_detail: '/sales/shipment/:pk/',
-    api_endpoint: ApiEndpoints.sales_order_shipment_list,
-    icon: 'sales_orders'
-  },
-  returnorder: {
-    label: () => t`Return Order`,
-    label_multiple: () => t`Return Orders`,
-    url_overview: '/sales/index/returnorders',
-    url_detail: '/sales/return-order/:pk/',
-    api_endpoint: ApiEndpoints.return_order_list,
-    admin_url: '/order/returnorder/',
-    icon: 'return_orders'
-  },
-  returnorderlineitem: {
-    label: () => t`Return Order Line Item`,
-    label_multiple: () => t`Return Order Line Items`,
-    api_endpoint: ApiEndpoints.return_order_line_list,
-    icon: 'return_orders'
-  },
+  // purchaseorder: {
+  //   label: () => t`Purchase Order`,
+  //   label_multiple: () => t`Purchase Orders`,
+  //   url_overview: '/purchasing/index/purchaseorders',
+  //   url_detail: '/purchasing/purchase-order/:pk/',
+  //   api_endpoint: ApiEndpoints.purchase_order_list,
+  //   admin_url: '/order/purchaseorder/',
+  //   icon: 'purchase_orders'
+  // },
+  // purchaseorderlineitem: {
+  //   label: () => t`Purchase Order Line`,
+  //   label_multiple: () => t`Purchase Order Lines`,
+  //   api_endpoint: ApiEndpoints.purchase_order_line_list,
+  //   icon: 'purchase_orders'
+  // },
+  // salesorder: {
+  //   label: () => t`Sales Order`,
+  //   label_multiple: () => t`Sales Orders`,
+  //   url_overview: '/sales/index/salesorders',
+  //   url_detail: '/sales/sales-order/:pk/',
+  //   api_endpoint: ApiEndpoints.sales_order_list,
+  //   admin_url: '/order/salesorder/',
+  //   icon: 'sales_orders'
+  // },
+  // salesordershipment: {
+  //   label: () => t`Sales Order Shipment`,
+  //   label_multiple: () => t`Sales Order Shipments`,
+  //   url_overview: '/sales/shipment/',
+  //   url_detail: '/sales/shipment/:pk/',
+  //   api_endpoint: ApiEndpoints.sales_order_shipment_list,
+  //   icon: 'sales_orders'
+  // },
+  // returnorder: {
+  //   label: () => t`Return Order`,
+  //   label_multiple: () => t`Return Orders`,
+  //   url_overview: '/sales/index/returnorders',
+  //   url_detail: '/sales/return-order/:pk/',
+  //   api_endpoint: ApiEndpoints.return_order_list,
+  //   admin_url: '/order/returnorder/',
+  //   icon: 'return_orders'
+  // },
+  // returnorderlineitem: {
+  //   label: () => t`Return Order Line Item`,
+  //   label_multiple: () => t`Return Order Line Items`,
+  //   api_endpoint: ApiEndpoints.return_order_line_list,
+  //   icon: 'return_orders'
+  // },
   // address: {
   //   label: () => t`Address`,
   //   label_multiple: () => t`Addresses`,

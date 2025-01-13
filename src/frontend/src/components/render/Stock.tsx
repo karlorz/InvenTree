@@ -1,5 +1,5 @@
-import { t } from '@lingui/macro';
-import { Text } from '@mantine/core';
+// import { t } from '@lingui/macro';
+// import { Text } from '@mantine/core';
 import type { ReactNode } from 'react';
 
 import { ModelType } from '../../enums/ModelType';
@@ -51,27 +51,27 @@ export function RenderStockLocationType({
   );
 }
 
-export function RenderStockItem(
-  props: Readonly<InstanceRenderInterface>
-): ReactNode {
-  const { instance } = props;
-  let quantity_string = '';
+// export function RenderStockItem(
+//   props: Readonly<InstanceRenderInterface>
+// ): ReactNode {
+//   const { instance } = props;
+//   let quantity_string = '';
 
-  if (instance?.serial !== null && instance?.serial !== undefined) {
-    quantity_string += `${t`Serial Number`}: ${instance.serial}`;
-  } else if (instance?.quantity) {
-    quantity_string = `${t`Quantity`}: ${instance.quantity}`;
-  }
+//   if (instance?.serial !== null && instance?.serial !== undefined) {
+//     quantity_string += `${t`Serial Number`}: ${instance.serial}`;
+//   } else if (instance?.quantity) {
+//     quantity_string = `${t`Quantity`}: ${instance.quantity}`;
+//   }
 
-  return (
-    <RenderInlineModel
-      {...props}
-      primary={instance.part_detail?.full_name}
-      suffix={<Text size='xs'>{quantity_string}</Text>}
-      image={instance.part_detail?.thumbnail || instance.part_detail?.image}
-      url={
-        props.link ? getDetailUrl(ModelType.stockitem, instance.pk) : undefined
-      }
-    />
-  );
-}
+//   return (
+//     <RenderInlineModel
+//       {...props}
+//       primary={instance.part_detail?.full_name}
+//       suffix={<Text size='xs'>{quantity_string}</Text>}
+//       image={instance.part_detail?.thumbnail || instance.part_detail?.image}
+//       url={
+//         props.link ? getDetailUrl(ModelType.stockitem, instance.pk) : undefined
+//       }
+//     />
+//   );
+// }

@@ -7,13 +7,13 @@ import { ModelType } from '../enums/ModelType';
  * and the model type they are associated with
  */
 export const statusCodeList: Record<string, ModelType> = {
-  BuildStatus: ModelType.build,
-  PurchaseOrderStatus: ModelType.purchaseorder,
-  ReturnOrderStatus: ModelType.returnorder,
-  ReturnOrderLineStatus: ModelType.returnorderlineitem,
-  SalesOrderStatus: ModelType.salesorder,
-  StockHistoryCode: ModelType.stockhistory,
-  StockStatus: ModelType.stockitem,
+  // BuildStatus: ModelType.build,
+  // PurchaseOrderStatus: ModelType.purchaseorder,
+  // ReturnOrderStatus: ModelType.returnorder,
+  // ReturnOrderLineStatus: ModelType.returnorderlineitem,
+  // SalesOrderStatus: ModelType.salesorder,
+  // StockHistoryCode: ModelType.stockhistory,
+  // StockStatus: ModelType.stockitem,
   DataImportStatusCode: ModelType.importsession
 };
 

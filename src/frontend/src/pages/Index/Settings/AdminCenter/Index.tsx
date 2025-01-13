@@ -23,11 +23,11 @@ import { PanelGroup } from '../../../../components/panels/PanelGroup';
 import { Loadable } from '../../../../functions/loading';
 import { useUserState } from '../../../../states/UserState';
 
-const ReportTemplatePanel = Loadable(
-  lazy(() => import('./ReportTemplatePanel'))
-);
+// const ReportTemplatePanel = Loadable(
+//   lazy(() => import('./ReportTemplatePanel'))
+// );
 
-const LabelTemplatePanel = Loadable(lazy(() => import('./LabelTemplatePanel')));
+// const LabelTemplatePanel = Loadable(lazy(() => import('./LabelTemplatePanel')));
 
 const UserManagementPanel = Loadable(
   lazy(() => import('./UserManagementPanel'))
