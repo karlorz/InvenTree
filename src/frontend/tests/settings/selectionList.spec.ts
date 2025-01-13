@@ -31,7 +31,7 @@ test('PUI - Admin - Parameter', async ({ page }) => {
   await page.waitForLoadState('networkidle');
   await page
     .getByRole('cell', { name: 'my custom parameter' })
-    .waitFor({ timeout: 200 })
+    .waitFor({ timeout: 400 })
     .then(async (cell) => {
       await page
         .getByRole('cell', { name: 'my custom parameter' })
