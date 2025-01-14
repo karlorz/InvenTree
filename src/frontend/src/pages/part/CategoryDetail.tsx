@@ -22,7 +22,7 @@ import {
 } from '../../components/items/ActionDropdown';
 import { ApiIcon } from '../../components/items/ApiIcon';
 import InstanceDetail from '../../components/nav/InstanceDetail';
-import NavigationTree from '../../components/nav/NavigationTree';
+// import NavigationTree from '../../components/nav/NavigationTree';
 import { PageDetail } from '../../components/nav/PageDetail';
 import type { PanelType } from '../../components/panels/Panel';
 import { PanelGroup } from '../../components/panels/PanelGroup';
@@ -320,7 +320,7 @@ export default function CategoryDetail() {
       >
         <Stack gap='xs'>
           <LoadingOverlay visible={instanceQuery.isFetching} />
-          <NavigationTree
+          {/* <NavigationTree
             modelType={ModelType.partcategory}
             title={t`Part Categories`}
             endpoint={ApiEndpoints.category_tree}
@@ -329,7 +329,7 @@ export default function CategoryDetail() {
               setTreeOpen(false);
             }}
             selectedId={category?.pk}
-          />
+          /> */}
           <PageDetail
             title={t`Part Category`}
             subtitle={category?.name}

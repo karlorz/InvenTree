@@ -36,7 +36,7 @@ import {
   OptionsActionDropdown
 } from '../../components/items/ActionDropdown';
 import InstanceDetail from '../../components/nav/InstanceDetail';
-import NavigationTree from '../../components/nav/NavigationTree';
+// import NavigationTree from '../../components/nav/NavigationTree';
 import { PageDetail } from '../../components/nav/PageDetail';
 import AttachmentPanel from '../../components/panels/AttachmentPanel';
 import NotesPanel from '../../components/panels/NotesPanel';
@@ -950,7 +950,7 @@ export default function PartDetail() {
         requiredRole={UserRoles.part}
       >
         <Stack gap='xs'>
-          {user.hasViewRole(UserRoles.part_category) && (
+          {/* {user.hasViewRole(UserRoles.part_category) && (
             <NavigationTree
               title={t`Part Categories`}
               modelType={ModelType.partcategory}
@@ -961,7 +961,7 @@ export default function PartDetail() {
               }}
               selectedId={part?.category}
             />
-          )}
+          )} */}
           <PageDetail
             title={`${t`Part`}: ${part.full_name}`}
             icon={
