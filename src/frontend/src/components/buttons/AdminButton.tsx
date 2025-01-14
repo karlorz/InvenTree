@@ -76,16 +76,25 @@ export default function AdminButton(props: Readonly<AdminButtonProps>) {
     [props.model, props.id]
   );
 
+  const genAdminUrl = useCallback(() => {
+    const modelDef = ModelInformationDict[props.model];
+    return generateUrl(
+      `${server.server.django_admin}${modelDef.admin_url}${props.id}/`
+    );
+  }, [props.model, props.id]);
+
   return (
-    <ActionButton
-      icon={<IconUserStar />}
-      color='blue'
-      size='lg'
-      variant='filled'
-      tooltip={t`Open in admin interface`}
-      hidden={!enabled}
-      onClick={openAdmin}
-      tooltipAlignment='bottom'
-    />
+    <a href={genAdminUrl()} target='_self'>
+      <ActionButton
+        icon={<IconUserStar />}
+        color='blue'
+        size='lg'
+        variant='filled'
+        tooltip={t`Open in admin interface`}
+        hidden={!enabled}
+        onClick={() => {}}
+        tooltipAlignment='bottom'
+      />
+    </a>
   );
 }
