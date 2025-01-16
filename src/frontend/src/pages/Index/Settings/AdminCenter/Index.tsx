@@ -4,7 +4,6 @@ import {
   IconCoins,
   IconCpu,
   IconExclamationCircle,
-  IconFileUpload,
   IconList,
   IconListDetails,
   IconPlugConnected,
@@ -61,9 +60,9 @@ const BarcodeScanHistoryTable = Loadable(
   lazy(() => import('../../../../tables/settings/BarcodeScanHistoryTable'))
 );
 
-const ImportSesssionTable = Loadable(
-  lazy(() => import('../../../../tables/settings/ImportSessionTable'))
-);
+// const ImportSesssionTable = Loadable(
+//   lazy(() => import('../../../../tables/settings/ImportSessionTable'))
+// );
 
 const ProjectCodeTable = Loadable(
   lazy(() => import('../../../../tables/settings/ProjectCodeTable'))
@@ -102,12 +101,12 @@ export default function AdminCenter() {
         icon: <IconUsersGroup />,
         content: <UserManagementPanel />
       },
-      {
-        name: 'import',
-        label: t`Data Import`,
-        icon: <IconFileUpload />,
-        content: <ImportSesssionTable />
-      },
+      // {
+      //   name: 'import',
+      //   label: t`Data Import`,
+      //   icon: <IconFileUpload />,
+      //   content: <ImportSesssionTable />
+      // },
       {
         name: 'barcode-history',
         label: t`Barcode Scans`,

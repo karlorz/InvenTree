@@ -1,4 +1,4 @@
-import { ModelType } from '../enums/ModelType';
+import type { ModelType } from '../enums/ModelType';
 
 /* Lookup tables for mapping backend responses to internal types */
 
@@ -14,7 +14,7 @@ export const statusCodeList: Record<string, ModelType> = {
   // SalesOrderStatus: ModelType.salesorder,
   // StockHistoryCode: ModelType.stockhistory,
   // StockStatus: ModelType.stockitem,
-  DataImportStatusCode: ModelType.importsession
+  // DataImportStatusCode: ModelType.importsession
 };
 
 /*

@@ -19,7 +19,6 @@ import { Thumbnail } from '../images/Thumbnail';
 import {
   RenderContentType,
   RenderError,
-  RenderImportSession,
   // RenderProjectCode,
   RenderSelectionList
 } from './Generic';
@@ -79,7 +78,7 @@ const RendererLookup: EnumDictionary<
   // [ModelType.supplierpart]: RenderSupplierPart,
   [ModelType.user]: RenderUser,
   [ModelType.group]: RenderGroup,
-  [ModelType.importsession]: RenderImportSession,
+  // [ModelType.importsession]: RenderImportSession,
   // [ModelType.reporttemplate]: RenderReportTemplate,
   // [ModelType.labeltemplate]: RenderLabelTemplate,
   [ModelType.pluginconfig]: RenderPlugin,

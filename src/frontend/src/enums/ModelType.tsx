@@ -23,7 +23,7 @@ export enum ModelType {
   // salesordershipment = 'salesordershipment',
   // returnorder = 'returnorder',
   // returnorderlineitem = 'returnorderlineitem',
-  importsession = 'importsession',
+  // importsession = 'importsession',
   // address = 'address',
   // contact = 'contact',
   owner = 'owner',
