@@ -141,45 +141,45 @@ interface CreateMachineSettingStateProps {
   configType: 'M' | 'D';
 }
 
-export const createMachineSettingsState = ({
-  machine,
-  configType
-}: CreateMachineSettingStateProps) => {
-  const pathParams: PathParams = { machine, config_type: configType };
+// export const createMachineSettingsState = ({
+//   machine,
+//   configType
+// }: CreateMachineSettingStateProps) => {
+//   const pathParams: PathParams = { machine, config_type: configType };
 
-  return createStore<SettingsStateProps>()((set, get) => ({
-    settings: [],
-    lookup: {},
-    endpoint: ApiEndpoints.machine_setting_detail,
-    pathParams,
-    fetchSettings: async () => {
-      await api
-        .get(apiUrl(ApiEndpoints.machine_setting_list, undefined, { machine }))
-        .then((response) => {
-          const settings = response.data.filter(
-            (s: any) => s.config_type === configType
-          );
-          set({
-            settings,
-            lookup: generate_lookup(settings)
-          });
-        })
-        .catch((error) => {
-          console.error(
-            `Error fetching machine settings for machine ${machine} with type ${configType}:`,
-            error
-          );
-        });
-    },
-    getSetting: (key: string, default_value?: string) => {
-      return get().lookup[key] ?? default_value ?? '';
-    },
-    isSet: (key: string, default_value?: boolean) => {
-      const value = get().lookup[key] ?? default_value ?? 'false';
-      return isTrue(value);
-    }
-  }));
-};
+//   return createStore<SettingsStateProps>()((set, get) => ({
+//     settings: [],
+//     lookup: {},
+//     endpoint: ApiEndpoints.machine_setting_detail,
+//     pathParams,
+//     fetchSettings: async () => {
+//       await api
+//         .get(apiUrl(ApiEndpoints.machine_setting_list, undefined, { machine }))
+//         .then((response) => {
+//           const settings = response.data.filter(
+//             (s: any) => s.config_type === configType
+//           );
+//           set({
+//             settings,
+//             lookup: generate_lookup(settings)
+//           });
+//         })
+//         .catch((error) => {
+//           console.error(
+//             `Error fetching machine settings for machine ${machine} with type ${configType}:`,
+//             error
+//           );
+//         });
+//     },
+//     getSetting: (key: string, default_value?: string) => {
+//       return get().lookup[key] ?? default_value ?? '';
+//     },
+//     isSet: (key: string, default_value?: boolean) => {
+//       const value = get().lookup[key] ?? default_value ?? 'false';
+//       return isTrue(value);
+//     }
+//   }));
+// };
 
 /*
   return a lookup dictionary for the value of the provided Setting list

@@ -16,7 +16,7 @@ import { useEditApiFormModal } from '../../hooks/UseForm';
 import { apiUrl } from '../../states/ApiState';
 import {
   type SettingsStateProps,
-  createMachineSettingsState,
+  // createMachineSettingsState,
   createPluginSettingsState,
   useGlobalSettingsState,
   useUserSettingsState
@@ -193,22 +193,22 @@ export function PluginSettingList({
   return <SettingList settingsState={pluginSettings} />;
 }
 
-export function MachineSettingList({
-  machinePk,
-  configType,
-  onChange
-}: Readonly<{
-  machinePk: string;
-  configType: 'M' | 'D';
-  onChange?: () => void;
-}>) {
-  const machineSettingsStore = useRef(
-    createMachineSettingsState({
-      machine: machinePk,
-      configType: configType
-    })
-  ).current;
-  const machineSettings = useStore(machineSettingsStore);
+// export function MachineSettingList({
+//   machinePk,
+//   configType,
+//   onChange
+// }: Readonly<{
+//   machinePk: string;
+//   configType: 'M' | 'D';
+//   onChange?: () => void;
+// }>) {
+//   const machineSettingsStore = useRef(
+//     createMachineSettingsState({
+//       machine: machinePk,
+//       configType: configType
+//     })
+//   ).current;
+//   const machineSettings = useStore(machineSettingsStore);
 
-  return <SettingList settingsState={machineSettings} onChange={onChange} />;
-}
+//   return <SettingList settingsState={machineSettings} onChange={onChange} />;
+// }

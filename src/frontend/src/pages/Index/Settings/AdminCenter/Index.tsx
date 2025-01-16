@@ -46,9 +46,9 @@ const PluginManagementPanel = Loadable(
   lazy(() => import('./PluginManagementPanel'))
 );
 
-const MachineManagementPanel = Loadable(
-  lazy(() => import('./MachineManagementPanel'))
-);
+// const MachineManagementPanel = Loadable(
+//   lazy(() => import('./MachineManagementPanel'))
+// );
 
 const PartParameterPanel = Loadable(lazy(() => import('./PartParameterPanel')));
 
