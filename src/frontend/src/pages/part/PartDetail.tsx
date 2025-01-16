@@ -7,7 +7,6 @@ import {
   IconList,
   IconLock,
   IconPackages,
-  IconStack2,
   IconTestPipe,
   IconVersions
 } from '@tabler/icons-react';
@@ -17,7 +16,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Select from 'react-select';
 
 import AdminButton from '../../components/buttons/AdminButton';
-import { PrintingActions } from '../../components/buttons/PrintingActions';
+// import { PrintingActions } from '../../components/buttons/PrintingActions';
 import {
   type DetailsField,
   DetailsTable
@@ -68,7 +67,7 @@ import {
   useUserSettingsState
 } from '../../states/SettingsState';
 import { useUserState } from '../../states/UserState';
-import { UsedInTable } from '../../tables/bom/UsedInTable';
+// import { UsedInTable } from '../../tables/bom/UsedInTable';
 import { PartParameterTable } from '../../tables/part/PartParameterTable';
 import PartTestTemplateTable from '../../tables/part/PartTestTemplateTable';
 import { PartVariantTable } from '../../tables/part/PartVariantTable';
@@ -516,13 +515,13 @@ export default function PartDetail() {
       //   hidden: !part.assembly || !user.hasViewRole(UserRoles.build),
       //   content: part.pk ? <BuildOrderTable partId={part.pk} /> : <Skeleton />
       // },
-      {
-        name: 'used_in',
-        label: t`Used In`,
-        icon: <IconStack2 />,
-        hidden: !part.component,
-        content: <UsedInTable partId={part.pk ?? -1} />
-      },
+      // {
+      //   name: 'used_in',
+      //   label: t`Used In`,
+      //   icon: <IconStack2 />,
+      //   hidden: !part.component,
+      //   content: <UsedInTable partId={part.pk ?? -1} />
+      // },
       {
         name: 'pricing',
         label: t`Part Pricing`,
@@ -862,12 +861,12 @@ export default function PartDetail() {
         perm={user.hasChangeRole(UserRoles.part)}
         key='action_dropdown'
       />,
-      <PrintingActions
-        modelType={ModelType.part}
-        items={[part.pk]}
-        enableReports
-        enableLabels
-      />,
+      // <PrintingActions
+      //   modelType={ModelType.part}
+      //   items={[part.pk]}
+      //   enableReports
+      //   enableLabels
+      // />,
       <ActionDropdown
         tooltip={t`Stock Actions`}
         icon={<IconPackages />}

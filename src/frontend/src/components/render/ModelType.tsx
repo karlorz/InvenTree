@@ -243,22 +243,22 @@ export const ModelInformationDict: ModelDict = {
     api_endpoint: ApiEndpoints.import_session_list,
     icon: 'import'
   },
-  labeltemplate: {
-    label: () => t`Label Template`,
-    label_multiple: () => t`Label Templates`,
-    url_overview: '/labeltemplate',
-    url_detail: '/labeltemplate/:pk/',
-    api_endpoint: ApiEndpoints.label_list,
-    icon: 'labels'
-  },
-  reporttemplate: {
-    label: () => t`Report Template`,
-    label_multiple: () => t`Report Templates`,
-    url_overview: '/reporttemplate',
-    url_detail: '/reporttemplate/:pk/',
-    api_endpoint: ApiEndpoints.report_list,
-    icon: 'reports'
-  },
+  // labeltemplate: {
+  //   label: () => t`Label Template`,
+  //   label_multiple: () => t`Label Templates`,
+  //   url_overview: '/labeltemplate',
+  //   url_detail: '/labeltemplate/:pk/',
+  //   api_endpoint: ApiEndpoints.label_list,
+  //   icon: 'labels'
+  // },
+  // reporttemplate: {
+  //   label: () => t`Report Template`,
+  //   label_multiple: () => t`Report Templates`,
+  //   url_overview: '/reporttemplate',
+  //   url_detail: '/reporttemplate/:pk/',
+  //   api_endpoint: ApiEndpoints.report_list,
+  //   icon: 'reports'
+  // },
   pluginconfig: {
     label: () => t`Plugin Configuration`,
     label_multiple: () => t`Plugin Configurations`,

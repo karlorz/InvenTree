@@ -19,7 +19,7 @@ import { Fragment } from 'react/jsx-runtime';
 import { Boundary } from '../components/Boundary';
 import { ActionButton } from '../components/buttons/ActionButton';
 import { ButtonMenu } from '../components/buttons/ButtonMenu';
-import { PrintingActions } from '../components/buttons/PrintingActions';
+// import { PrintingActions } from '../components/buttons/PrintingActions';
 import { useApi } from '../contexts/ApiContext';
 import { useDeleteApiFormModal } from '../hooks/UseForm';
 import type { TableState } from '../hooks/UseTable';
@@ -146,12 +146,12 @@ export default function InvenTreeTableHeader({
 
       <Group justify='apart' grow wrap='nowrap'>
         <Group justify='left' key='custom-actions' gap={5} wrap='nowrap'>
-          <PrintingActions
+          {/* <PrintingActions
             items={tableState.selectedIds}
             modelType={tableProps.modelType}
             enableLabels={tableProps.enableLabels}
             enableReports={tableProps.enableReports}
-          />
+          /> */}
           {(tableProps.barcodeActions?.length ?? 0) > 0 && (
             <ButtonMenu
               key='barcode-actions'

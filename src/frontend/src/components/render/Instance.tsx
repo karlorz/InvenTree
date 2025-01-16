@@ -31,7 +31,7 @@ import {
   RenderPartTestTemplate
 } from './Part';
 import { RenderPlugin } from './Plugin';
-import { RenderLabelTemplate, RenderReportTemplate } from './Report';
+// import { RenderLabelTemplate, RenderReportTemplate } from './Report';
 import { RenderStockLocation, RenderStockLocationType } from './Stock';
 import { RenderGroup, RenderOwner, RenderUser } from './User';
 
@@ -80,8 +80,8 @@ const RendererLookup: EnumDictionary<
   [ModelType.user]: RenderUser,
   [ModelType.group]: RenderGroup,
   [ModelType.importsession]: RenderImportSession,
-  [ModelType.reporttemplate]: RenderReportTemplate,
-  [ModelType.labeltemplate]: RenderLabelTemplate,
+  // [ModelType.reporttemplate]: RenderReportTemplate,
+  // [ModelType.labeltemplate]: RenderLabelTemplate,
   [ModelType.pluginconfig]: RenderPlugin,
   [ModelType.contenttype]: RenderContentType,
   [ModelType.selectionlist]: RenderSelectionList,

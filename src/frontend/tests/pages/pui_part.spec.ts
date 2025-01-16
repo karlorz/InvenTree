@@ -15,7 +15,7 @@ test('Parts - Tabs', async ({ page }) => {
   await page.goto(`${baseUrl}/part/category/index/parts`);
   await page.getByText('1551ABK').click();
   // await page.getByRole('tab', { name: 'Allocations' }).click();
-  await page.getByRole('tab', { name: 'Used In' }).click();
+  // await page.getByRole('tab', { name: 'Used In' }).click();
   await page.getByRole('tab', { name: 'Pricing' }).click();
   // await page.getByRole('tab', { name: 'Suppliers' }).click();
   // await page.getByRole('tab', { name: 'Purchase Orders' }).click();
@@ -35,7 +35,7 @@ test('Parts - Tabs', async ({ page }) => {
   //   .getByRole('tab', { name: 'Stock', exact: true })
   //   .click();
   // await page.getByRole('tab', { name: 'Allocations' }).click();
-  await page.getByRole('tab', { name: 'Used In' }).click();
+  // await page.getByRole('tab', { name: 'Used In' }).click();
   await page.getByRole('tab', { name: 'Pricing' }).click();
 
   // await page.goto(`${baseUrl}/part/category/index/parts`);
