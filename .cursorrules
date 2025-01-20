@@ -1,0 +1,57 @@
+# Project: React App Frontend for interacting with API endpoints
+
+## Project Description
+This project is a React frontend application for managing a REST API. It uses TypeScript, React, Mantine UI, Axios, React Query, and Lingui for internationalization. The project is tested using Playwright.
+
+## Coding Standards
+- Use TypeScript for all new code.
+- Prefer functional components and hooks over class components.
+- Use proper TypeScript types for all variables and functions.
+- Follow the coding style enforced by Biome.
+- Use 2 spaces for indentation.
+- Max line length: 120 characters.
+- Use camelCase for variable names and PascalCase for component names.
+- Use JSDoc comments for all functions and components.
+- Use `@lingui/macro` for internationalization.
+
+## API Interaction
+- Use Axios for making API requests.
+- Set the base URL from `window.INVENTREE_SETTINGS.base_url`.
+- Include the authentication token in the `Authorization` header.
+- Use React Query for data fetching and caching.
+
+## UI Components
+- Use Mantine UI components for building the user interface.
+- Use consistent styling and theming.
+- Create reusable components for common UI elements.
+
+## Testing
+- Write unit tests for all new components and utilities.
+- Use Playwright for end-to-end testing.
+- Aim for at least 80% test coverage.
+- Playwright test folder is located at `src/frontend/tests`.
+
+## Internationalization
+- Use `@lingui/macro` for all user-facing text.
+- Ensure all text is translated into supported languages.
+- Use the `src/locales` directory for storing translation files.
+
+## Error Handling
+- Use Sentry for error tracking.
+- Implement error boundaries for handling component errors.
+- Log errors to the console.
+
+## Development
+- Use Vite for development server.
+- Use environment variables for configuration.
+- Use `yarn` for package management.
+- The React source code base folder is located at `src/frontend`.
+- The `dev.env` file contains development environment settings.
+
+## Additional Notes
+- The project uses a custom SVG logo located at `src/frontend/public/inventree.svg` and `src/frontend/src/assets/inventree.svg`.
+- The project uses a `.nyc_output` directory for test coverage reports.
+- The project uses a `netlify.toml` file for Netlify deployment.
+- The project uses a `.gitignore` file to exclude certain files and directories from version control.
+
+Remember to consider accessibility and performance in all new features.
