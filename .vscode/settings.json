@@ -6,4 +6,5 @@
     "quickfix.biome": "explicit"
   },
   "python.envFile":  "${workspaceFolder}/dev.env",
+  "python.terminal.activateEnvironment": true,
 }
